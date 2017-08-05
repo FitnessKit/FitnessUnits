@@ -1,8 +1,8 @@
 //
-//  UnitPercent.swift
+//  UnitAngle.swift
 //  FitnessUnits
 //
-//  Created by Kevin Hoogheem on 4/1/17.
+//  Created by Kevin Hoogheem on 4/18/17.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -25,17 +25,12 @@
 import Foundation
 
 @available(OSX 10.12, *)
-/// Percentage Unit
-final class UnitPercent: Unit {
+public extension UnitAngle {
 
-    private struct Symbol {
-        static let percent      = "%"
-    }
-
-    public class var percent: UnitPercent {
+    /// Bradian Unit of Angle
+    public class var bradian: UnitAngle {
         get {
-            return UnitPercent(symbol: Symbol.percent)
+            return UnitAngle(symbol: "bradian", converter: UnitConverterLinear(coefficient: 1.40625))
         }
     }
-
 }
