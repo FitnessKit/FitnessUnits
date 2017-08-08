@@ -1,8 +1,8 @@
 //
-//  UnitCadence.swift
+//  UnitGender.swift
 //  FitnessUnits
 //
-//  Created by Kevin Hoogheem on 4/1/17.
+//  Created by Kevin Hoogheem on 8/8/17.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -22,49 +22,30 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-
 import Foundation
 
-/// Cadence Unit
+/// Gender Unit
+///
+/// Gender unit doesn't make much sense to use with Measurements.
+/// However it helps in Forumlas where Gener is needed.
 @available(swift 3.1)
 @available(iOS 10.0, tvOS 10.0, watchOS 3.0, OSX 10.12, *)
-open class UnitCadence: Unit {
+open class UnitGender: Unit {
 
     private struct Symbol {
-        static let beatsPerMinute       = "BPM"
-        static let revolutionsPerMinute = "RPM"
-        static let stepsPerMinute       = "steps/min"
-        static let stridesPerMinute     = "strides/min"
-        static let strokesPerMinute     = "strokes/min"
+        static let female       = "Female"
+        static let male         = "Male"
     }
 
-    public class var beatsPerMinute: UnitCadence {
+    public class var female: UnitGender {
         get {
-            return UnitCadence(symbol: Symbol.beatsPerMinute)
+            return UnitGender(symbol: Symbol.female)
         }
     }
 
-    public class var revolutionsPerMinute: UnitCadence {
+    public class var male: UnitGender {
         get {
-            return UnitCadence(symbol: Symbol.revolutionsPerMinute)
-        }
-    }
-
-    public class var stepsPerMinute: UnitCadence {
-        get {
-            return UnitCadence(symbol: Symbol.stepsPerMinute)
-        }
-    }
-
-    public class var stridesPerMinute: UnitCadence {
-        get {
-            return UnitCadence(symbol: Symbol.stridesPerMinute)
-        }
-    }
-
-    public class var strokesPerMinute: UnitCadence {
-        get {
-            return UnitCadence(symbol: Symbol.strokesPerMinute)
+            return UnitGender(symbol: Symbol.male)
         }
     }
 
