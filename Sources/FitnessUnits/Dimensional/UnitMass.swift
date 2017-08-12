@@ -29,7 +29,6 @@ import Foundation
 @available(iOS 10.0, tvOS 10.0, watchOS 3.0, OSX 10.12, *)
 public extension UnitMass {
 
-
     /// Body Surface Area (BSA) using the Mosteller Formula
     ///
     /// - Parameters:
@@ -90,6 +89,12 @@ public extension UnitMass {
         return bsa
     }
 
+}
+
+@available(swift 3.1)
+@available(iOS 10.0, tvOS 10.0, watchOS 3.0, OSX 10.12, *)
+public extension UnitMass {
+
     /// Body Mass Index (BMI)
     ///
     /// - Parameters:
@@ -100,9 +105,9 @@ public extension UnitMass {
 
         let heightM = height.converted(to: .meters).value
         let weightKg = weight.converted(to: .kilograms).value
-
+        
         let bmi = weightKg / pow(heightM, 2)
         return bmi
     }
-
+    
 }
