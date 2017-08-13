@@ -8,11 +8,13 @@
 
 Pod::Spec.new do |s|
   s.name             = 'FitnessUnits'
-  s.version          = '1.1.0'
+  s.version          = '1.1.1'
   s.summary          = 'FitnessUnits.  Units for Fitness activity'
 
   s.description      = <<-DESC
 FitnessUnits.  Units for Fitness activity.
+
+Extends Foundations Units for Fitness related activity.
                        DESC
 
   s.homepage         = 'https://github.com/FitnessKit/FitnessUnits'
