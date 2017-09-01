@@ -1,8 +1,8 @@
 //
-//  UnitAngularVelocity.swift
+//  UnitSpeed.swift
 //  FitnessUnits
 //
-//  Created by Kevin Hoogheem on 4/1/17.
+//  Created by Kevin Hoogheem on 9/1/17.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -24,43 +24,13 @@
 
 import Foundation
 
-/// Units of Angular Velocity
 @available(swift 3.1)
 @available(iOS 10.0, tvOS 10.0, watchOS 3.0, OSX 10.12, *)
-open class UnitAngularVelocity: Dimension {
+public extension UnitSpeed {
 
-    private struct Symbol {
-        static let degress      = "deg/s"
-        static let radians      = "rad/s"
-    }
-
-    private struct Coefficient {
-        static let degress          = 1.0
-        static let radians          = 57.2958
-    }
-
-
-    private init(symbol: String, coefficient: Double) {
-        super.init(symbol: symbol, converter: UnitConverterLinear(coefficient: coefficient))
-    }
-
-    open class var degressPerSecond: UnitAngularVelocity {
+    public class var kilometersPerMinute: UnitSpeed {
         get {
-            return UnitAngularVelocity(symbol: Symbol.degress, coefficient: Coefficient.degress)
+            return UnitSpeed(symbol: "km/m", converter: UnitConverterLinear(coefficient: 16.666667))
         }
     }
-
-    open class var radiansPerSecond: UnitAngularVelocity {
-        get {
-            return UnitAngularVelocity(symbol: Symbol.radians, coefficient: Coefficient.radians)
-        }
-    }
-
-    open override class func baseUnit() -> UnitAngularVelocity {
-        return UnitAngularVelocity.degressPerSecond
-    }
-
-    public required init?(coder aDecoder: NSCoder) { super.init(coder: aDecoder) }
-    open override func encode(with aCoder: NSCoder) { super.encode(with: aCoder) }
-    
 }

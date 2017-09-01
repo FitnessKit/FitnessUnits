@@ -1,8 +1,8 @@
 //
-//  UnitAngularVelocity.swift
+//  UnitForce.swift
 //  FitnessUnits
 //
-//  Created by Kevin Hoogheem on 4/1/17.
+//  Created by Kevin Hoogheem on 9/1/17.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -24,19 +24,23 @@
 
 import Foundation
 
-/// Units of Angular Velocity
+/// Units of Force
 @available(swift 3.1)
 @available(iOS 10.0, tvOS 10.0, watchOS 3.0, OSX 10.12, *)
-open class UnitAngularVelocity: Dimension {
+open class UnitForce: Dimension {
 
     private struct Symbol {
-        static let degress      = "deg/s"
-        static let radians      = "rad/s"
+        static let dyne             = "dyn"
+        static let newton           = "N"
+        static let poundForce       = "lbf"
+        static let kilogramForce    = "kgf"
     }
 
     private struct Coefficient {
-        static let degress          = 1.0
-        static let radians          = 57.2958
+        static let dyne             = 1e-05
+        static let newton           = 1.0
+        static let poundForce       = 4.44822
+        static let kilogramForce    = 9.80665
     }
 
 
@@ -44,23 +48,34 @@ open class UnitAngularVelocity: Dimension {
         super.init(symbol: symbol, converter: UnitConverterLinear(coefficient: coefficient))
     }
 
-    open class var degressPerSecond: UnitAngularVelocity {
+    open class var newton: UnitForce {
         get {
-            return UnitAngularVelocity(symbol: Symbol.degress, coefficient: Coefficient.degress)
+            return UnitForce(symbol: Symbol.newton, coefficient: Coefficient.newton)
         }
     }
 
-    open class var radiansPerSecond: UnitAngularVelocity {
+    open class var kilogramForce: UnitForce {
         get {
-            return UnitAngularVelocity(symbol: Symbol.radians, coefficient: Coefficient.radians)
+            return UnitForce(symbol: Symbol.kilogramForce, coefficient: Coefficient.kilogramForce)
         }
     }
 
-    open override class func baseUnit() -> UnitAngularVelocity {
-        return UnitAngularVelocity.degressPerSecond
+    open class var poundForce: UnitForce {
+        get {
+            return UnitForce(symbol: Symbol.poundForce, coefficient: Coefficient.poundForce)
+        }
+    }
+
+    open class var dyne: UnitForce {
+        get {
+            return UnitForce(symbol: Symbol.dyne, coefficient: Coefficient.dyne)
+        }
+    }
+
+    open override class func baseUnit() -> UnitForce {
+        return UnitForce.newton
     }
 
     public required init?(coder aDecoder: NSCoder) { super.init(coder: aDecoder) }
     open override func encode(with aCoder: NSCoder) { super.encode(with: aCoder) }
-    
 }

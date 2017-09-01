@@ -21,6 +21,30 @@ Swift Package Manager:
     ]
 ```
 
+## New Dimensional Unit Types ##
+
+* UnitAngularVelocity
+* UnitForce
+* UnitLinearDensity
+* UnitMagneticField
+* UnitTorque
+
+## Extensions to Dimensional Units ##
+
+* UnitAcceleration - add galileo
+* UnitAngle - bradian
+* UnitSpeed - add kilometersPerMinute
+* UnitEnergy - Energy Burn Calculations
+* UnitMass - Mass Calculations
+
+## New Dimensionless Unit Types ##
+
+* UnitCadence - Cadence (RPM, BPM, Steps per min, etc..)
+* UnitGender
+* UnitOxygenConsumption - VO2
+* UnitPercent
+
+
 ## Author
 
 Kevin A. Hoogheem, kevin@hoogheem.net
