@@ -1,6 +1,7 @@
 # FitnessUnits
 Units of Measurement for Fitness
 
+[![Swift3](https://img.shields.io/badge/swift3-compatible-4BC51D.svg?style=flat)](https://developer.apple.com/swift)
 [![Version](https://img.shields.io/cocoapods/v/FitnessUnits.svg?style=flat)](http://cocoapods.org/pods/FitnessUnits)
 [![License](https://img.shields.io/cocoapods/l/FitnessUnits.svg?style=flat)](http://cocoapods.org/pods/FitnessUnits)
 [![Platform](https://img.shields.io/cocoapods/p/FitnessUnits.svg?style=flat)](http://cocoapods.org/pods/FitnessUnits)
@@ -47,7 +48,7 @@ Swift Package Manager:
 
 ## Author
 
-Kevin A. Hoogheem, kevin@hoogheem.net
+Kevin A. Hoogheem
 
 ## License
 
