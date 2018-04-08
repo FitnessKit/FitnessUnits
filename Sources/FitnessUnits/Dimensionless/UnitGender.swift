@@ -58,5 +58,25 @@ open class UnitGender: Unit {
             return UnitGender(symbol: Symbol.unspecificed)
         }
     }
-
 }
+
+extension UnitGender: Encodable {
+
+    private enum CodingKeys : Int, CodingKey {
+        case value
+        case unit
+    }
+
+    private enum UnitCodingKeys : Int, CodingKey {
+        case symbol
+    }
+
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(self.symbol, forKey: .value)
+
+        var unitContainer = container.nestedContainer(keyedBy: UnitCodingKeys.self, forKey: .unit)
+        try unitContainer.encode("Gender", forKey: .symbol)
+    }
+}
+
