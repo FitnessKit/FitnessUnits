@@ -46,24 +46,30 @@ open class UnitTorque: Dimension {
         super.init(symbol: symbol, converter: UnitConverterLinear(coefficient: coefficient))
     }
 
+    /// Torque in Newton Meter (N·m)
     open class var newtonMeter: UnitTorque {
         get {
             return UnitTorque(symbol: Symbol.newtonMeter, coefficient: Coefficient.newtonMeter)
         }
     }
 
+    /// Torque in Foot Pound Force (lbf·ft)
     open class var footPoundForce: UnitTorque {
         get {
             return UnitTorque(symbol: Symbol.footPoundForce, coefficient: Coefficient.footPoundForce)
         }
     }
 
+    /// Torque in Kilogram Force Meter (kgf·m)
     open class var kilogramForceMeter: UnitTorque {
         get {
             return UnitTorque(symbol: Symbol.kilogramForceMeter, coefficient: Coefficient.kilogramForceMeter)
         }
     }
 
+    /// Base Unit for UnitTorque
+    ///
+    /// - Returns: Base Unit
     open override class func baseUnit() -> UnitTorque {
         return UnitTorque.newtonMeter
     }

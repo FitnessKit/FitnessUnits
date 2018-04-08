@@ -33,6 +33,7 @@ final public class UnitPercent: Unit {
         static let percent      = "%"
     }
 
+    /// Percentage Unit
     public class var percent: UnitPercent {
         get {
             return UnitPercent(symbol: Symbol.percent)

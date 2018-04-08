@@ -36,32 +36,45 @@ open class UnitCadence: Unit {
         static let stepsPerMinute       = "steps/min"
         static let stridesPerMinute     = "strides/min"
         static let strokesPerMinute     = "strokes/min"
+        static let unitsPerMinute       = "units/min"
     }
 
+    /// Beats Per Minute (BPM)
     public class var beatsPerMinute: UnitCadence {
         get {
             return UnitCadence(symbol: Symbol.beatsPerMinute)
         }
     }
 
+    /// Generic Cadence (units/min)
+    public class var genericUnitsPerMinute: UnitCadence {
+        get {
+            return UnitCadence(symbol: Symbol.unitsPerMinute)
+        }
+    }
+
+    /// Revolutions Per Minute (RPM)
     public class var revolutionsPerMinute: UnitCadence {
         get {
             return UnitCadence(symbol: Symbol.revolutionsPerMinute)
         }
     }
 
+    /// Steps Per Minute (steps/minute)
     public class var stepsPerMinute: UnitCadence {
         get {
             return UnitCadence(symbol: Symbol.stepsPerMinute)
         }
     }
 
+    /// Strides Per Minute (strides/min)
     public class var stridesPerMinute: UnitCadence {
         get {
             return UnitCadence(symbol: Symbol.stridesPerMinute)
         }
     }
 
+    /// Strokes Per Minute (strokes/min)
     public class var strokesPerMinute: UnitCadence {
         get {
             return UnitCadence(symbol: Symbol.strokesPerMinute)

@@ -44,20 +44,25 @@ open class UnitAngularVelocity: Dimension {
         super.init(symbol: symbol, converter: UnitConverterLinear(coefficient: coefficient))
     }
 
-    open class var degressPerSecond: UnitAngularVelocity {
+    /// Angular Velocity in Degrees per Second (deg/s)
+    open class var degreesPerSecond: UnitAngularVelocity {
         get {
             return UnitAngularVelocity(symbol: Symbol.degress, coefficient: Coefficient.degress)
         }
     }
 
+    /// Angular Velocity in Radians per Second (rad/s)
     open class var radiansPerSecond: UnitAngularVelocity {
         get {
             return UnitAngularVelocity(symbol: Symbol.radians, coefficient: Coefficient.radians)
         }
     }
 
+    /// Base unit for UnitAngularVelocity
+    ///
+    /// - Returns: Base Unit
     open override class func baseUnit() -> UnitAngularVelocity {
-        return UnitAngularVelocity.degressPerSecond
+        return UnitAngularVelocity.degreesPerSecond
     }
 
     public required init?(coder aDecoder: NSCoder) { super.init(coder: aDecoder) }

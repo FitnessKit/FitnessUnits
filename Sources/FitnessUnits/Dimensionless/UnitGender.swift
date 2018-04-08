@@ -35,17 +35,27 @@ open class UnitGender: Unit {
     private struct Symbol {
         static let female       = "Female"
         static let male         = "Male"
+        static let unspecificed = "Unspecificed"
     }
 
+    /// Female Gender type
     public class var female: UnitGender {
         get {
             return UnitGender(symbol: Symbol.female)
         }
     }
 
+    /// Male Gender type
     public class var male: UnitGender {
         get {
             return UnitGender(symbol: Symbol.male)
+        }
+    }
+
+    /// Unspecified Gender type
+    public class var unspecificed: UnitGender {
+        get {
+            return UnitGender(symbol: Symbol.unspecificed)
         }
     }
 

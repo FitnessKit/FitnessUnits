@@ -48,30 +48,37 @@ open class UnitForce: Dimension {
         super.init(symbol: symbol, converter: UnitConverterLinear(coefficient: coefficient))
     }
 
+    /// Force in Newtons (N)
     open class var newton: UnitForce {
         get {
             return UnitForce(symbol: Symbol.newton, coefficient: Coefficient.newton)
         }
     }
 
+    /// Force in Kilogram Force (kgf)
     open class var kilogramForce: UnitForce {
         get {
             return UnitForce(symbol: Symbol.kilogramForce, coefficient: Coefficient.kilogramForce)
         }
     }
 
+    /// Force in Pound Force (lbf)
     open class var poundForce: UnitForce {
         get {
             return UnitForce(symbol: Symbol.poundForce, coefficient: Coefficient.poundForce)
         }
     }
 
+    /// Force in Dyne (dyn)
     open class var dyne: UnitForce {
         get {
             return UnitForce(symbol: Symbol.dyne, coefficient: Coefficient.dyne)
         }
     }
 
+    /// Base Unit for Force
+    ///
+    /// - Returns: The Force Base Unit
     open override class func baseUnit() -> UnitForce {
         return UnitForce.newton
     }

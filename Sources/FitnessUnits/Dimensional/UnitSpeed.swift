@@ -28,6 +28,7 @@ import Foundation
 @available(iOS 10.0, tvOS 10.0, watchOS 3.0, OSX 10.12, *)
 public extension UnitSpeed {
 
+    /// Speed in Kilometers Per Minute (km/m)
     public class var kilometersPerMinute: UnitSpeed {
         get {
             return UnitSpeed(symbol: "km/m", converter: UnitConverterLinear(coefficient: 16.666667))

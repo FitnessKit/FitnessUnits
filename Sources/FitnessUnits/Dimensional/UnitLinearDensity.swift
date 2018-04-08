@@ -44,18 +44,23 @@ open class UnitLinearDensity: Dimension {
         super.init(symbol: symbol, converter: UnitConverterLinear(coefficient: coefficient))
     }
 
+    /// Linear Density in Kilogram Meter (kg/m)
     open class var kilogramMeter: UnitLinearDensity {
         get {
             return UnitLinearDensity(symbol: Symbol.kilogramMeter, coefficient: Coefficient.kilogramMeter)
         }
     }
 
+    /// Linear Desnity in Pound Foot (lb/ft)
     open class var poundFoot: UnitLinearDensity {
         get {
             return UnitLinearDensity(symbol: Symbol.poundFoot, coefficient: Coefficient.poundFoot)
         }
     }
 
+    /// Base unit for UnitLinearDensity
+    ///
+    /// - Returns: Base Unit
     open override class func baseUnit() -> UnitLinearDensity {
         return UnitLinearDensity.kilogramMeter
     }

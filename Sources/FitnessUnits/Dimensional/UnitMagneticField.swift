@@ -50,37 +50,44 @@ open class UnitMagneticField: Dimension {
         super.init(symbol: symbol, converter: UnitConverterLinear(coefficient: coefficient))
     }
 
+    /// Magnetic Field in Tesla (T)
     open class var tesla: UnitMagneticField {
         get {
             return UnitMagneticField(symbol: Symbol.tesla, coefficient: Coefficient.tesla)
         }
     }
 
+    /// Magnetic Field in Mico Tesla (µT)
     open class var microTesla: UnitMagneticField {
         get {
             return UnitMagneticField(symbol: Symbol.microTesla, coefficient: Coefficient.microTesla)
         }
     }
 
+    /// Magnetic Field in Nano Tesla (nT)
     open class var nanoTesla: UnitMagneticField {
         get {
             return UnitMagneticField(symbol: Symbol.nanoTesla, coefficient: Coefficient.nanoTesla)
         }
     }
 
+    /// Magnetic Field in Gauss (G)
     open class var gauss: UnitMagneticField {
         get {
             return UnitMagneticField(symbol: Symbol.gauss, coefficient: Coefficient.gauss)
         }
     }
 
+    /// Magnetic Field in Milli Gauss (mG)
     open class var milliGauss: UnitMagneticField {
         get {
             return UnitMagneticField(symbol: Symbol.milliGauss, coefficient: Coefficient.milliGauss)
         }
     }
 
-
+    /// Base unit for MagneticField
+    ///
+    /// - Returns: Base Unit
     open override class func baseUnit() -> UnitMagneticField {
         return UnitMagneticField.tesla
     }
