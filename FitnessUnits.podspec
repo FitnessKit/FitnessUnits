@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'FitnessUnits'
-  s.version          = '1.3.0'
+  s.version          = '1.4.0'
   s.summary          = 'FitnessUnits.  Units for Fitness activity'
 
   s.description      = <<-DESC

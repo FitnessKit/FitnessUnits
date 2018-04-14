@@ -45,6 +45,13 @@ Swift Package Manager:
 * UnitOxygenConsumption - VO2
 * UnitPercent
 
+## New Measurement Types ##
+
+* StringMeasurement - Type that holds a `String` value associated with a `Unit`
+* ValidatedMeasurement - Extension of `Measurement` that provides feedback on validity of data.
+
+
+
 
 ## Author
 
