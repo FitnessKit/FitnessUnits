@@ -51,6 +51,10 @@ Swift Package Manager:
 * ValidatedMeasurement - Extension of `Measurement` that provides feedback on validity of data.
 
 
+## Other Types ##
+
+* MeasurementZone - Type that bounds values between a upper and lower bounds.
+
 
 
 ## Author
