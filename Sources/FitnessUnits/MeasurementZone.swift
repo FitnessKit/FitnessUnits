@@ -36,9 +36,9 @@ public struct MeasurementZone {
     private(set) public var name: String
 
     /// Color Repesentation of the Zone
-    private(set) public var color: Color
+    private(set) public var color: ColorType
 
-    public init(lower: UInt8, upper: UInt8, name: String, color: Color) {
+    public init(lower: UInt8, upper: UInt8, name: String, color: ColorType) {
         range = ClosedRange(uncheckedBounds: (lower: lower, upper: upper))
         self.name = name
         self.color = color
@@ -57,18 +57,26 @@ public struct MeasurementZone {
 extension MeasurementZone: Encodable {
 
     public func encode(to encoder: Encoder) throws {
-        enum CodingKeys : Int, CodingKey {
-            case lowerBounds
-            case upperBounds
+        enum CodingKeys: Int, CodingKey {
+            case range
             case name
             case color
         }
 
+        enum BoundsKeys: Int, CodingKey {
+            case lowerBounds
+            case upperBounds
+        }
+
         var container = encoder.container(keyedBy: CodingKeys.self)
-        try container.encode(self.range.lowerBound, forKey: .lowerBounds)
-        try container.encode(self.range.upperBound, forKey: .upperBounds)
         try container.encode(name, forKey: .name)
-        try container.encode(color, forKey: .color)
+
+        var boundsContainer = container.nestedContainer(keyedBy: BoundsKeys.self, forKey: .range)
+        try boundsContainer.encode(self.range.lowerBound, forKey: .lowerBounds)
+        try boundsContainer.encode(self.range.upperBound, forKey: .upperBounds)
+
+        try color.encode(to: encoder)
+
     }
 }
 

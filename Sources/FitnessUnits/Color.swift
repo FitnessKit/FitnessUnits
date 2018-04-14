@@ -24,42 +24,21 @@
 
 import Foundation
 
+public protocol ColorType: Encodable {}
 
-/// Color
-public struct Color {
 
-    /// Red
-    public let red: Float
+/// Color Type of HexString Color
+public struct HexColor: ColorType {
 
-    /// Green
-    public let green: Float
+    /// Hex Representation of the Color
+    public let hex: String
 
-    /// Blue
-    public let blue: Float
-
-    /// Alpha
+    /// Amount of Alpha
     ///
     /// 0.0 to 1.0
     public let alpha: Float
 
-    /// Hex Representation of Color
-    public let hex: String?
-
-    public init(r: Float, g: Float, b: Float, a: Float) {
-        red = r
-        green = g
-        blue = b
-
-        var aVal = a
-        if aVal < 0.0 { aVal = 0.0 }
-        if aVal > 1.0 { aVal = 1.0 }
-
-        alpha = aVal
-        hex = nil
-    }
-
     public init(hex: String, a: Float) {
-
         var string = ""
         if hex.lowercased().hasPrefix("0x") {
             string =  hex.replacingOccurrences(of: "0x", with: "")
@@ -77,12 +56,55 @@ public struct Color {
         }
         self.hex = string
 
-        var hexValue: UInt32 = 0
-        Scanner(string: string).scanHexInt32(&hexValue)
+        var aVal = a
+        if aVal < 0.0 { aVal = 0.0 }
+        if aVal > 1.0 { aVal = 1.0 }
 
-        red = Float(hexValue >> 16 & 0xFF)
-        green = Float(hexValue >> 8 & 0xFF)
-        blue = Float(hexValue & 0xFF)
+        self.alpha = aVal
+    }
+}
+
+@available(swift 4.0)
+extension HexColor {
+    public func encode(to encoder: Encoder) throws {
+        enum CodingKeys : Int, CodingKey {
+            case color
+        }
+
+        enum ColorKeys : Int, CodingKey {
+            case alpha
+            case hex
+        }
+
+        var container = encoder.container(keyedBy: CodingKeys.self)
+
+        var colorContainer = container.nestedContainer(keyedBy: ColorKeys.self, forKey: .color)
+        try colorContainer.encode(hex, forKey: .hex)
+        try colorContainer.encode(alpha, forKey: .alpha)
+    }
+}
+
+/// Color Type of RGB Color
+public struct RGBColor: ColorType {
+
+    /// Red
+    public let red: Float
+
+    /// Green
+    public let green: Float
+
+    /// Blue
+    public let blue: Float
+
+    /// Amount of Alpha
+    ///
+    /// 0.0 to 1.0
+    public let alpha: Float
+
+    public init(r: Float, g: Float, b: Float, a: Float) {
+        red = r
+        green = g
+        blue = b
 
         var aVal = a
         if aVal < 0.0 { aVal = 0.0 }
@@ -93,25 +115,26 @@ public struct Color {
 }
 
 @available(swift 4.0)
-extension Color: Encodable {
+extension RGBColor: Encodable {
 
     public func encode(to encoder: Encoder) throws {
         enum CodingKeys : Int, CodingKey {
+            case color
+        }
+
+        enum ColorKeys : Int, CodingKey {
             case red
             case green
             case blue
             case alpha
-            case hex
         }
 
         var container = encoder.container(keyedBy: CodingKeys.self)
-        try container.encode(alpha, forKey: .alpha)
-        if let hexstring = hex?.uppercased() {
-            try container.encode(hexstring, forKey: .hex)
-        } else {
-            try container.encode(red, forKey: .red)
-            try container.encode(green, forKey: .green)
-            try container.encode(blue, forKey: .blue)
-        }
+
+        var colorContainer = container.nestedContainer(keyedBy: ColorKeys.self, forKey: .color)
+        try colorContainer.encode(alpha, forKey: .alpha)
+        try colorContainer.encode(red, forKey: .red)
+        try colorContainer.encode(green, forKey: .green)
+        try colorContainer.encode(blue, forKey: .blue)
     }
 }
