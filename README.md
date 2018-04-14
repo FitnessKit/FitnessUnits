@@ -32,9 +32,10 @@ Swift Package Manager:
 
 ## Extensions to Dimensional Units ##
 
-* UnitAcceleration - add galileo
-* UnitAngle - bradian
-* UnitSpeed - add kilometersPerMinute
+* UnitAcceleration - Galileo
+* UnitAngle - Bradian
+* UnitAngle - Milliradian
+* UnitSpeed - kilometersPerMinute
 * UnitEnergy - Energy Burn Calculations
 * UnitMass - Mass Calculations
 

@@ -73,6 +73,63 @@ extension ValidatedMeasurement : CustomStringConvertible, CustomDebugStringConve
 }
 
 
+/// When a `ValidatedMeasurement` contains a `Dimension` unit, it gains the ability to convert between the kinds of units in that dimension.
+@available(macOS 10.12, iOS 10.0, watchOS 3.0, tvOS 10.0, *)
+extension ValidatedMeasurement where UnitType : Dimension {
+    /// Returns a new measurement created by converting to the specified unit.
+    ///
+    /// - parameter otherUnit: A unit of the same `Dimension`.
+    /// - returns: A converted measurement.
+    public func converted(to otherUnit: UnitType) -> ValidatedMeasurement<UnitType> {
+        if unit.isEqual(otherUnit) {
+            return ValidatedMeasurement(value: value, valid: valid, unit: otherUnit)
+        } else {
+            let valueInTermsOfBase = unit.converter.baseUnitValue(fromValue: value)
+            if otherUnit.isEqual(type(of: unit).baseUnit()) {
+                return ValidatedMeasurement(value: valueInTermsOfBase, valid: valid, unit: otherUnit)
+            } else {
+                let otherValueFromTermsOfBase = otherUnit.converter.value(fromBaseUnitValue: valueInTermsOfBase)
+                return ValidatedMeasurement(value: otherValueFromTermsOfBase, valid: valid, unit: otherUnit)
+            }
+        }
+    }
+
+    /// Converts the measurement to the specified unit.
+    ///
+    /// - parameter otherUnit: A unit of the same `Dimension`.
+    public mutating func convert(to otherUnit: UnitType) {
+        self = converted(to: otherUnit)
+    }
+
+    /// Add two measurements of the same Dimension.
+    ///
+    /// If the `unit` of the `lhs` and `rhs` are `isEqual`, then this returns the result of adding the `value` of each `ValidatedMeasurement`. If they are not equal, then this will convert both to the base unit of the `Dimension` and return the result as a `ValidatedMeasurement` of that base unit.
+    /// - returns: The result of adding the two measurements.
+    public static func +(lhs: ValidatedMeasurement<UnitType>, rhs: ValidatedMeasurement<UnitType>) -> ValidatedMeasurement<UnitType> {
+        if lhs.unit.isEqual(rhs.unit) && lhs.valid == rhs.valid {
+            return ValidatedMeasurement(value: lhs.value + rhs.value, valid: lhs.valid, unit: lhs.unit)
+        } else {
+            let lhsValueInTermsOfBase = lhs.unit.converter.baseUnitValue(fromValue: lhs.value)
+            let rhsValueInTermsOfBase = rhs.unit.converter.baseUnitValue(fromValue: rhs.value)
+            return ValidatedMeasurement(value: lhsValueInTermsOfBase + rhsValueInTermsOfBase, valid: lhs.valid, unit: type(of: lhs.unit).baseUnit())
+        }
+    }
+
+    /// Subtract two measurements of the same Dimension.
+    ///
+    /// If the `unit` of the `lhs` and `rhs` are `==`, then this returns the result of subtracting the `value` of each `ValidatedMeasurement`. If they are not equal, then this will convert both to the base unit of the `Dimension` and return the result as a `ValidatedMeasurement` of that base unit.
+    /// - returns: The result of adding the two measurements.
+    public static func -(lhs: ValidatedMeasurement<UnitType>, rhs: ValidatedMeasurement<UnitType>) -> ValidatedMeasurement<UnitType> {
+        if lhs.unit == rhs.unit && lhs.valid == rhs.valid {
+            return ValidatedMeasurement(value: lhs.value - rhs.value, valid: lhs.valid, unit: lhs.unit)
+        } else {
+            let lhsValueInTermsOfBase = lhs.unit.converter.baseUnitValue(fromValue: lhs.value)
+            let rhsValueInTermsOfBase = rhs.unit.converter.baseUnitValue(fromValue: rhs.value)
+            return ValidatedMeasurement(value: lhsValueInTermsOfBase - rhsValueInTermsOfBase, valid: lhs.valid, unit: type(of: lhs.unit).baseUnit())
+        }
+    }
+}
+
 @available(macOS 10.12, iOS 10.0, watchOS 3.0, tvOS 10.0, *)
 extension ValidatedMeasurement {
     /// Add two measurements of the same Unit.

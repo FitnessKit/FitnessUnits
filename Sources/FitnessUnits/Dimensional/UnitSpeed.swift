@@ -28,10 +28,18 @@ import Foundation
 @available(iOS 10.0, tvOS 10.0, watchOS 3.0, OSX 10.12, *)
 public extension UnitSpeed {
 
+    private struct Symbol {
+        static let kpm      = "km/m"
+    }
+
+    private struct Coefficient {
+        static let kpm      = 16.666667
+    }
+
     /// Speed in Kilometers Per Minute (km/m)
     public class var kilometersPerMinute: UnitSpeed {
         get {
-            return UnitSpeed(symbol: "km/m", converter: UnitConverterLinear(coefficient: 16.666667))
+            return UnitSpeed(symbol: Symbol.kpm, converter: UnitConverterLinear(coefficient: Coefficient.kpm))
         }
     }
 }

@@ -28,10 +28,34 @@ import Foundation
 @available(iOS 10.0, tvOS 10.0, watchOS 3.0, OSX 10.12, *)
 public extension UnitAngle {
 
+    private struct Symbol {
+        static let bradian      = "bradian"
+        static let milliradian  = "mrad"
+        static let turn         = "turn"
+    }
+
+    private struct Coefficient {
+        static let bradian          = 1.40625
+        static let milliradian      = 0.057296
+        static let turn             = 360.0
+    }
+
     /// Bradian Unit of Angle
     public class var bradian: UnitAngle {
         get {
-            return UnitAngle(symbol: "bradian", converter: UnitConverterLinear(coefficient: 1.40625))
+            return UnitAngle(symbol: Symbol.bradian, converter: UnitConverterLinear(coefficient: Coefficient.bradian))
         }
+    }
+
+    /// Milliradian Unit of Angle
+    public class var milliradian: UnitAngle {
+        return UnitAngle(symbol: Symbol.milliradian, converter: UnitConverterLinear(coefficient: Coefficient.milliradian))
+    }
+
+    /// Turn Unit of Angle
+    ///
+    /// This is the same as a `UnitAngle.revolutions`
+    public class var turn: UnitAngle {
+        return UnitAngle(symbol: Symbol.turn, converter: UnitConverterLinear(coefficient: Coefficient.turn))
     }
 }
