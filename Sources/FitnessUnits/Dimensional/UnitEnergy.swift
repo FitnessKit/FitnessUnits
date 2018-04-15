@@ -29,6 +29,67 @@ import Foundation
 @available(iOS 10.0, tvOS 10.0, watchOS 3.0, OSX 10.12, *)
 public extension UnitEnergy {
 
+    private struct Symbol {
+        static let megajoule        = "MJ"
+        static let wattHours        = "Wh"
+        static let electronVolt     = "eV"
+        static let btu              = "BTU"
+        static let therm            = "thm"
+    }
+
+    private struct Coefficient {
+        static let megajoule        = 1000000.0
+        static let wattHours        = 3600.0
+        static let electronVolt     = 1.6022e-19
+        static let btu              = 1055.06
+        static let therm            = 1.055e+8
+    }
+
+    private convenience init(symbol: String, coefficient: Double) {
+        self.init(symbol: symbol, converter: UnitConverterLinear(coefficient: coefficient))
+    }
+
+    /// Energy in MegaJoule (MJ)
+    public class var megajoule: UnitEnergy {
+        get {
+            return UnitEnergy(symbol: Symbol.megajoule, coefficient: Coefficient.megajoule)
+        }
+    }
+
+    /// Energy in Watt Hours (Wh)
+    public class var wattHours: UnitEnergy {
+        get {
+            return UnitEnergy(symbol: Symbol.wattHours, coefficient: Coefficient.wattHours)
+        }
+    }
+
+    /// Energy in Electron Volts (ev)
+    public class var electronVolt: UnitEnergy {
+        get {
+            return UnitEnergy(symbol: Symbol.electronVolt, coefficient: Coefficient.electronVolt)
+        }
+    }
+
+    /// Energy in British Thermal Units (BTU)
+    public class var btu: UnitEnergy {
+        get {
+            return UnitEnergy(symbol: Symbol.btu, coefficient: Coefficient.btu)
+        }
+    }
+
+    /// Energy in Therms (thm)
+    public class var therm: UnitEnergy {
+        get {
+            return UnitEnergy(symbol: Symbol.therm, coefficient: Coefficient.therm)
+        }
+    }
+
+}
+
+@available(swift 3.1)
+@available(iOS 10.0, tvOS 10.0, watchOS 3.0, OSX 10.12, *)
+public extension UnitEnergy {
+
     /// Calculates the Energy Burned using stanard calculation from Heartrate, age, gender
     ///
     /// - Parameters:

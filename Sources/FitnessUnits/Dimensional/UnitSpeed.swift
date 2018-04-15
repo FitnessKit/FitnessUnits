@@ -29,11 +29,44 @@ import Foundation
 public extension UnitSpeed {
 
     private struct Symbol {
-        static let kpm      = "km/m"
+        static let meterPerHour     = "m/h"
+        static let meterPerMinute   = "m/m"
+        static let kms              = "km/s"
+        static let kpm              = "km/m"
+        static let mpm              = "mpm" //Miles Per Minute
+        static let mps              = "mps" //Miles Per Second
+        static let speedOfLight     = "c"
     }
 
     private struct Coefficient {
-        static let kpm      = 16.666667
+        static let meterPerHour     = 0.0002778
+        static let meterPerMinute   = 0.01667
+        static let kms              = 1000.0
+        static let kpm              = 16.666667
+        static let mpm              = 26.82
+        static let mps              = 1609.0
+        static let speedOfLight     = 299792454.00
+    }
+
+    /// Speed in Meters Per Hour (m/h)
+    public class var metersPerHour: UnitSpeed {
+        get {
+            return UnitSpeed(symbol: Symbol.meterPerHour, converter: UnitConverterLinear(coefficient: Coefficient.meterPerHour))
+        }
+    }
+
+    /// Speed in Meters Per Minute (m/m)
+    public class var metersPerMinute: UnitSpeed {
+        get {
+            return UnitSpeed(symbol: Symbol.meterPerMinute, converter: UnitConverterLinear(coefficient: Coefficient.meterPerMinute))
+        }
+    }
+
+    /// Speed in Kilometers Per Second (km/s)
+    public class var kilometersPerSecond: UnitSpeed {
+        get {
+            return UnitSpeed(symbol: Symbol.kms, converter: UnitConverterLinear(coefficient: Coefficient.kms))
+        }
     }
 
     /// Speed in Kilometers Per Minute (km/m)
@@ -42,4 +75,26 @@ public extension UnitSpeed {
             return UnitSpeed(symbol: Symbol.kpm, converter: UnitConverterLinear(coefficient: Coefficient.kpm))
         }
     }
+
+    /// Speed in Miles Per Minute (mpm)
+    public class var milesPerMinute: UnitSpeed {
+        get {
+            return UnitSpeed(symbol: Symbol.mpm, converter: UnitConverterLinear(coefficient: Coefficient.mpm))
+        }
+    }
+
+    /// Speed in Miles Per Second (mps)
+    public class var milesPerSecond: UnitSpeed {
+        get {
+            return UnitSpeed(symbol: Symbol.mps, converter: UnitConverterLinear(coefficient: Coefficient.mps))
+        }
+    }
+
+    /// Speed in Speed of Light (c)
+    public class var speedOfLight: UnitSpeed {
+        get {
+            return UnitSpeed(symbol: Symbol.speedOfLight, converter: UnitConverterLinear(coefficient: Coefficient.speedOfLight))
+        }
+    }
+
 }

@@ -35,8 +35,19 @@ Swift Package Manager:
 * UnitAcceleration - Galileo
 * UnitAngle - Bradian
 * UnitAngle - Milliradian
+* UnitSpeed - metersPerMinute
+* UnitSpeed - metersPerHour
+* UnitSpeed - kilometersPerSecond
 * UnitSpeed - kilometersPerMinute
+* UnitSpeed - milesPerSecond
+* UnitSpeed - milesPerMinute
+* UnitSpeed - speedOfLight
 * UnitEnergy - Energy Burn Calculations
+* UnitEnergy - MegaJoule
+* UnitEnergy - Watt Hour
+* UnitEnergy - Electron Volts
+* UnitEnergy - British Thermal Units (BTU)
+* UnitEnergy - US Therm (thm)
 * UnitMass - Mass Calculations
 
 ## New Dimensionless Unit Types ##
@@ -45,6 +56,7 @@ Swift Package Manager:
 * UnitGender
 * UnitOxygenConsumption - VO2
 * UnitPercent
+* UnitRadioactivity
 
 ## New Measurement Types ##
 
