@@ -49,6 +49,11 @@ Swift Package Manager:
 * UnitEnergy - British Thermal Units (BTU)
 * UnitEnergy - US Therm (thm)
 * UnitMass - Mass Calculations
+* UnitConcentrationMass - gramsPerMilliliter
+* UnitConcentrationMass - kilogramsPerMilliliter
+* UnitConcentrationMass - milligramsPerLiter
+* UnitConcentrationMass - kilogramsPerLiter
+
 
 ## New Dimensionless Unit Types ##
 
