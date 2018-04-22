@@ -29,17 +29,44 @@ import Foundation
 public extension UnitDuration { /// Base unit - seconds
 
     private struct Symbol {
-        static let year        = "year"
+        static let microsecond  = "μs"
+        static let millisecond  = "ms"
+        static let year         = "year"
+        static let decade       = "decade"
     }
 
     private struct Coefficient {
-        static let year        = 3.154e+7
+        static let microsecond  = 1e-6
+        static let millisecond  = 0.001
+        static let year         = 3.154e+7
+        static let decade       = 3.154e+8
+    }
+
+    /// Duration Microsecond
+    public class var microsecond: UnitDuration {
+        get {
+            return UnitDuration(symbol: Symbol.microsecond, converter: UnitConverterLinear(coefficient: Coefficient.microsecond))
+        }
+    }
+
+    /// Duration Millisecond
+    public class var millisecond: UnitDuration {
+        get {
+            return UnitDuration(symbol: Symbol.millisecond, converter: UnitConverterLinear(coefficient: Coefficient.millisecond))
+        }
     }
 
     /// Duration Year
     public class var year: UnitDuration {
         get {
             return UnitDuration(symbol: Symbol.year, converter: UnitConverterLinear(coefficient: Coefficient.year))
+        }
+    }
+
+    /// Duration Decade
+    public class var decade: UnitDuration {
+        get {
+            return UnitDuration(symbol: Symbol.decade, converter: UnitConverterLinear(coefficient: Coefficient.decade))
         }
     }
 

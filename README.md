@@ -53,7 +53,10 @@ Swift Package Manager:
 * UnitConcentrationMass - kilogramsPerMilliliter
 * UnitConcentrationMass - milligramsPerLiter
 * UnitConcentrationMass - kilogramsPerLiter
+* UnitDuration - microsecond
+* UnitDuration - millisecond
 * UnitDuration - year
+* UnitDuration - decade
 
 
 ## New Dimensionless Unit Types ##
