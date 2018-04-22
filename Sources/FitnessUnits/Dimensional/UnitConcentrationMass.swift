@@ -44,30 +44,30 @@ public extension UnitConcentrationMass { /// Base unit - gramsPerLiter
     }
 
     /// Concentraion of Mass in Grams Per Milliliter (g/mL)
-    public class var gramsPerMilliliter: UnitSpeed {
+    public class var gramsPerMilliliter: UnitConcentrationMass {
         get {
-            return UnitSpeed(symbol: Symbol.gramPerMilliliter, converter: UnitConverterLinear(coefficient: Coefficient.gramPerMilliliter))
+            return UnitConcentrationMass(symbol: Symbol.gramPerMilliliter, converter: UnitConverterLinear(coefficient: Coefficient.gramPerMilliliter))
         }
     }
 
     /// Concentraion of Mass in Kilograms Per Milliliter (kg/mL)
-    public class var kilogramsPerMilliliter: UnitSpeed {
+    public class var kilogramsPerMilliliter: UnitConcentrationMass {
         get {
-            return UnitSpeed(symbol: Symbol.kilogramPerMilliliter, converter: UnitConverterLinear(coefficient: Coefficient.kilogramPerMilliliter))
+            return UnitConcentrationMass(symbol: Symbol.kilogramPerMilliliter, converter: UnitConverterLinear(coefficient: Coefficient.kilogramPerMilliliter))
         }
     }
 
     /// Concentraion of Mass in Milligram Per Liter (mg/L)
-    public class var milligramsPerLiter: UnitSpeed {
+    public class var milligramsPerLiter: UnitConcentrationMass {
         get {
-            return UnitSpeed(symbol: Symbol.milligramPerLiter, converter: UnitConverterLinear(coefficient: Coefficient.milligramPerLiter))
+            return UnitConcentrationMass(symbol: Symbol.milligramPerLiter, converter: UnitConverterLinear(coefficient: Coefficient.milligramPerLiter))
         }
     }
 
     /// Concentraion of Mass in Kilogram Per Liter (kg/L)
-    public class var kilogramsPerLiter: UnitSpeed {
+    public class var kilogramsPerLiter: UnitConcentrationMass {
         get {
-            return UnitSpeed(symbol: Symbol.kilogramPerLiter, converter: UnitConverterLinear(coefficient: Coefficient.kilogramPerLiter))
+            return UnitConcentrationMass(symbol: Symbol.kilogramPerLiter, converter: UnitConverterLinear(coefficient: Coefficient.kilogramPerLiter))
         }
     }
 
