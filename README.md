@@ -71,7 +71,8 @@ Swift Package Manager:
 
 * StringMeasurement - Type that holds a `String` value associated with a `Unit`
 * ValidatedMeasurement - Extension of `Measurement` that provides feedback on validity of data.
-
+* ValidatedBinaryInteger - BinaryInteger with a validity check
+* ValidatedBinaryFloatingPoint - BinaryFloatingPoint with a validity check
 
 ## Other Types ##
 

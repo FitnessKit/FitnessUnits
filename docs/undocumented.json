@@ -1,0 +1,131 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/kevinh/Developer/GitHub/FitnessKit/FitnessUnits/Sources/FitnessUnits/Color.swift",
+      "line": 27,
+      "symbol": "ColorType",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kevinh/Developer/GitHub/FitnessKit/FitnessUnits/Sources/FitnessUnits/Color.swift",
+      "line": 41,
+      "symbol": "HexColor.init(hex:a:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kevinh/Developer/GitHub/FitnessKit/FitnessUnits/Sources/FitnessUnits/Color.swift",
+      "line": 104,
+      "symbol": "RGBColor.init(r:g:b:a:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kevinh/Developer/GitHub/FitnessKit/FitnessUnits/Sources/FitnessUnits/Dimensional/UnitAngularVelocity.swift",
+      "line": 68,
+      "symbol": "UnitAngularVelocity.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kevinh/Developer/GitHub/FitnessKit/FitnessUnits/Sources/FitnessUnits/Dimensional/UnitAngularVelocity.swift",
+      "line": 69,
+      "symbol": "UnitAngularVelocity.encode(with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kevinh/Developer/GitHub/FitnessKit/FitnessUnits/Sources/FitnessUnits/Dimensional/UnitForce.swift",
+      "line": 86,
+      "symbol": "UnitForce.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kevinh/Developer/GitHub/FitnessKit/FitnessUnits/Sources/FitnessUnits/Dimensional/UnitForce.swift",
+      "line": 87,
+      "symbol": "UnitForce.encode(with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kevinh/Developer/GitHub/FitnessKit/FitnessUnits/Sources/FitnessUnits/Dimensional/UnitLinearDensity.swift",
+      "line": 68,
+      "symbol": "UnitLinearDensity.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kevinh/Developer/GitHub/FitnessKit/FitnessUnits/Sources/FitnessUnits/Dimensional/UnitLinearDensity.swift",
+      "line": 69,
+      "symbol": "UnitLinearDensity.encode(with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kevinh/Developer/GitHub/FitnessKit/FitnessUnits/Sources/FitnessUnits/Dimensional/UnitMagneticField.swift",
+      "line": 95,
+      "symbol": "UnitMagneticField.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kevinh/Developer/GitHub/FitnessKit/FitnessUnits/Sources/FitnessUnits/Dimensional/UnitMagneticField.swift",
+      "line": 96,
+      "symbol": "UnitMagneticField.encode(with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kevinh/Developer/GitHub/FitnessKit/FitnessUnits/Sources/FitnessUnits/Dimensional/UnitRadioactivity.swift",
+      "line": 124,
+      "symbol": "UnitRadioactivity.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kevinh/Developer/GitHub/FitnessKit/FitnessUnits/Sources/FitnessUnits/Dimensional/UnitRadioactivity.swift",
+      "line": 125,
+      "symbol": "UnitRadioactivity.encode(with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kevinh/Developer/GitHub/FitnessKit/FitnessUnits/Sources/FitnessUnits/Dimensional/UnitTorque.swift",
+      "line": 77,
+      "symbol": "UnitTorque.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kevinh/Developer/GitHub/FitnessKit/FitnessUnits/Sources/FitnessUnits/Dimensional/UnitTorque.swift",
+      "line": 78,
+      "symbol": "UnitTorque.encode(with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kevinh/Developer/GitHub/FitnessKit/FitnessUnits/Sources/FitnessUnits/MeasurementZone.swift",
+      "line": 41,
+      "symbol": "MeasurementZone.init(lower:upper:name:color:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kevinh/Developer/GitHub/FitnessKit/FitnessUnits/Sources/FitnessUnits/Measurements/StringMeasurement.swift",
+      "line": 100,
+      "symbol": "StringMeasurement.init(from:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kevinh/Developer/GitHub/FitnessKit/FitnessUnits/Sources/FitnessUnits/Measurements/ValidatedMeasurement.swift",
+      "line": 51,
+      "symbol": "ValidatedMeasurement.hashValue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/kevinh/Developer/GitHub/FitnessKit/FitnessUnits"
+}

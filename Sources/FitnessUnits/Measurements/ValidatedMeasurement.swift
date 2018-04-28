@@ -30,7 +30,7 @@ import Foundation
 ///
 /// ValidatedMeasurements support a large set of operators, including `+`, `-`, `*`, `/`, and a full set of comparison operators.
 @available(macOS 10.12, iOS 10.0, watchOS 3.0, tvOS 10.0, *)
-public struct ValidatedMeasurement<UnitType : Unit> :  Comparable, Equatable {
+public struct ValidatedMeasurement<UnitType: Unit>: Comparable, Equatable {
 
     /// The unit component of the `ValidatedMeasurement`.
     public let unit: UnitType
@@ -54,7 +54,7 @@ public struct ValidatedMeasurement<UnitType : Unit> :  Comparable, Equatable {
 }
 
 @available(macOS 10.12, iOS 10.0, watchOS 3.0, tvOS 10.0, *)
-extension ValidatedMeasurement : CustomStringConvertible, CustomDebugStringConvertible, CustomReflectable {
+extension ValidatedMeasurement: CustomStringConvertible, CustomDebugStringConvertible, CustomReflectable {
     public var description: String {
         return "\(value) \(unit.symbol))"
     }
@@ -221,18 +221,18 @@ extension ValidatedMeasurement {
 @available(swift 4.0)
 @available(macOS 10.12, iOS 10.0, watchOS 3.0, tvOS 10.0, *)
 extension ValidatedMeasurement : Codable {
-    private enum CodingKeys : Int, CodingKey {
+    private enum CodingKeys: Int, CodingKey {
         case value
         case valid
         case unit
     }
 
-    private enum UnitCodingKeys : Int, CodingKey {
+    private enum UnitCodingKeys: Int, CodingKey {
         case symbol
         case converter
     }
 
-    private enum LinearConverterCodingKeys : Int, CodingKey {
+    private enum LinearConverterCodingKeys: Int, CodingKey {
         case coefficient
         case constant
     }

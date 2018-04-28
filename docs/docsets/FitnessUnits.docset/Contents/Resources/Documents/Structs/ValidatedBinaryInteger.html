@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ValidatedBinaryInteger Structure Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Struct/ValidatedBinaryInteger" class="dashAnchor"></a>
+    <a title="ValidatedBinaryInteger Structure Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">FitnessUnits Docs</a> (90% documented)</p>
+        <p class="header-right"><a href="https://github.com/FitnessKit/FitnessUnits"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">FitnessUnits Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        ValidatedBinaryInteger Structure Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/UnitAngularVelocity.html">UnitAngularVelocity</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/UnitCadence.html">UnitCadence</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/UnitForce.html">UnitForce</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/UnitGender.html">UnitGender</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/UnitLinearDensity.html">UnitLinearDensity</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/UnitMagneticField.html">UnitMagneticField</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/UnitOxygenConsumption.html">UnitOxygenConsumption</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/UnitPercent.html">UnitPercent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/UnitRadioactivity.html">UnitRadioactivity</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/UnitTorque.html">UnitTorque</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/UnitAcceleration.html">UnitAcceleration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UnitAngle.html">UnitAngle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UnitConcentrationMass.html">UnitConcentrationMass</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UnitDuration.html">UnitDuration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UnitEnergy.html">UnitEnergy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UnitMass.html">UnitMass</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UnitSpeed.html">UnitSpeed</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/s:12FitnessUnits9ColorTypeP">ColorType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/HexColor.html">HexColor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MeasurementZone.html">MeasurementZone</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/RGBColor.html">RGBColor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/StringMeasurement.html">StringMeasurement</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ValidatedBinaryFloatingPoint.html">ValidatedBinaryFloatingPoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ValidatedBinaryInteger.html">ValidatedBinaryInteger</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ValidatedMeasurement.html">ValidatedMeasurement</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>ValidatedBinaryInteger</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ValidatedBinaryInteger</span><span class="o">&lt;</span><span class="kt">BinaryIntegerType</span><span class="p">:</span> <span class="kt">BinaryInteger</span><span class="o">&gt;</span></code></pre>
+
+                </div>
+              </div>
+            <p>A <code>ValidatedBinaryInteger</code> is a model type that holds a <code>Numeric</code> value that has an associated <code>valid</code> flag.</p>
+
+<p><code>ValidatedBinaryInteger</code> provides feedback on validity of value</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12FitnessUnits22ValidatedBinaryIntegerV5valuexvp"></a>
+                    <a name="//apple_ref/swift/Property/value" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12FitnessUnits22ValidatedBinaryIntegerV5valuexvp">value</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The value component of the <code>ValidatedBinaryInteger</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">BinaryIntegerType</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12FitnessUnits22ValidatedBinaryIntegerV5validSbvp"></a>
+                    <a name="//apple_ref/swift/Property/valid" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12FitnessUnits22ValidatedBinaryIntegerV5validSbvp">valid</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The validity of the <code>ValidatedBinaryInteger</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">valid</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12FitnessUnits22ValidatedBinaryIntegerVACyxGx5value_Sb5validtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(value:valid:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12FitnessUnits22ValidatedBinaryIntegerVACyxGx5value_Sb5validtcfc">init(value:valid:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create a <code>ValidatedBinaryInteger</code> given a specified value and unit.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="kt">BinaryIntegerType</span><span class="p">,</span> <span class="nv">valid</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:s23CustomStringConvertibleP11descriptionSSvp"></a>
+                    <a name="//apple_ref/swift/Property/description" class="dashAnchor"></a>
+                    <a class="token" href="#/s:s23CustomStringConvertibleP11descriptionSSvp">description</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:s28CustomDebugStringConvertibleP16debugDescriptionSSvp"></a>
+                    <a name="//apple_ref/swift/Property/debugDescription" class="dashAnchor"></a>
+                    <a class="token" href="#/s:s28CustomDebugStringConvertibleP16debugDescriptionSSvp">debugDescription</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">debugDescription</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:s17CustomReflectableP12customMirrors0D0Vvp"></a>
+                    <a name="//apple_ref/swift/Property/customMirror" class="dashAnchor"></a>
+                    <a class="token" href="#/s:s17CustomReflectableP12customMirrors0D0Vvp">customMirror</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">customMirror</span><span class="p">:</span> <span class="kt">Mirror</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:s9DecodablePxs7Decoder_p4from_tKcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(from:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:s9DecodablePxs7Decoder_p4from_tKcfc">init(from:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">from</span> <span class="nv">decoder</span><span class="p">:</span> <span class="kt">Decoder</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:s9EncodableP6encodeys7Encoder_p2to_tKF"></a>
+                    <a name="//apple_ref/swift/Method/encode(to:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:s9EncodableP6encodeys7Encoder_p2to_tKF">encode(to:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">encode</span><span class="p">(</span><span class="n">to</span> <span class="nv">encoder</span><span class="p">:</span> <span class="kt">Encoder</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>© 2017 Kevin A. Hoogheem</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
