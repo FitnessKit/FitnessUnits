@@ -1,7 +1,7 @@
 # FitnessUnits
 Units of Measurement for Fitness
 
-[![Swift3](https://img.shields.io/badge/swift3-compatible-4BC51D.svg?style=flat)](https://developer.apple.com/swift)
+[![Swift4](https://img.shields.io/badge/swift4-compatible-4BC51D.svg?style=flat)](https://developer.apple.com/swift)
 [![Version](https://img.shields.io/cocoapods/v/FitnessUnits.svg?style=flat)](http://cocoapods.org/pods/FitnessUnits)
 [![License](https://img.shields.io/cocoapods/l/FitnessUnits.svg?style=flat)](http://cocoapods.org/pods/FitnessUnits)
 [![Platform](https://img.shields.io/cocoapods/p/FitnessUnits.svg?style=flat)](http://cocoapods.org/pods/FitnessUnits)
@@ -16,11 +16,21 @@ pod "FitnessUnits"
 ```
 
 Swift Package Manager:
+
+Swift3
 ```swift
     dependencies: [
         .Package(url: "https://github.com/FitnessKit/FitnessUnits", majorVersion: 1)
     ]
 ```
+
+Swift4
+```swift
+    dependencies: [
+        .package(url: "https://github.com/FitnessKit/FitnessUnits", from: "2.0.0"),
+    ]
+```
+
 
 ## New Dimensional Unit Types ##
 

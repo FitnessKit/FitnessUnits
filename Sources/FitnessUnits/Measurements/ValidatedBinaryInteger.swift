@@ -37,7 +37,7 @@ public struct ValidatedBinaryInteger<BinaryIntegerType: BinaryInteger> {
     public var valid: Bool
 
     /// Create a `ValidatedBinaryInteger` given a specified value and unit.
-        public init(value: BinaryIntegerType, valid: Bool) {
+    public init(value: BinaryIntegerType, valid: Bool) {
         self.value = value
         self.valid = valid
     }
@@ -133,43 +133,43 @@ extension ValidatedBinaryInteger: Codable {
         switch unitType {
         case "UInt8".lowercased():
             let value = try container.decode(UInt8.self, forKey: .value)
-            self.init(value: value, valid: valid)
+            self.init(value: UInt8(value), valid: valid)
 
         case "UInt16".lowercased():
             let value = try container.decode(UInt16.self, forKey: .value)
-            self.init(value: value, valid: valid)
+            self.init(value: UInt16(value), valid: valid)
 
         case "UInt32".lowercased():
             let value = try container.decode(UInt32.self, forKey: .value)
-            self.init(value: value, valid: valid)
+            self.init(value: UInt32(value), valid: valid)
 
         case "UInt64".lowercased():
             let value = try container.decode(UInt64.self, forKey: .value)
-            self.init(value: value, valid: valid)
+            self.init(value: UInt64(value), valid: valid)
 
         case "UInt".lowercased():
-            let value = try container.decode(UInt64.self, forKey: .value)
-            self.init(value: value, valid: valid)
+            let value = try container.decode(UInt.self, forKey: .value)
+            self.init(value: UInt(value), valid: valid)
 
         case "Int8".lowercased():
             let value = try container.decode(Int8.self, forKey: .value)
-            self.init(value: value, valid: valid)
+            self.init(value: Int8(value), valid: valid)
 
         case "Int16".lowercased():
             let value = try container.decode(Int16.self, forKey: .value)
-            self.init(value: value, valid: valid)
+            self.init(value: Int16(value), valid: valid)
 
         case "Int32".lowercased():
             let value = try container.decode(Int32.self, forKey: .value)
-            self.init(value: value, valid: valid)
+            self.init(value: Int32(value), valid: valid)
 
         case "Int64".lowercased():
             let value = try container.decode(Int64.self, forKey: .value)
-            self.init(value: value, valid: valid)
+            self.init(value: Int64(value), valid: valid)
 
         case "Int".lowercased():
-            let value = try container.decode(Int64.self, forKey: .value)
-            self.init(value: value, valid: valid)
+            let value = try container.decode(Int.self, forKey: .value)
+            self.init(value: Int(value), valid: valid)
 
         default:
             fatalError("Attempt to decode none BinaryInteger")
