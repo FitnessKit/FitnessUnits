@@ -12,5 +12,5 @@ let package = Package(
         .target(
             name: "FitnessUnits"
         )
-    ],
+    ]
 )
