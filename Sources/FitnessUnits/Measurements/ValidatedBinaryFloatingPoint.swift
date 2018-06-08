@@ -52,10 +52,12 @@ public struct ValidatedBinaryFloatingPoint<BinaryFloatingPointType: BinaryFloati
         self.valid = valid
     }
 
+    #if os(OSX)
     private init(value: Float80, valid: Bool) {
         self.value = BinaryFloatingPointType(value)
         self.valid = valid
     }
+    #endif
 }
 
 @available(swift 3.1)
