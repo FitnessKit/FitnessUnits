@@ -28,36 +28,19 @@ import Foundation
 ///
 /// `ValidatedBinaryFloatingPoint` provides feedback on validity of value
 @available(swift 3.1)
-public struct ValidatedBinaryFloatingPoint<BinaryFloatingPointType: BinaryFloatingPoint> {
+public struct ValidatedBinaryFloatingPoint<Element> where Element: BinaryFloatingPoint {
 
     /// The value component of the `ValidatedBinaryFloatingPoint`.
-    public var value: BinaryFloatingPointType
+    public var value: Element
 
     /// The validity of the `ValidatedBinaryFloatingPoint`.
     public var valid: Bool
 
     /// Create a `ValidatedBinaryFloatingPoint` given a specified value and unit.
-    public init(value: BinaryFloatingPointType, valid: Bool) {
+    public init(value: Element, valid: Bool) {
         self.value = value
         self.valid = valid
     }
-
-    private init(value: Float, valid: Bool) {
-        self.value = BinaryFloatingPointType(value)
-        self.valid = valid
-    }
-
-    private init(value: Float64, valid: Bool) {
-        self.value = BinaryFloatingPointType(value)
-        self.valid = valid
-    }
-
-    #if os(OSX)
-    private init(value: Float80, valid: Bool) {
-        self.value = BinaryFloatingPointType(value)
-        self.valid = valid
-    }
-    #endif
 }
 
 @available(swift 3.1)
@@ -100,19 +83,19 @@ extension ValidatedBinaryFloatingPoint: Codable {
         switch unitType {
         case "Float".lowercased():
             let value = try container.decode(Float.self, forKey: .value)
-            self.init(value: value, valid: valid)
+            self.init(value: Element(value), valid: valid)
 
         case "Float32".lowercased():
             let value = try container.decode(Float.self, forKey: .value)
-            self.init(value: value, valid: valid)
+            self.init(value: Element(value), valid: valid)
 
         case "Float64".lowercased():
             let value = try container.decode(Float64.self, forKey: .value)
-            self.init(value: value, valid: valid)
+            self.init(value: Element(value), valid: valid)
 
         case "Double".lowercased():
             let value = try container.decode(Double.self, forKey: .value)
-            self.init(value: value, valid: valid)
+            self.init(value: Element(value), valid: valid)
 
 
         default:
