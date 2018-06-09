@@ -24,7 +24,6 @@
 
 import Foundation
 
-
 @available(swift 3.1)
 @available(iOS 10.0, tvOS 10.0, watchOS 3.0, OSX 10.12, *)
 public extension UnitMass {
@@ -88,7 +87,6 @@ public extension UnitMass {
         let bsa = 0.0235 * pow(heightCm, 0.42246) * pow(weightKg, 0.51456)
         return bsa
     }
-
 }
 
 @available(swift 3.1)

@@ -5,6 +5,9 @@ Units of Measurement for Fitness
 [![Version](https://img.shields.io/cocoapods/v/FitnessUnits.svg?style=flat)](http://cocoapods.org/pods/FitnessUnits)
 [![License](https://img.shields.io/cocoapods/l/FitnessUnits.svg?style=flat)](http://cocoapods.org/pods/FitnessUnits)
 [![Platform](https://img.shields.io/cocoapods/p/FitnessUnits.svg?style=flat)](http://cocoapods.org/pods/FitnessUnits)
+[![Readme Score](http://readme-score-api.herokuapp.com/score.svg?url=https://github.com/fitnesskit/fitnessunits)](http://clayallsopp.github.io/readme-score?url=https://github.com/fitnesskit/fitnessunits)
+[![codebeat badge](https://codebeat.co/badges/da3ab4bb-38da-4caf-a886-f16deed74d63)](https://codebeat.co/projects/github-com-fitnesskit-fitnessunits-master)
+
 
 ## Installation
 
@@ -27,7 +30,7 @@ Swift3
 Swift4
 ```swift
     dependencies: [
-        .package(url: "https://github.com/FitnessKit/FitnessUnits", from: "2.0.2"),
+        .package(url: "https://github.com/FitnessKit/FitnessUnits", from: "2.0.3"),
     ]
 ```
 
@@ -92,8 +95,9 @@ Swift4
 
 ## Author
 
-Kevin A. Hoogheem
+This package is developed and maintained by Kevin A. Hoogheem
 
 ## License
 
-FitnessUnits is available under the MIT license. See the LICENSE file for more info.
+BluetoothMessageProtocol is available under the [MIT license](http://opensource.org/licenses/MIT)
+

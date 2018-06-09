@@ -43,7 +43,6 @@ open class UnitForce: Dimension {
         static let kilogramForce    = 9.80665
     }
 
-
     private init(symbol: String, coefficient: Double) {
         super.init(symbol: symbol, converter: UnitConverterLinear(coefficient: coefficient))
     }
@@ -84,5 +83,6 @@ open class UnitForce: Dimension {
     }
 
     public required init?(coder aDecoder: NSCoder) { super.init(coder: aDecoder) }
+
     open override func encode(with aCoder: NSCoder) { super.encode(with: aCoder) }
 }

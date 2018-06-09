@@ -51,7 +51,6 @@ open class UnitRadioactivity: Dimension {
         static let rutherford               = 1000000.0
     }
 
-
     private init(symbol: String, coefficient: Double) {
         super.init(symbol: symbol, converter: UnitConverterLinear(coefficient: coefficient))
     }
@@ -122,6 +121,7 @@ open class UnitRadioactivity: Dimension {
     }
 
     public required init?(coder aDecoder: NSCoder) { super.init(coder: aDecoder) }
+
     open override func encode(with aCoder: NSCoder) { super.encode(with: aCoder) }
 
 }

@@ -79,4 +79,3 @@ extension UnitGender: Encodable {
         try unitContainer.encode("Gender", forKey: .symbol)
     }
 }
-

@@ -26,7 +26,6 @@ import Foundation
 
 public protocol ColorType: Encodable {}
 
-
 /// Color Type of HexString Color
 public struct HexColor: ColorType {
 

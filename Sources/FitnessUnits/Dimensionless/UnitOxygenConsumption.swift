@@ -47,9 +47,7 @@ open class UnitOxygenConsumption: Unit {
             return UnitOxygenConsumption(symbol: Symbol.vo2)
         }
     }
-
 }
-
 
 @available(OSX 10.12, *)
 public extension UnitOxygenConsumption {
@@ -70,6 +68,5 @@ public extension UnitOxygenConsumption {
         let value = Measurement(value: consumption, unit: UnitOxygenConsumption.vo2)
         return value
     }
-
 
 }

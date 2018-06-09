@@ -66,6 +66,7 @@ open class UnitAngularVelocity: Dimension {
     }
 
     public required init?(coder aDecoder: NSCoder) { super.init(coder: aDecoder) }
+
     open override func encode(with aCoder: NSCoder) { super.encode(with: aCoder) }
     
 }

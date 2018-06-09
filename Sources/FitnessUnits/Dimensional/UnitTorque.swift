@@ -41,7 +41,6 @@ open class UnitTorque: Dimension {
         static let footPoundForce       = 1.3558
     }
 
-
     private init(symbol: String, coefficient: Double) {
         super.init(symbol: symbol, converter: UnitConverterLinear(coefficient: coefficient))
     }
@@ -75,6 +74,7 @@ open class UnitTorque: Dimension {
     }
 
     public required init?(coder aDecoder: NSCoder) { super.init(coder: aDecoder) }
+
     open override func encode(with aCoder: NSCoder) { super.encode(with: aCoder) }
     
 }

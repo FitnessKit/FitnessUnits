@@ -45,7 +45,6 @@ open class UnitMagneticField: Dimension {
         static let tesla        = 1.0
     }
 
-
     private init(symbol: String, coefficient: Double) {
         super.init(symbol: symbol, converter: UnitConverterLinear(coefficient: coefficient))
     }
@@ -93,6 +92,7 @@ open class UnitMagneticField: Dimension {
     }
 
     public required init?(coder aDecoder: NSCoder) { super.init(coder: aDecoder) }
+
     open override func encode(with aCoder: NSCoder) { super.encode(with: aCoder) }
     
 }
