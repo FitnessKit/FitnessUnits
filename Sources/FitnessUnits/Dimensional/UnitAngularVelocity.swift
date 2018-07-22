@@ -35,10 +35,9 @@ open class UnitAngularVelocity: Dimension {
     }
 
     private struct Coefficient {
-        static let degress          = 1.0
-        static let radians          = 57.2958
+        static let degress      = 1.0
+        static let radians      = 57.2958
     }
-
 
     private init(symbol: String, coefficient: Double) {
         super.init(symbol: symbol, converter: UnitConverterLinear(coefficient: coefficient))

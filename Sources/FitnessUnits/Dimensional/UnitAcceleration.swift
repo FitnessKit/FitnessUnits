@@ -26,7 +26,7 @@ import Foundation
 
 @available(swift 3.1)
 @available(iOS 10.0, tvOS 10.0, watchOS 3.0, OSX 10.12, *)
-public extension UnitAcceleration  {
+public extension UnitAcceleration {
 
     /// Unit of Acceleration in Galileo
     public class var galileo: UnitAcceleration {

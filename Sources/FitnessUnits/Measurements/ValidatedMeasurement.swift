@@ -259,7 +259,6 @@ extension ValidatedMeasurement : Codable {
         self.init(value: value, valid: valid, unit: unit)
     }
 
-
     public func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(self.value, forKey: .value)

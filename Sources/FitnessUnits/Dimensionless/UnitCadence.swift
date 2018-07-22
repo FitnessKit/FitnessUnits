@@ -79,5 +79,4 @@ open class UnitCadence: Unit {
             return UnitCadence(symbol: Symbol.strokesPerMinute)
         }
     }
-
 }

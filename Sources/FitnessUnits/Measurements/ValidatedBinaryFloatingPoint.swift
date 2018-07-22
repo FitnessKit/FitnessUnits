@@ -110,16 +110,16 @@ extension ValidatedBinaryFloatingPoint: Codable {
 
         switch self.value {
         case is Double:
-            try container.encode(self.value as! Double, forKey: .value)
+            try container.encode(self.value as? Double, forKey: .value)
             typeString = "Double"
 
         case is Float:
             /// as well as Float32
-            try container.encode(self.value as! Float, forKey: .value)
+            try container.encode(self.value as? Float, forKey: .value)
             typeString = "Float"
 
         case is Float64:
-            try container.encode(self.value as! Float64, forKey: .value)
+            try container.encode(self.value as? Float64, forKey: .value)
             typeString = "Float64"
 
         default:
