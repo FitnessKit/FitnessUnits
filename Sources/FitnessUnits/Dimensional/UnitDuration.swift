@@ -27,6 +27,7 @@ import Foundation
 @available(swift 3.1)
 @available(iOS 10.0, tvOS 10.0, watchOS 3.0, OSX 10.12, *)
 public extension UnitDuration { /// Base unit - seconds
+    // Base already has seconds/minutes/hours
 
     private struct Symbol {
         static let microsecond  = "μs"
@@ -69,5 +70,4 @@ public extension UnitDuration { /// Base unit - seconds
             return UnitDuration(symbol: Symbol.decade, converter: UnitConverterLinear(coefficient: Coefficient.decade))
         }
     }
-
 }

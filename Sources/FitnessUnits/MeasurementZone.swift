@@ -24,9 +24,10 @@
 
 import Foundation
 
-/// A `MeasurementZone` is a model type that bounds values between a upper and lowe bounds.
+/// A `MeasurementZone` is a model type that bounds values between a upper and lower bounds.
 ///
-/// `MeasurementZone` may be a Heart Rate Zone, FTP Zone, or used for other measurements that you wish to bound between an upper and lower value
+/// `MeasurementZone` may be a Heart Rate Zone, FTP Zone, or used for other measurements
+/// that you wish to bound between an upper and lower value
 public struct MeasurementZone {
 
     /// Zone Range

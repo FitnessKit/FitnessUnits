@@ -28,10 +28,30 @@ import Foundation
 @available(iOS 10.0, tvOS 10.0, watchOS 3.0, OSX 10.12, *)
 public extension UnitAcceleration {
 
+    private struct Symbol {
+        static let feetPerSecondSquared = "ft/s²"
+        static let gal                  = "gal"
+    }
+
+    private struct Coefficient {
+        static let feetPerSecondSquared = 0.304800
+        static let gal                  = 0.01
+
+    }
+
+    /// Unit of Acceleration in Feet Per Second Squared
+    public class var feetPerSecondSquared: UnitAcceleration {
+        get {
+            return UnitAcceleration(symbol: Symbol.feetPerSecondSquared,
+                                    converter: UnitConverterLinear(coefficient: Coefficient.feetPerSecondSquared))
+        }
+    }
+
     /// Unit of Acceleration in Galileo
     public class var galileo: UnitAcceleration {
         get {
-            return UnitAcceleration(symbol: "gal", converter: UnitConverterLinear(coefficient: 100))
+            return UnitAcceleration(symbol: Symbol.gal,
+                                    converter: UnitConverterLinear(coefficient: Coefficient.gal))
         }
     }
 }

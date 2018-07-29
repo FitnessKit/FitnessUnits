@@ -39,5 +39,4 @@ final public class UnitPercent: Unit {
             return UnitPercent(symbol: Symbol.percent)
         }
     }
-
 }

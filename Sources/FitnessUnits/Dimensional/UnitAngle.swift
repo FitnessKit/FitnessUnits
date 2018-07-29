@@ -43,19 +43,22 @@ public extension UnitAngle {
     /// Bradian Unit of Angle
     public class var bradian: UnitAngle {
         get {
-            return UnitAngle(symbol: Symbol.bradian, converter: UnitConverterLinear(coefficient: Coefficient.bradian))
+            return UnitAngle(symbol: Symbol.bradian,
+                             converter: UnitConverterLinear(coefficient: Coefficient.bradian))
         }
     }
 
     /// Milliradian Unit of Angle
     public class var milliradian: UnitAngle {
-        return UnitAngle(symbol: Symbol.milliradian, converter: UnitConverterLinear(coefficient: Coefficient.milliradian))
+        return UnitAngle(symbol: Symbol.milliradian,
+                         converter: UnitConverterLinear(coefficient: Coefficient.milliradian))
     }
 
     /// Turn Unit of Angle
     ///
     /// This is the same as a `UnitAngle.revolutions`
     public class var turn: UnitAngle {
-        return UnitAngle(symbol: Symbol.turn, converter: UnitConverterLinear(coefficient: Coefficient.turn))
+        return UnitAngle(symbol: Symbol.turn,
+                         converter: UnitConverterLinear(coefficient: Coefficient.turn))
     }
 }
