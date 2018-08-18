@@ -29,15 +29,20 @@ import Foundation
 public extension UnitAngle {
 
     private struct Symbol {
-        static let bradian      = "bradian"
-        static let milliradian  = "mrad"
-        static let turn         = "turn"
+        static let bradian          = "bradian"
+        static let milliradian      = "mrad"
+        static let turn             = "turn"
+        static let semicircle       = "semi circle"
+        static let angularMilNato   = "mil"
     }
 
     private struct Coefficient {
-        static let bradian          = 1.40625
-        static let milliradian      = 0.057296
-        static let turn             = 360.0
+        static let bradian              = 1.40625
+        static let milliradian          = 0.057296
+        static let turn                 = 360.0
+        static let semicircle           = 1 / 0.0055556
+        static let garminSemicircle     = 0.00000008381903171539306640625
+        static let angularMilNato       = 1 / 17.778
     }
 
     /// Bradian Unit of Angle
@@ -61,4 +66,19 @@ public extension UnitAngle {
         return UnitAngle(symbol: Symbol.turn,
                          converter: UnitConverterLinear(coefficient: Coefficient.turn))
     }
+
+    /// Semicircle Unit of Angle
+    public class var semicircle: UnitAngle {
+        return UnitAngle(symbol: Symbol.semicircle,
+                         converter: UnitConverterLinear(coefficient: Coefficient.semicircle))
+    }
+
+    /// NATO Angular Mil Unit of Angle
+    public class var natoAngularMil: UnitAngle {
+        return UnitAngle(symbol: Symbol.angularMilNato,
+                         converter: UnitConverterLinear(coefficient: Coefficient.angularMilNato))
+    }
+
+
+
 }

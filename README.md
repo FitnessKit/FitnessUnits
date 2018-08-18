@@ -30,7 +30,7 @@ Swift3
 Swift4
 ```swift
     dependencies: [
-        .package(url: "https://github.com/FitnessKit/FitnessUnits", from: "2.0.3"),
+        .package(url: "https://github.com/FitnessKit/FitnessUnits", from: "2.1.0"),
     ]
 ```
 
@@ -48,6 +48,8 @@ Swift4
 * UnitAcceleration - Galileo
 * UnitAngle - Bradian
 * UnitAngle - Milliradian
+* UnitAngle - Semicircle
+* UnitAngle - Garmin Semicircle (ANT/FIT Files)
 * UnitSpeed - metersPerMinute
 * UnitSpeed - metersPerHour
 * UnitSpeed - kilometersPerSecond
