@@ -73,12 +73,18 @@ public extension UnitAngle {
                          converter: UnitConverterLinear(coefficient: Coefficient.semicircle))
     }
 
+    /// Garmin Semicircle Unit of Angle
+    ///
+    /// Used in ANT and FIT Files
+    public class var garminSemicircle: UnitAngle {
+        return UnitAngle(symbol: Symbol.semicircle,
+                         converter: UnitConverterLinear(coefficient: Coefficient.garminSemicircle))
+    }
+
     /// NATO Angular Mil Unit of Angle
     public class var natoAngularMil: UnitAngle {
         return UnitAngle(symbol: Symbol.angularMilNato,
                          converter: UnitConverterLinear(coefficient: Coefficient.angularMilNato))
     }
-
-
 
 }

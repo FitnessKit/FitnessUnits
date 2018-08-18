@@ -10,6 +10,7 @@
     
   </head>
   <body>
+    <a name="//apple_ref/swift/Section/Structures" class="dashAnchor"></a>
     <a title="Structures  Reference"></a>
     <header>
       <div class="content-wrapper">
@@ -155,7 +156,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">HexColor</span><span class="p">:</span> <span class="kt"><a href="Protocols.html#/s:12FitnessUnits9ColorTypeP">ColorType</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">HexColor</span> <span class="p">:</span> <span class="kt"><a href="Protocols.html#/s:12FitnessUnits9ColorTypeP">ColorType</a></span></code></pre>
 
                         </div>
                       </div>
@@ -183,41 +184,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">RGBColor</span><span class="p">:</span> <span class="kt"><a href="Protocols.html#/s:12FitnessUnits9ColorTypeP">ColorType</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:12FitnessUnits22ValidatedBinaryIntegerV"></a>
-                    <a name="//apple_ref/swift/Struct/ValidatedBinaryInteger" class="dashAnchor"></a>
-                    <a class="token" href="#/s:12FitnessUnits22ValidatedBinaryIntegerV">ValidatedBinaryInteger</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A <code>ValidatedBinaryInteger</code> is a model type that holds a <code>Numeric</code> value that has an associated <code>valid</code> flag.</p>
-
-<p><code>ValidatedBinaryInteger</code> provides feedback on validity of value</p>
-
-                        <a href="Structs/ValidatedBinaryInteger.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ValidatedBinaryInteger</span><span class="o">&lt;</span><span class="kt">BinaryIntegerType</span><span class="p">:</span> <span class="kt">BinaryInteger</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">RGBColor</span> <span class="p">:</span> <span class="kt"><a href="Protocols.html#/s:12FitnessUnits9ColorTypeP">ColorType</a></span></code></pre>
 
                         </div>
                       </div>
@@ -241,9 +208,10 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A <code>MeasurementZone</code> is a model type that bounds values between a upper and lowe bounds.</p>
+                        <p>A <code>MeasurementZone</code> is a model type that bounds values between a upper and lower bounds.</p>
 
-<p><code>MeasurementZone</code> may be a Heart Rate Zone, FTP Zone, or used for other measurements that you wish to bound between an upper and lower value</p>
+<p><code>MeasurementZone</code> may be a Heart Rate Zone, FTP Zone, or used for other measurements
+that you wish to bound between an upper and lower value</p>
 
                         <a href="Structs/MeasurementZone.html" class="slightly-smaller">See more</a>
                       </div>
@@ -251,7 +219,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">MeasurementZone</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">MeasurementZone</span></code></pre>
 
                         </div>
                       </div>
@@ -283,7 +251,8 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">StringMeasurement</span><span class="o">&lt;</span><span class="kt">UnitType</span><span class="p">:</span> <span class="kt">Unit</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">Equatable</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@available(* 3.1, iOS 10.0, tvOS 10.0, watchOS 3.0, OSX 10.12, *)</span>
+<span class="kd">public</span> <span class="kd">struct</span> <span class="kt">StringMeasurement</span><span class="o">&lt;</span><span class="kt">UnitType</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt">Equatable</span> <span class="k">where</span> <span class="kt">UnitType</span> <span class="p">:</span> <span class="kt">Unit</span></code></pre>
 
                         </div>
                       </div>
@@ -317,7 +286,43 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ValidatedBinaryFloatingPoint</span><span class="o">&lt;</span><span class="kt">BinaryFloatingPointType</span><span class="p">:</span> <span class="kt">BinaryFloatingPoint</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@available(swift 3.1)</span>
+<span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ValidatedBinaryFloatingPoint</span><span class="o">&lt;</span><span class="kt">Element</span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">Element</span> <span class="p">:</span> <span class="kt">BinaryFloatingPoint</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12FitnessUnits22ValidatedBinaryIntegerV"></a>
+                    <a name="//apple_ref/swift/Struct/ValidatedBinaryInteger" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12FitnessUnits22ValidatedBinaryIntegerV">ValidatedBinaryInteger</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A <code>ValidatedBinaryInteger</code> is a model type that holds a <code>Numeric</code> value that has an associated <code>valid</code> flag.</p>
+
+<p><code>ValidatedBinaryInteger</code> provides feedback on validity of value</p>
+
+                        <a href="Structs/ValidatedBinaryInteger.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@available(swift 3.1)</span>
+<span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ValidatedBinaryInteger</span><span class="o">&lt;</span><span class="kt">Element</span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">Element</span> <span class="p">:</span> <span class="kt">BinaryInteger</span></code></pre>
 
                         </div>
                       </div>
@@ -353,7 +358,8 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ValidatedMeasurement</span><span class="o">&lt;</span><span class="kt">UnitType</span><span class="p">:</span> <span class="kt">Unit</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">Comparable</span><span class="p">,</span> <span class="kt">Equatable</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@available(OSX 10.12, iOS 10.0, watchOS 3.0, tvOS 10.0, *)</span>
+<span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ValidatedMeasurement</span><span class="o">&lt;</span><span class="kt">UnitType</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt">Comparable</span><span class="p">,</span> <span class="kt">Equatable</span> <span class="k">where</span> <span class="kt">UnitType</span> <span class="p">:</span> <span class="kt">Unit</span></code></pre>
 
                         </div>
                       </div>
@@ -366,7 +372,7 @@
         </section>
         <section id="footer">
           <p>© 2017 Kevin A. Hoogheem</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>
