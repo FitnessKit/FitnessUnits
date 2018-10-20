@@ -68,5 +68,4 @@ public extension UnitOxygenConsumption {
         let value = Measurement(value: consumption, unit: UnitOxygenConsumption.vo2)
         return value
     }
-
 }

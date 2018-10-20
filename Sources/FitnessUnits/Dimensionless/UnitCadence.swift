@@ -31,6 +31,7 @@ open class UnitCadence: Unit {
 
     private struct Symbol {
         static let beatsPerMinute       = "BPM"
+        static let floorsPerMinute      = "floors/min"
         static let punchesPerMinute     = "punches/min"
         static let revolutionsPerMinute = "RPM"
         static let stepsPerMinute       = "steps/min"
@@ -38,6 +39,7 @@ open class UnitCadence: Unit {
         static let strikesPerMinute     = "strikes/min"
         static let strokesPerMinute     = "strokes/min"
         static let unitsPerMinute       = "units/min"
+        static let jumpsPerMinute       = "jumps/min"
     }
 
     /// Beats Per Minute (BPM)
@@ -47,10 +49,24 @@ open class UnitCadence: Unit {
         }
     }
 
+    /// Floors Per Minute (floors/min)
+    public class var floorsPerMinute: UnitCadence {
+        get {
+            return UnitCadence(symbol: Symbol.floorsPerMinute)
+        }
+    }
+
     /// Generic Cadence (units/min)
     public class var genericUnitsPerMinute: UnitCadence {
         get {
             return UnitCadence(symbol: Symbol.unitsPerMinute)
+        }
+    }
+
+    /// Jumps Per Minute (jumps/min)
+    public class var jumpsPerMinute: UnitCadence {
+        get {
+            return UnitCadence(symbol: Symbol.jumpsPerMinute)
         }
     }
 

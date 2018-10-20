@@ -69,5 +69,4 @@ public extension UnitConcentrationMass { /// Base unit - gramsPerLiter
             return UnitConcentrationMass(symbol: Symbol.kilogramPerLiter, converter: UnitConverterLinear(coefficient: Coefficient.kilogramPerLiter))
         }
     }
-
 }

@@ -93,6 +93,8 @@ open class UnitMagneticField: Dimension {
 
     public required init?(coder aDecoder: NSCoder) { super.init(coder: aDecoder) }
 
+    /// Encodes the receiver using a given archiver
+    ///
+    /// - Parameter aCoder: An archiver object.
     open override func encode(with aCoder: NSCoder) { super.encode(with: aCoder) }
-    
 }

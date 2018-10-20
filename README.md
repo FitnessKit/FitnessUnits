@@ -30,7 +30,7 @@ Swift3
 Swift4
 ```swift
     dependencies: [
-        .package(url: "https://github.com/FitnessKit/FitnessUnits", from: "2.1.0"),
+        .package(url: "https://github.com/FitnessKit/FitnessUnits", from: "2.1.1"),
     ]
 ```
 

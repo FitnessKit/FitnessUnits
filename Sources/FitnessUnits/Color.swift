@@ -50,7 +50,6 @@ public struct HexColor: ColorType {
         if string.count == 3 { // convert hex to 6 digit format if in short format
             var str = ""
             string.forEach { str.append(String(repeating: String($0), count: 2)) }
-            print(string)
             string = str
         }
         self.hex = string
@@ -65,6 +64,16 @@ public struct HexColor: ColorType {
 
 @available(swift 4.0)
 extension HexColor {
+
+    /// Encodes this value into the given encoder.
+    ///
+    /// If the value fails to encode anything, `encoder` will encode an empty
+    /// keyed container in its place.
+    ///
+    /// This function throws an error if any values are invalid for the given
+    /// encoder's format.
+    ///
+    /// - Parameter encoder: The encoder to write data to.
     public func encode(to encoder: Encoder) throws {
         enum CodingKeys : Int, CodingKey {
             case color
@@ -116,6 +125,15 @@ public struct RGBColor: ColorType {
 @available(swift 4.0)
 extension RGBColor: Encodable {
 
+    /// Encodes this value into the given encoder.
+    ///
+    /// If the value fails to encode anything, `encoder` will encode an empty
+    /// keyed container in its place.
+    ///
+    /// This function throws an error if any values are invalid for the given
+    /// encoder's format.
+    ///
+    /// - Parameter encoder: The encoder to write data to.
     public func encode(to encoder: Encoder) throws {
         enum CodingKeys : Int, CodingKey {
             case color

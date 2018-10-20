@@ -5,6 +5,7 @@
     <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="css/highlight.css" />
     <meta charset='utf-8'>
+	<meta name="viewport" content="width=device-width, viewport-fit=cover, initial-scale=1.0" />
     <script src="js/jquery.min.js" defer></script>
     <script src="js/jazzy.js" defer></script>
     
@@ -14,349 +15,369 @@
     <a title="Extensions  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">FitnessUnits Docs</a> (90% documented)</p>
-        <p class="header-right"><a href="https://github.com/FitnessKit/FitnessUnits"><img src="img/gh.png"/>View on GitHub</a></p>
+        <p>
+          <a href="index.html">FitnessUnits Docs</a>
+          <span class="no-mobile"> (93% documented)</span>
+        </p>
+    
+        <p class="header-right">
+          <a href="https://github.com/FitnessKit/FitnessUnits">
+            <img src="img/gh.png"/>
+            <span class="no-mobile">View on GitHub</span>
+          </a>
+        </p>
+    
       </div>
     </header>
-    <div class="content-wrapper">
-      <p id="breadcrumbs">
-        <a href="index.html">FitnessUnits Reference</a>
-        <img id="carat" src="img/carat.png" />
-        Extensions  Reference
-      </p>
+    <div id="breadcrumbs-container">
+      <div class="content-wrapper">
+        <p id="breadcrumbs">
+          <span class="no-mobile">
+            <a href="index.html">FitnessUnits Reference</a>
+            <img id="carat" src="img/carat.png" />
+          </span>
+          Extensions  Reference
+        </p>
+      </div>
     </div>
-    <div class="content-wrapper">
-      <nav class="sidebar">
-        <ul class="nav-groups">
-          <li class="nav-group-name">
-            <a href="Classes.html">Classes</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="Classes/UnitAngularVelocity.html">UnitAngularVelocity</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/UnitCadence.html">UnitCadence</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/UnitForce.html">UnitForce</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/UnitGender.html">UnitGender</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/UnitLinearDensity.html">UnitLinearDensity</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/UnitMagneticField.html">UnitMagneticField</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/UnitOxygenConsumption.html">UnitOxygenConsumption</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/UnitPercent.html">UnitPercent</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/UnitRadioactivity.html">UnitRadioactivity</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/UnitTorque.html">UnitTorque</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
-            <a href="Extensions.html">Extensions</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="Extensions/UnitAcceleration.html">UnitAcceleration</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Extensions/UnitAngle.html">UnitAngle</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Extensions/UnitConcentrationMass.html">UnitConcentrationMass</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Extensions/UnitDuration.html">UnitDuration</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Extensions/UnitEnergy.html">UnitEnergy</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Extensions/UnitMass.html">UnitMass</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Extensions/UnitSpeed.html">UnitSpeed</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
-            <a href="Protocols.html">Protocols</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="Protocols.html#/s:12FitnessUnits9ColorTypeP">ColorType</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
-            <a href="Structs.html">Structures</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="Structs/HexColor.html">HexColor</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Structs/MeasurementZone.html">MeasurementZone</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Structs/RGBColor.html">RGBColor</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Structs/StringMeasurement.html">StringMeasurement</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Structs/ValidatedBinaryFloatingPoint.html">ValidatedBinaryFloatingPoint</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Structs/ValidatedBinaryInteger.html">ValidatedBinaryInteger</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Structs/ValidatedMeasurement.html">ValidatedMeasurement</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-      <article class="main-content">
-        <section>
-          <section class="section">
-            <h1>Extensions</h1>
-            <p>The following extensions are available globally.</p>
+    <div class="wrapper">
+      <div class="article-wrapper">
+        <article class="main-content">
+          <section>
+            <section class="section">
+              <h1>Extensions</h1>
+              <p>The following extensions are available globally.</p>
 
+            </section>
+            <section class="section task-group-section">
+              <div class="task-group">
+                <ul>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(cs)NSUnitAcceleration"></a>
+                      <a name="//apple_ref/swift/Extension/UnitAcceleration" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(cs)NSUnitAcceleration">UnitAcceleration</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+                          <a href="Extensions/UnitAcceleration.html" class="slightly-smaller">See more</a>
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">UnitAcceleration</span> <span class="p">:</span> <span class="kt">Dimension</span><span class="p">,</span> <span class="kt">NSSecureCoding</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="task-group">
+                <ul>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(cs)NSUnitAngle"></a>
+                      <a name="//apple_ref/swift/Extension/UnitAngle" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(cs)NSUnitAngle">UnitAngle</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+                          <a href="Extensions/UnitAngle.html" class="slightly-smaller">See more</a>
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">UnitAngle</span> <span class="p">:</span> <span class="kt">Dimension</span><span class="p">,</span> <span class="kt">NSSecureCoding</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="task-group">
+                <ul>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(cs)NSUnitConcentrationMass"></a>
+                      <a name="//apple_ref/swift/Extension/UnitConcentrationMass" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(cs)NSUnitConcentrationMass">UnitConcentrationMass</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+                          <a href="Extensions/UnitConcentrationMass.html" class="slightly-smaller">See more</a>
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">UnitConcentrationMass</span> <span class="p">:</span> <span class="kt">Dimension</span><span class="p">,</span> <span class="kt">NSSecureCoding</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="task-group">
+                <ul>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(cs)NSUnitDuration"></a>
+                      <a name="//apple_ref/swift/Extension/UnitDuration" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(cs)NSUnitDuration">UnitDuration</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+                          <a href="Extensions/UnitDuration.html" class="slightly-smaller">See more</a>
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">UnitDuration</span> <span class="p">:</span> <span class="kt">Dimension</span><span class="p">,</span> <span class="kt">NSSecureCoding</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="task-group">
+                <ul>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(cs)NSUnitEnergy"></a>
+                      <a name="//apple_ref/swift/Extension/UnitEnergy" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(cs)NSUnitEnergy">UnitEnergy</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+                          <a href="Extensions/UnitEnergy.html" class="slightly-smaller">See more</a>
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">UnitEnergy</span> <span class="p">:</span> <span class="kt">Dimension</span><span class="p">,</span> <span class="kt">NSSecureCoding</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="task-group">
+                <ul>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(cs)NSUnitMass"></a>
+                      <a name="//apple_ref/swift/Extension/UnitMass" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(cs)NSUnitMass">UnitMass</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+                          <a href="Extensions/UnitMass.html" class="slightly-smaller">See more</a>
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">UnitMass</span> <span class="p">:</span> <span class="kt">Dimension</span><span class="p">,</span> <span class="kt">NSSecureCoding</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="task-group">
+                <ul>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(cs)NSUnitSpeed"></a>
+                      <a name="//apple_ref/swift/Extension/UnitSpeed" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(cs)NSUnitSpeed">UnitSpeed</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+                          <a href="Extensions/UnitSpeed.html" class="slightly-smaller">See more</a>
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">UnitSpeed</span> <span class="p">:</span> <span class="kt">Dimension</span><span class="p">,</span> <span class="kt">NSSecureCoding</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </section>
           </section>
-          <section class="section task-group-section">
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)NSUnitAcceleration"></a>
-                    <a name="//apple_ref/swift/Extension/UnitAcceleration" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)NSUnitAcceleration">UnitAcceleration</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                        <a href="Extensions/UnitAcceleration.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">UnitAcceleration</span> <span class="p">:</span> <span class="kt">Dimension</span><span class="p">,</span> <span class="kt">NSSecureCoding</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
+        </article>
+      </div>
+      <div class="nav-wrapper">
+        <nav class="nav-bottom">
+          <ul class="nav-groups">
+            <li class="nav-group-name">
+              <a href="Classes.html">Classes</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="Classes/UnitAngularVelocity.html">UnitAngularVelocity</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/UnitCadence.html">UnitCadence</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/UnitForce.html">UnitForce</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/UnitGender.html">UnitGender</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/UnitLinearDensity.html">UnitLinearDensity</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/UnitMagneticField.html">UnitMagneticField</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/UnitOxygenConsumption.html">UnitOxygenConsumption</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/UnitPercent.html">UnitPercent</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/UnitRadioactivity.html">UnitRadioactivity</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/UnitTorque.html">UnitTorque</a>
                 </li>
               </ul>
-            </div>
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)NSUnitAngle"></a>
-                    <a name="//apple_ref/swift/Extension/UnitAngle" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)NSUnitAngle">UnitAngle</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                        <a href="Extensions/UnitAngle.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">UnitAngle</span> <span class="p">:</span> <span class="kt">Dimension</span><span class="p">,</span> <span class="kt">NSSecureCoding</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
+            </li>
+            <li class="nav-group-name">
+              <a href="Extensions.html">Extensions</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="Extensions/UnitAcceleration.html">UnitAcceleration</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Extensions/UnitAngle.html">UnitAngle</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Extensions/UnitConcentrationMass.html">UnitConcentrationMass</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Extensions/UnitDuration.html">UnitDuration</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Extensions/UnitEnergy.html">UnitEnergy</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Extensions/UnitMass.html">UnitMass</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Extensions/UnitSpeed.html">UnitSpeed</a>
                 </li>
               </ul>
-            </div>
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)NSUnitConcentrationMass"></a>
-                    <a name="//apple_ref/swift/Extension/UnitConcentrationMass" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)NSUnitConcentrationMass">UnitConcentrationMass</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                        <a href="Extensions/UnitConcentrationMass.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">UnitConcentrationMass</span> <span class="p">:</span> <span class="kt">Dimension</span><span class="p">,</span> <span class="kt">NSSecureCoding</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
+            </li>
+            <li class="nav-group-name">
+              <a href="Protocols.html">Protocols</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="Protocols.html#/s:12FitnessUnits9ColorTypeP">ColorType</a>
                 </li>
               </ul>
-            </div>
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)NSUnitDuration"></a>
-                    <a name="//apple_ref/swift/Extension/UnitDuration" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)NSUnitDuration">UnitDuration</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                        <a href="Extensions/UnitDuration.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">UnitDuration</span> <span class="p">:</span> <span class="kt">Dimension</span><span class="p">,</span> <span class="kt">NSSecureCoding</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
+            </li>
+            <li class="nav-group-name">
+              <a href="Structs.html">Structures</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="Structs/HexColor.html">HexColor</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Structs/MeasurementZone.html">MeasurementZone</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Structs/RGBColor.html">RGBColor</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Structs/StringMeasurement.html">StringMeasurement</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Structs/ValidatedBinaryFloatingPoint.html">ValidatedBinaryFloatingPoint</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Structs/ValidatedBinaryInteger.html">ValidatedBinaryInteger</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Structs/ValidatedMeasurement.html">ValidatedMeasurement</a>
                 </li>
               </ul>
-            </div>
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)NSUnitEnergy"></a>
-                    <a name="//apple_ref/swift/Extension/UnitEnergy" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)NSUnitEnergy">UnitEnergy</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                        <a href="Extensions/UnitEnergy.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">UnitEnergy</span> <span class="p">:</span> <span class="kt">Dimension</span><span class="p">,</span> <span class="kt">NSSecureCoding</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)NSUnitMass"></a>
-                    <a name="//apple_ref/swift/Extension/UnitMass" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)NSUnitMass">UnitMass</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                        <a href="Extensions/UnitMass.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">UnitMass</span> <span class="p">:</span> <span class="kt">Dimension</span><span class="p">,</span> <span class="kt">NSSecureCoding</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)NSUnitSpeed"></a>
-                    <a name="//apple_ref/swift/Extension/UnitSpeed" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)NSUnitSpeed">UnitSpeed</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                        <a href="Extensions/UnitSpeed.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">UnitSpeed</span> <span class="p">:</span> <span class="kt">Dimension</span><span class="p">,</span> <span class="kt">NSSecureCoding</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </section>
-        </section>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-wrapper">
         <section id="footer">
           <p>© 2017 Kevin A. Hoogheem</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
-      </article>
+      </div>
     </div>
   </body>
 </div>

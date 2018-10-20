@@ -111,8 +111,6 @@ open class UnitRadioactivity: Dimension {
         }
     }
 
-
-
     /// Base Unit for UnitRadioactivity
     ///
     /// - Returns: Base Unit
@@ -122,6 +120,8 @@ open class UnitRadioactivity: Dimension {
 
     public required init?(coder aDecoder: NSCoder) { super.init(coder: aDecoder) }
 
+    /// Encodes the receiver using a given archiver
+    ///
+    /// - Parameter aCoder: An archiver object.
     open override func encode(with aCoder: NSCoder) { super.encode(with: aCoder) }
-
 }
