@@ -56,7 +56,7 @@ public struct ValidatedMeasurement<UnitType: Unit>: Comparable, Equatable {
 @available(macOS 10.12, iOS 10.0, watchOS 3.0, tvOS 10.0, *)
 extension ValidatedMeasurement: CustomStringConvertible, CustomDebugStringConvertible, CustomReflectable {
     public var description: String {
-        return "\(value) \(unit.symbol))"
+        return "\(value) \(unit.symbol)"
     }
 
     public var debugDescription: String {
