@@ -28,7 +28,6 @@ import Foundation
 @available(swift 3.1)
 @available(iOS 10.0, tvOS 10.0, watchOS 3.0, OSX 10.12, *)
 open class UnitTorque: Dimension {
-
     private struct Symbol {
         static let kilogramForceMeter   = "kgf·m"
         static let newtonMeter          = "N·m"
@@ -40,6 +39,16 @@ open class UnitTorque: Dimension {
         static let newtonMeter          = 1.0
         static let footPoundForce       = 1.3558
     }
+    
+    #if os(Linux)
+    required public init(symbol: String) {
+        super.init(symbol: symbol)
+    }
+
+    required public init(symbol: String, converter: UnitConverter) {
+        super.init(symbol: symbol, converter: converter)
+    }
+    #endif
 
     private init(symbol: String, coefficient: Double) {
         super.init(symbol: symbol, converter: UnitConverterLinear(coefficient: coefficient))

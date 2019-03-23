@@ -51,6 +51,16 @@ open class UnitRadioactivity: Dimension {
         static let rutherford               = 1000000.0
     }
 
+    #if os(Linux)
+    required public init(symbol: String) {
+        super.init(symbol: symbol)
+    }
+    
+    required public init(symbol: String, converter: UnitConverter) {
+        super.init(symbol: symbol, converter: converter)
+    }
+    #endif
+
     private init(symbol: String, coefficient: Double) {
         super.init(symbol: symbol, converter: UnitConverterLinear(coefficient: coefficient))
     }

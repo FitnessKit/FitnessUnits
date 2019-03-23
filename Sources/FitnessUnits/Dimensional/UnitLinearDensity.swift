@@ -39,6 +39,16 @@ open class UnitLinearDensity: Dimension {
         static let poundFoot        = 1.48816
     }
 
+    #if os(Linux)
+    required public init(symbol: String) {
+        super.init(symbol: symbol)
+    }
+    
+    required public init(symbol: String, converter: UnitConverter) {
+        super.init(symbol: symbol, converter: converter)
+    }
+    #endif
+
     private init(symbol: String, coefficient: Double) {
         super.init(symbol: symbol, converter: UnitConverterLinear(coefficient: coefficient))
     }

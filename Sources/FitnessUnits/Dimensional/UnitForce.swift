@@ -42,6 +42,16 @@ open class UnitForce: Dimension {
         static let poundForce       = 4.44822
         static let kilogramForce    = 9.80665
     }
+    
+    #if os(Linux)
+    required public init(symbol: String) {
+        super.init(symbol: symbol)
+    }
+    
+    required public init(symbol: String, converter: UnitConverter) {
+        super.init(symbol: symbol, converter: converter)
+    }
+    #endif
 
     private init(symbol: String, coefficient: Double) {
         super.init(symbol: symbol, converter: UnitConverterLinear(coefficient: coefficient))

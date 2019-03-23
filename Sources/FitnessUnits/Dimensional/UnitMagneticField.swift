@@ -45,6 +45,16 @@ open class UnitMagneticField: Dimension {
         static let tesla        = 1.0
     }
 
+    #if os(Linux)
+    required public init(symbol: String) {
+        super.init(symbol: symbol)
+    }
+    
+    required public init(symbol: String, converter: UnitConverter) {
+        super.init(symbol: symbol, converter: converter)
+    }
+    #endif
+
     private init(symbol: String, coefficient: Double) {
         super.init(symbol: symbol, converter: UnitConverterLinear(coefficient: coefficient))
     }
