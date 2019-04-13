@@ -23,7 +23,7 @@ Swift Package Manager:
 Swift
 ```swift
 dependencies: [
-.package(url: "https://github.com/FitnessKit/FitnessUnits", from: "2.1.2"),
+.package(url: "https://github.com/FitnessKit/FitnessUnits", from: "3.0.0"),
 ]
 ```
 
