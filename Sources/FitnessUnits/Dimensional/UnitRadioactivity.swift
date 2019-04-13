@@ -27,7 +27,7 @@ import Foundation
 /// Units of Radioactivity
 @available(swift 3.1)
 @available(iOS 10.0, tvOS 10.0, watchOS 3.0, OSX 10.12, *)
-open class UnitRadioactivity: Dimension {
+public final class UnitRadioactivity: Dimension {
 
     private struct Symbol {
         static let disintegrationsPerMinute     = "dpm"
@@ -66,56 +66,56 @@ open class UnitRadioactivity: Dimension {
     }
 
     /// Radioactivity in Disintegrations Per Minute (dpm)
-    open class var disintegrationsPerMinute: UnitRadioactivity {
+    public class var disintegrationsPerMinute: UnitRadioactivity {
         get {
             return UnitRadioactivity(symbol: Symbol.disintegrationsPerMinute, coefficient: Coefficient.disintegrationsPerMinute)
         }
     }
 
     /// Radioactivity in Becquerel (Bq)
-    open class var becquerel: UnitRadioactivity {
+    public class var becquerel: UnitRadioactivity {
         get {
             return UnitRadioactivity(symbol: Symbol.becquerel, coefficient: Coefficient.becquerel)
         }
     }
 
     /// Radioactivity in Kilo Becquerel (kBq)
-    open class var kilobecquerel: UnitRadioactivity {
+    public class var kilobecquerel: UnitRadioactivity {
         get {
             return UnitRadioactivity(symbol: Symbol.kilobecquerel, coefficient: Coefficient.kilobecquerel)
         }
     }
 
     /// Radioactivity in Mega Becquerel (MBq)
-    open class var megabecquerel: UnitRadioactivity {
+    public class var megabecquerel: UnitRadioactivity {
         get {
             return UnitRadioactivity(symbol: Symbol.megabecquerel, coefficient: Coefficient.megabecquerel)
         }
     }
 
     /// Radioactivity in Micro Curie (µCi)
-    open class var microcurie: UnitRadioactivity {
+    public class var microcurie: UnitRadioactivity {
         get {
             return UnitRadioactivity(symbol: Symbol.microcurie, coefficient: Coefficient.microcurie)
         }
     }
 
     /// Radioactivity in Milli Curie (mCi)
-    open class var millicurie: UnitRadioactivity {
+    public class var millicurie: UnitRadioactivity {
         get {
             return UnitRadioactivity(symbol: Symbol.millicurie, coefficient: Coefficient.millicurie)
         }
     }
 
     /// Radioactivity in Milli Curie (mCi)
-    open class var curie: UnitRadioactivity {
+    public class var curie: UnitRadioactivity {
         get {
             return UnitRadioactivity(symbol: Symbol.curie, coefficient: Coefficient.curie)
         }
     }
 
     /// Radioactivity in Rutherford (rd)
-    open class var rutherford: UnitRadioactivity {
+    public class var rutherford: UnitRadioactivity {
         get {
             return UnitRadioactivity(symbol: Symbol.rutherford, coefficient: Coefficient.rutherford)
         }
@@ -124,8 +124,8 @@ open class UnitRadioactivity: Dimension {
     /// Base Unit for UnitRadioactivity
     ///
     /// - Returns: Base Unit
-    open override class func baseUnit() -> UnitRadioactivity {
-        return UnitRadioactivity.becquerel
+    public override class func baseUnit() -> UnitRadioactivity {
+        return .becquerel
     }
 
     public required init?(coder aDecoder: NSCoder) { super.init(coder: aDecoder) }
@@ -133,5 +133,17 @@ open class UnitRadioactivity: Dimension {
     /// Encodes the receiver using a given archiver
     ///
     /// - Parameter aCoder: An archiver object.
-    open override func encode(with aCoder: NSCoder) { super.encode(with: aCoder) }
+    public override func encode(with aCoder: NSCoder) { super.encode(with: aCoder) }
+    
+    public override func isEqual(_ object: Any?) -> Bool {
+        guard let other = object as? UnitRadioactivity else {
+            return false
+        }
+        
+        if self === other {
+            return true
+        }
+        
+        return super.isEqual(object)
+    }
 }

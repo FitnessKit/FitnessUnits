@@ -46,7 +46,7 @@ public extension UnitAngle {
     }
 
     /// Bradian Unit of Angle
-    public class var bradian: UnitAngle {
+    class var bradian: UnitAngle {
         get {
             return UnitAngle(symbol: Symbol.bradian,
                              converter: UnitConverterLinear(coefficient: Coefficient.bradian))
@@ -54,7 +54,7 @@ public extension UnitAngle {
     }
 
     /// Milliradian Unit of Angle
-    public class var milliradian: UnitAngle {
+    class var milliradian: UnitAngle {
         return UnitAngle(symbol: Symbol.milliradian,
                          converter: UnitConverterLinear(coefficient: Coefficient.milliradian))
     }
@@ -62,13 +62,13 @@ public extension UnitAngle {
     /// Turn Unit of Angle
     ///
     /// This is the same as a `UnitAngle.revolutions`
-    public class var turn: UnitAngle {
+    class var turn: UnitAngle {
         return UnitAngle(symbol: Symbol.turn,
                          converter: UnitConverterLinear(coefficient: Coefficient.turn))
     }
 
     /// Semicircle Unit of Angle
-    public class var semicircle: UnitAngle {
+    class var semicircle: UnitAngle {
         return UnitAngle(symbol: Symbol.semicircle,
                          converter: UnitConverterLinear(coefficient: Coefficient.semicircle))
     }
@@ -76,13 +76,13 @@ public extension UnitAngle {
     /// Garmin Semicircle Unit of Angle
     ///
     /// Used in ANT and FIT Files
-    public class var garminSemicircle: UnitAngle {
+    class var garminSemicircle: UnitAngle {
         return UnitAngle(symbol: Symbol.semicircle,
                          converter: UnitConverterLinear(coefficient: Coefficient.garminSemicircle))
     }
 
     /// NATO Angular Mil Unit of Angle
-    public class var natoAngularMil: UnitAngle {
+    class var natoAngularMil: UnitAngle {
         return UnitAngle(symbol: Symbol.angularMilNato,
                          converter: UnitConverterLinear(coefficient: Coefficient.angularMilNato))
     }

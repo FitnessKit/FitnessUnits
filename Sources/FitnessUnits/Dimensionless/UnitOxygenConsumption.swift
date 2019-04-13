@@ -58,7 +58,7 @@ public extension UnitOxygenConsumption {
     ///
     /// - Parameter velocity: Velocity as a Measurement of UnitSpeed
     /// - Returns: Measurement of UnitOxygenConsumption
-    public class func vo2UsingMultiStageFitnessTest(velocity: Measurement<UnitSpeed>) -> Measurement<UnitOxygenConsumption> {
+    class func vo2UsingMultiStageFitnessTest(velocity: Measurement<UnitSpeed>) -> Measurement<UnitOxygenConsumption> {
 
         let speed = velocity.converted(to: .kilometersPerHour)
 

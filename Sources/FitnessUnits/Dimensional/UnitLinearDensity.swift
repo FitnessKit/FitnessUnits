@@ -27,7 +27,7 @@ import Foundation
 /// Units of Linear Density
 @available(swift 3.1)
 @available(iOS 10.0, tvOS 10.0, watchOS 3.0, OSX 10.12, *)
-open class UnitLinearDensity: Dimension {
+public final class UnitLinearDensity: Dimension {
 
     private struct Symbol {
         static let kilogramMeter    = "kg/m"
@@ -54,14 +54,14 @@ open class UnitLinearDensity: Dimension {
     }
 
     /// Linear Density in Kilogram Meter (kg/m)
-    open class var kilogramMeter: UnitLinearDensity {
+    public class var kilogramMeter: UnitLinearDensity {
         get {
             return UnitLinearDensity(symbol: Symbol.kilogramMeter, coefficient: Coefficient.kilogramMeter)
         }
     }
 
     /// Linear Desnity in Pound Foot (lb/ft)
-    open class var poundFoot: UnitLinearDensity {
+    public class var poundFoot: UnitLinearDensity {
         get {
             return UnitLinearDensity(symbol: Symbol.poundFoot, coefficient: Coefficient.poundFoot)
         }
@@ -70,8 +70,8 @@ open class UnitLinearDensity: Dimension {
     /// Base unit for UnitLinearDensity
     ///
     /// - Returns: Base Unit
-    open override class func baseUnit() -> UnitLinearDensity {
-        return UnitLinearDensity.kilogramMeter
+    public override class func baseUnit() -> UnitLinearDensity {
+        return .kilogramMeter
     }
 
     public required init?(coder aDecoder: NSCoder) { super.init(coder: aDecoder) }
@@ -79,6 +79,17 @@ open class UnitLinearDensity: Dimension {
     /// Encodes the receiver using a given archiver
     ///
     /// - Parameter aCoder: An archiver object.
-    open override func encode(with aCoder: NSCoder) { super.encode(with: aCoder) }
+    public override func encode(with aCoder: NSCoder) { super.encode(with: aCoder) }
 
+    public override func isEqual(_ object: Any?) -> Bool {
+        guard let other = object as? UnitLinearDensity else {
+            return false
+        }
+        
+        if self === other {
+            return true
+        }
+        
+        return super.isEqual(object)
+    }
 }

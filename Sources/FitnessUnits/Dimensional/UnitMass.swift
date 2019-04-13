@@ -34,7 +34,7 @@ public extension UnitMass {
     ///   - height: Height
     ///   - weight: Weight
     /// - Returns: Body Surface Area (BSA)
-    public final class func bsaUsingMosteller(height: Measurement<UnitLength>, weight: Measurement<UnitMass>) -> Double {
+    final class func bsaUsingMosteller(height: Measurement<UnitLength>, weight: Measurement<UnitMass>) -> Double {
 
         let heightCm = height.converted(to: .centimeters).value
         let weightKg = weight.converted(to: .kilograms).value
@@ -49,7 +49,7 @@ public extension UnitMass {
     ///   - height: Height
     ///   - weight: Weight
     /// - Returns: Body Surface Area (BSA)
-    public final class func bsaUsingDuBois(height: Measurement<UnitLength>, weight: Measurement<UnitMass>) -> Double {
+    final class func bsaUsingDuBois(height: Measurement<UnitLength>, weight: Measurement<UnitMass>) -> Double {
 
         let heightCm = height.converted(to: .centimeters).value
         let weightKg = weight.converted(to: .kilograms).value
@@ -64,7 +64,7 @@ public extension UnitMass {
     ///   - height: Height
     ///   - weight: Weight
     /// - Returns: Body Surface Area (BSA)
-    public final class func bsaUsingHaycock(height: Measurement<UnitLength>, weight: Measurement<UnitMass>) -> Double {
+    final class func bsaUsingHaycock(height: Measurement<UnitLength>, weight: Measurement<UnitMass>) -> Double {
 
         let heightCm = height.converted(to: .centimeters).value
         let weightKg = weight.converted(to: .kilograms).value
@@ -79,7 +79,7 @@ public extension UnitMass {
     ///   - height: Height
     ///   - weight: Weight
     /// - Returns: Body Surface Area (BSA)
-    public final class func bsaUsingGehanGeorge(height: Measurement<UnitLength>, weight: Measurement<UnitMass>) -> Double {
+    final class func bsaUsingGehanGeorge(height: Measurement<UnitLength>, weight: Measurement<UnitMass>) -> Double {
 
         let heightCm = height.converted(to: .centimeters).value
         let weightKg = weight.converted(to: .kilograms).value
@@ -99,7 +99,7 @@ public extension UnitMass {
     ///   - height: Height
     ///   - weight: Weight
     /// - Returns: Body Mass Index (BMI)
-    public final class func bmi(height: Measurement<UnitLength>, weight: Measurement<UnitMass>) -> Double {
+    final class func bmi(height: Measurement<UnitLength>, weight: Measurement<UnitMass>) -> Double {
 
         let heightM = height.converted(to: .meters).value
         let weightKg = weight.converted(to: .kilograms).value

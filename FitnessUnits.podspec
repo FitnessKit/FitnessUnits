@@ -22,6 +22,8 @@ Extends Foundations Units for Fitness related activity.
   s.author           = { 'Kevin A. Hoogheem' => 'kevin@hoogheem.net' }
   s.source           = { :git => 'https://github.com/FitnessKit/FitnessUnits.git', :tag => s.version.to_s }
 
+  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '5.0' }
+
   s.ios.deployment_target = '10.0'
   s.osx.deployment_target = '10.12'
   s.tvos.deployment_target = '10.0'
