@@ -22,9 +22,9 @@ Swift Package Manager:
 
 Swift
 ```swift
-dependencies: [
-.package(url: "https://github.com/FitnessKit/FitnessUnits", from: "3.0.0"),
-]
+    dependencies: [
+        .package(url: "https://github.com/FitnessKit/FitnessUnits", from: "3.0.0"),
+    ]
 ```
 
 Swift4
