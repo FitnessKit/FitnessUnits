@@ -27,7 +27,7 @@ import Foundation
 /// Units of Magnetic Field
 @available(swift 3.1)
 @available(iOS 10.0, tvOS 10.0, watchOS 3.0, OSX 10.12, *)
-open class UnitMagneticField: Dimension {
+public final class UnitMagneticField: Dimension {
 
     private struct Symbol {
         static let nanoTesla    = "nT"
@@ -60,35 +60,35 @@ open class UnitMagneticField: Dimension {
     }
 
     /// Magnetic Field in Tesla (T)
-    open class var tesla: UnitMagneticField {
+    public class var tesla: UnitMagneticField {
         get {
             return UnitMagneticField(symbol: Symbol.tesla, coefficient: Coefficient.tesla)
         }
     }
 
     /// Magnetic Field in Mico Tesla (µT)
-    open class var microTesla: UnitMagneticField {
+    public class var microTesla: UnitMagneticField {
         get {
             return UnitMagneticField(symbol: Symbol.microTesla, coefficient: Coefficient.microTesla)
         }
     }
 
     /// Magnetic Field in Nano Tesla (nT)
-    open class var nanoTesla: UnitMagneticField {
+    public class var nanoTesla: UnitMagneticField {
         get {
             return UnitMagneticField(symbol: Symbol.nanoTesla, coefficient: Coefficient.nanoTesla)
         }
     }
 
     /// Magnetic Field in Gauss (G)
-    open class var gauss: UnitMagneticField {
+    public class var gauss: UnitMagneticField {
         get {
             return UnitMagneticField(symbol: Symbol.gauss, coefficient: Coefficient.gauss)
         }
     }
 
     /// Magnetic Field in Milli Gauss (mG)
-    open class var milliGauss: UnitMagneticField {
+    public class var milliGauss: UnitMagneticField {
         get {
             return UnitMagneticField(symbol: Symbol.milliGauss, coefficient: Coefficient.milliGauss)
         }
@@ -97,8 +97,8 @@ open class UnitMagneticField: Dimension {
     /// Base unit for MagneticField
     ///
     /// - Returns: Base Unit
-    open override class func baseUnit() -> UnitMagneticField {
-        return UnitMagneticField.tesla
+    public override class func baseUnit() -> UnitMagneticField {
+        return .tesla
     }
 
     public required init?(coder aDecoder: NSCoder) { super.init(coder: aDecoder) }
@@ -106,5 +106,17 @@ open class UnitMagneticField: Dimension {
     /// Encodes the receiver using a given archiver
     ///
     /// - Parameter aCoder: An archiver object.
-    open override func encode(with aCoder: NSCoder) { super.encode(with: aCoder) }
+    public override func encode(with aCoder: NSCoder) { super.encode(with: aCoder) }
+    
+    public override func isEqual(_ object: Any?) -> Bool {
+        guard let other = object as? UnitMagneticField else {
+            return false
+        }
+        
+        if self === other {
+            return true
+        }
+        
+        return super.isEqual(object)
+    }
 }

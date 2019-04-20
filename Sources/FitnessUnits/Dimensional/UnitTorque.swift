@@ -27,7 +27,7 @@ import Foundation
 /// Units of Torque
 @available(swift 3.1)
 @available(iOS 10.0, tvOS 10.0, watchOS 3.0, OSX 10.12, *)
-open class UnitTorque: Dimension {
+public final class UnitTorque: Dimension {
     private struct Symbol {
         static let kilogramForceMeter   = "kgf·m"
         static let newtonMeter          = "N·m"
@@ -55,21 +55,21 @@ open class UnitTorque: Dimension {
     }
 
     /// Torque in Newton Meter (N·m)
-    open class var newtonMeter: UnitTorque {
+    public class var newtonMeter: UnitTorque {
         get {
             return UnitTorque(symbol: Symbol.newtonMeter, coefficient: Coefficient.newtonMeter)
         }
     }
 
     /// Torque in Foot Pound Force (lbf·ft)
-    open class var footPoundForce: UnitTorque {
+    public class var footPoundForce: UnitTorque {
         get {
             return UnitTorque(symbol: Symbol.footPoundForce, coefficient: Coefficient.footPoundForce)
         }
     }
 
     /// Torque in Kilogram Force Meter (kgf·m)
-    open class var kilogramForceMeter: UnitTorque {
+    public class var kilogramForceMeter: UnitTorque {
         get {
             return UnitTorque(symbol: Symbol.kilogramForceMeter, coefficient: Coefficient.kilogramForceMeter)
         }
@@ -78,8 +78,8 @@ open class UnitTorque: Dimension {
     /// Base Unit for UnitTorque
     ///
     /// - Returns: Base Unit
-    open override class func baseUnit() -> UnitTorque {
-        return UnitTorque.newtonMeter
+    public override class func baseUnit() -> UnitTorque {
+        return .newtonMeter
     }
 
     public required init?(coder aDecoder: NSCoder) { super.init(coder: aDecoder) }
@@ -87,5 +87,17 @@ open class UnitTorque: Dimension {
     /// Encodes the receiver using a given archiver
     ///
     /// - Parameter aCoder: An archiver object.
-    open override func encode(with aCoder: NSCoder) { super.encode(with: aCoder) }
+    public override func encode(with aCoder: NSCoder) { super.encode(with: aCoder) }
+    
+    public override func isEqual(_ object: Any?) -> Bool {
+        guard let other = object as? UnitTorque else {
+            return false
+        }
+        
+        if self === other {
+            return true
+        }
+        
+        return super.isEqual(object)
+    }
 }

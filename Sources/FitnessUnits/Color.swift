@@ -75,11 +75,11 @@ extension HexColor {
     ///
     /// - Parameter encoder: The encoder to write data to.
     public func encode(to encoder: Encoder) throws {
-        enum CodingKeys : Int, CodingKey {
+        enum CodingKeys: Int, CodingKey {
             case color
         }
 
-        enum ColorKeys : Int, CodingKey {
+        enum ColorKeys: Int, CodingKey {
             case alpha
             case hex
         }

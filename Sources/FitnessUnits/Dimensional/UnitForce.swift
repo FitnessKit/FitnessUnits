@@ -27,7 +27,7 @@ import Foundation
 /// Units of Force
 @available(swift 3.1)
 @available(iOS 10.0, tvOS 10.0, watchOS 3.0, OSX 10.12, *)
-open class UnitForce: Dimension {
+public final class UnitForce: Dimension {
 
     private struct Symbol {
         static let dyne             = "dyn"
@@ -58,28 +58,28 @@ open class UnitForce: Dimension {
     }
 
     /// Force in Newtons (N)
-    open class var newton: UnitForce {
+    public class var newton: UnitForce {
         get {
             return UnitForce(symbol: Symbol.newton, coefficient: Coefficient.newton)
         }
     }
 
     /// Force in Kilogram Force (kgf)
-    open class var kilogramForce: UnitForce {
+    public class var kilogramForce: UnitForce {
         get {
             return UnitForce(symbol: Symbol.kilogramForce, coefficient: Coefficient.kilogramForce)
         }
     }
 
     /// Force in Pound Force (lbf)
-    open class var poundForce: UnitForce {
+    public class var poundForce: UnitForce {
         get {
             return UnitForce(symbol: Symbol.poundForce, coefficient: Coefficient.poundForce)
         }
     }
 
     /// Force in Dyne (dyn)
-    open class var dyne: UnitForce {
+    public class var dyne: UnitForce {
         get {
             return UnitForce(symbol: Symbol.dyne, coefficient: Coefficient.dyne)
         }
@@ -88,11 +88,23 @@ open class UnitForce: Dimension {
     /// Base Unit for Force
     ///
     /// - Returns: The Force Base Unit
-    open override class func baseUnit() -> UnitForce {
-        return UnitForce.newton
+    public override class func baseUnit() -> UnitForce {
+        return .newton
     }
 
     public required init?(coder aDecoder: NSCoder) { super.init(coder: aDecoder) }
 
-    open override func encode(with aCoder: NSCoder) { super.encode(with: aCoder) }
+    public override func encode(with aCoder: NSCoder) { super.encode(with: aCoder) }
+    
+    public override func isEqual(_ object: Any?) -> Bool {
+        guard let other = object as? UnitForce else {
+            return false
+        }
+        
+        if self === other {
+            return true
+        }
+        
+        return super.isEqual(object)
+    }
 }

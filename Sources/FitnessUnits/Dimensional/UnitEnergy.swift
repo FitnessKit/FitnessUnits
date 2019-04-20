@@ -49,35 +49,35 @@ public extension UnitEnergy {
     }
 
     /// Energy in MegaJoule (MJ)
-    public class var megajoule: UnitEnergy {
+    class var megajoule: UnitEnergy {
         get {
             return UnitEnergy(symbol: Symbol.megajoule, coefficient: Coefficient.megajoule)
         }
     }
 
     /// Energy in Watt Hours (Wh)
-    public class var wattHours: UnitEnergy {
+    class var wattHours: UnitEnergy {
         get {
             return UnitEnergy(symbol: Symbol.wattHours, coefficient: Coefficient.wattHours)
         }
     }
 
     /// Energy in Electron Volts (ev)
-    public class var electronVolt: UnitEnergy {
+    class var electronVolt: UnitEnergy {
         get {
             return UnitEnergy(symbol: Symbol.electronVolt, coefficient: Coefficient.electronVolt)
         }
     }
 
     /// Energy in British Thermal Units (BTU)
-    public class var btu: UnitEnergy {
+    class var btu: UnitEnergy {
         get {
             return UnitEnergy(symbol: Symbol.btu, coefficient: Coefficient.btu)
         }
     }
 
     /// Energy in Therms (thm)
-    public class var therm: UnitEnergy {
+    class var therm: UnitEnergy {
         get {
             return UnitEnergy(symbol: Symbol.therm, coefficient: Coefficient.therm)
         }
@@ -97,7 +97,7 @@ public extension UnitEnergy {
     ///   - heartRate: Heart Rate
     ///   - age: Age of Person in years
     /// - Returns: Energy Measurement
-    public final class func energyBurned(weight: Measurement<UnitMass>, gender: UnitGender, heartRate: UInt8, ageInYears age: Int ) -> Measurement<UnitEnergy> {
+    final class func energyBurned(weight: Measurement<UnitMass>, gender: UnitGender, heartRate: UInt8, ageInYears age: Int ) -> Measurement<UnitEnergy> {
 
         var kCals: Double = 0.0
 
@@ -121,7 +121,7 @@ public extension UnitEnergy {
     ///   - gender: Gender - UnitGender.female or UnitGender.male
     ///   - age: Age in Years
     /// - Returns: The Basal metabolic rate (BMR)
-    public final class func bmrUsingMifflin(height: Measurement<UnitLength>, weight: Measurement<UnitMass>, gender: UnitGender, ageInYears age: Int) -> Double {
+    final class func bmrUsingMifflin(height: Measurement<UnitLength>, weight: Measurement<UnitMass>, gender: UnitGender, ageInYears age: Int) -> Double {
 
         var bmr: Double = 0.0
         let weightKg = weight.converted(to: .kilograms).value

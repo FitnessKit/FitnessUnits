@@ -43,28 +43,28 @@ public extension UnitConcentrationMass { /// Base unit - gramsPerLiter
     }
 
     /// Concentraion of Mass in Grams Per Milliliter (g/mL)
-    public class var gramsPerMilliliter: UnitConcentrationMass {
+    class var gramsPerMilliliter: UnitConcentrationMass {
         get {
             return UnitConcentrationMass(symbol: Symbol.gramPerMilliliter, converter: UnitConverterLinear(coefficient: Coefficient.gramPerMilliliter))
         }
     }
 
     /// Concentraion of Mass in Kilograms Per Milliliter (kg/mL)
-    public class var kilogramsPerMilliliter: UnitConcentrationMass {
+    class var kilogramsPerMilliliter: UnitConcentrationMass {
         get {
             return UnitConcentrationMass(symbol: Symbol.kilogramPerMilliliter, converter: UnitConverterLinear(coefficient: Coefficient.kilogramPerMilliliter))
         }
     }
 
     /// Concentraion of Mass in Milligram Per Liter (mg/L)
-    public class var milligramsPerLiter: UnitConcentrationMass {
+    class var milligramsPerLiter: UnitConcentrationMass {
         get {
             return UnitConcentrationMass(symbol: Symbol.milligramPerLiter, converter: UnitConverterLinear(coefficient: Coefficient.milligramPerLiter))
         }
     }
 
     /// Concentraion of Mass in Kilogram Per Liter (kg/L)
-    public class var kilogramsPerLiter: UnitConcentrationMass {
+    class var kilogramsPerLiter: UnitConcentrationMass {
         get {
             return UnitConcentrationMass(symbol: Symbol.kilogramPerLiter, converter: UnitConverterLinear(coefficient: Coefficient.kilogramPerLiter))
         }

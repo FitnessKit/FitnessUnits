@@ -27,7 +27,7 @@ import Foundation
 /// Units of Angular Velocity
 @available(swift 3.1)
 @available(iOS 10.0, tvOS 10.0, watchOS 3.0, OSX 10.12, *)
-open class UnitAngularVelocity: Dimension {
+public final class UnitAngularVelocity: Dimension {
 
     private struct Symbol {
         static let degress      = "deg/s"
@@ -54,14 +54,14 @@ open class UnitAngularVelocity: Dimension {
     }
 
     /// Angular Velocity in Degrees per Second (deg/s)
-    open class var degreesPerSecond: UnitAngularVelocity {
+    public class var degreesPerSecond: UnitAngularVelocity {
         get {
             return UnitAngularVelocity(symbol: Symbol.degress, coefficient: Coefficient.degress)
         }
     }
 
     /// Angular Velocity in Radians per Second (rad/s)
-    open class var radiansPerSecond: UnitAngularVelocity {
+    public class var radiansPerSecond: UnitAngularVelocity {
         get {
             return UnitAngularVelocity(symbol: Symbol.radians, coefficient: Coefficient.radians)
         }
@@ -70,8 +70,8 @@ open class UnitAngularVelocity: Dimension {
     /// Base unit for UnitAngularVelocity
     ///
     /// - Returns: Base Unit
-    open override class func baseUnit() -> UnitAngularVelocity {
-        return UnitAngularVelocity.degreesPerSecond
+    public override class func baseUnit() -> UnitAngularVelocity {
+        return .degreesPerSecond
     }
 
     public required init?(coder aDecoder: NSCoder) { super.init(coder: aDecoder) }
@@ -79,5 +79,17 @@ open class UnitAngularVelocity: Dimension {
     /// Encodes the receiver using a given archiver
     ///
     /// - Parameter aCoder: An archiver object.
-    open override func encode(with aCoder: NSCoder) { super.encode(with: aCoder) }
+    public override func encode(with aCoder: NSCoder) { super.encode(with: aCoder) }
+    
+    public override func isEqual(_ object: Any?) -> Bool {
+        guard let other = object as? UnitAngularVelocity else {
+            return false
+        }
+        
+        if self === other {
+            return true
+        }
+        
+        return super.isEqual(object)
+    }
 }
