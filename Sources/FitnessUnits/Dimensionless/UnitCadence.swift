@@ -44,71 +44,51 @@ open class UnitCadence: Unit {
 
     /// Beats Per Minute (BPM)
     public class var beatsPerMinute: UnitCadence {
-        get {
-            return UnitCadence(symbol: Symbol.beatsPerMinute)
-        }
+        return UnitCadence(symbol: Symbol.beatsPerMinute)
     }
 
     /// Floors Per Minute (floors/min)
     public class var floorsPerMinute: UnitCadence {
-        get {
-            return UnitCadence(symbol: Symbol.floorsPerMinute)
-        }
+        return UnitCadence(symbol: Symbol.floorsPerMinute)
     }
 
     /// Generic Cadence (units/min)
     public class var genericUnitsPerMinute: UnitCadence {
-        get {
-            return UnitCadence(symbol: Symbol.unitsPerMinute)
-        }
+        return UnitCadence(symbol: Symbol.unitsPerMinute)
     }
 
     /// Jumps Per Minute (jumps/min)
     public class var jumpsPerMinute: UnitCadence {
-        get {
-            return UnitCadence(symbol: Symbol.jumpsPerMinute)
-        }
+        return UnitCadence(symbol: Symbol.jumpsPerMinute)
     }
 
     /// Punches Per Minute (punches/min)
     public class var punchesPerMinute: UnitCadence {
-        get {
-            return UnitCadence(symbol: Symbol.punchesPerMinute)
-        }
+        return UnitCadence(symbol: Symbol.punchesPerMinute)
     }
 
     /// Revolutions Per Minute (RPM)
     public class var revolutionsPerMinute: UnitCadence {
-        get {
-            return UnitCadence(symbol: Symbol.revolutionsPerMinute)
-        }
+        return UnitCadence(symbol: Symbol.revolutionsPerMinute)
     }
 
     /// Steps Per Minute (steps/minute)
     public class var stepsPerMinute: UnitCadence {
-        get {
-            return UnitCadence(symbol: Symbol.stepsPerMinute)
-        }
+        return UnitCadence(symbol: Symbol.stepsPerMinute)
     }
 
     /// Strides Per Minute (strides/min)
     public class var stridesPerMinute: UnitCadence {
-        get {
-            return UnitCadence(symbol: Symbol.stridesPerMinute)
-        }
+        return UnitCadence(symbol: Symbol.stridesPerMinute)
     }
 
     /// Strikes Per Minute (strikes/min)
     public class var strikesPerMinute: UnitCadence {
-        get {
-            return UnitCadence(symbol: Symbol.strikesPerMinute)
-        }
+        return UnitCadence(symbol: Symbol.strikesPerMinute)
     }
 
     /// Strokes Per Minute (strokes/min)
     public class var strokesPerMinute: UnitCadence {
-        get {
-            return UnitCadence(symbol: Symbol.strokesPerMinute)
-        }
+        return UnitCadence(symbol: Symbol.strokesPerMinute)
     }
 }

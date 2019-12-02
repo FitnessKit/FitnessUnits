@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'FitnessUnits'
-  s.version          = '3.0.0'
+  s.version          = '3.1.0'
   s.summary          = 'FitnessUnits.  Units for Fitness activity'
 
   s.description      = <<-DESC
@@ -23,6 +23,7 @@ Extends Foundations Units for Fitness related activity.
   s.source           = { :git => 'https://github.com/FitnessKit/FitnessUnits.git', :tag => s.version.to_s }
 
   s.pod_target_xcconfig = { 'SWIFT_VERSION' => '5.0' }
+  s.swift_version       = '5.0'
 
   s.ios.deployment_target = '10.0'
   s.osx.deployment_target = '10.12'

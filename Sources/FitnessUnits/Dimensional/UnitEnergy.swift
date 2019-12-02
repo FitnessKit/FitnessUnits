@@ -50,37 +50,27 @@ public extension UnitEnergy {
 
     /// Energy in MegaJoule (MJ)
     class var megajoule: UnitEnergy {
-        get {
-            return UnitEnergy(symbol: Symbol.megajoule, coefficient: Coefficient.megajoule)
-        }
+        return UnitEnergy(symbol: Symbol.megajoule, coefficient: Coefficient.megajoule)
     }
 
     /// Energy in Watt Hours (Wh)
     class var wattHours: UnitEnergy {
-        get {
-            return UnitEnergy(symbol: Symbol.wattHours, coefficient: Coefficient.wattHours)
-        }
+        return UnitEnergy(symbol: Symbol.wattHours, coefficient: Coefficient.wattHours)
     }
 
     /// Energy in Electron Volts (ev)
     class var electronVolt: UnitEnergy {
-        get {
-            return UnitEnergy(symbol: Symbol.electronVolt, coefficient: Coefficient.electronVolt)
-        }
+        return UnitEnergy(symbol: Symbol.electronVolt, coefficient: Coefficient.electronVolt)
     }
 
     /// Energy in British Thermal Units (BTU)
     class var btu: UnitEnergy {
-        get {
-            return UnitEnergy(symbol: Symbol.btu, coefficient: Coefficient.btu)
-        }
+        return UnitEnergy(symbol: Symbol.btu, coefficient: Coefficient.btu)
     }
 
     /// Energy in Therms (thm)
     class var therm: UnitEnergy {
-        get {
-            return UnitEnergy(symbol: Symbol.therm, coefficient: Coefficient.therm)
-        }
+        return UnitEnergy(symbol: Symbol.therm, coefficient: Coefficient.therm)
     }
 
 }

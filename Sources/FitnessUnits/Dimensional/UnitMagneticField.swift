@@ -61,37 +61,27 @@ public final class UnitMagneticField: Dimension {
 
     /// Magnetic Field in Tesla (T)
     public class var tesla: UnitMagneticField {
-        get {
-            return UnitMagneticField(symbol: Symbol.tesla, coefficient: Coefficient.tesla)
-        }
+        return UnitMagneticField(symbol: Symbol.tesla, coefficient: Coefficient.tesla)
     }
 
     /// Magnetic Field in Mico Tesla (µT)
     public class var microTesla: UnitMagneticField {
-        get {
-            return UnitMagneticField(symbol: Symbol.microTesla, coefficient: Coefficient.microTesla)
-        }
+        return UnitMagneticField(symbol: Symbol.microTesla, coefficient: Coefficient.microTesla)
     }
 
     /// Magnetic Field in Nano Tesla (nT)
     public class var nanoTesla: UnitMagneticField {
-        get {
-            return UnitMagneticField(symbol: Symbol.nanoTesla, coefficient: Coefficient.nanoTesla)
-        }
+        return UnitMagneticField(symbol: Symbol.nanoTesla, coefficient: Coefficient.nanoTesla)
     }
 
     /// Magnetic Field in Gauss (G)
     public class var gauss: UnitMagneticField {
-        get {
-            return UnitMagneticField(symbol: Symbol.gauss, coefficient: Coefficient.gauss)
-        }
+        return UnitMagneticField(symbol: Symbol.gauss, coefficient: Coefficient.gauss)
     }
 
     /// Magnetic Field in Milli Gauss (mG)
     public class var milliGauss: UnitMagneticField {
-        get {
-            return UnitMagneticField(symbol: Symbol.milliGauss, coefficient: Coefficient.milliGauss)
-        }
+        return UnitMagneticField(symbol: Symbol.milliGauss, coefficient: Coefficient.milliGauss)
     }
 
     /// Base unit for MagneticField

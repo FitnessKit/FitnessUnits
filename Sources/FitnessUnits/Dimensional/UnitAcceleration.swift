@@ -41,17 +41,13 @@ public extension UnitAcceleration {
 
     /// Unit of Acceleration in Feet Per Second Squared
     class var feetPerSecondSquared: UnitAcceleration {
-        get {
-            return UnitAcceleration(symbol: Symbol.feetPerSecondSquared,
-                                    converter: UnitConverterLinear(coefficient: Coefficient.feetPerSecondSquared))
-        }
+        return UnitAcceleration(symbol: Symbol.feetPerSecondSquared,
+                                converter: UnitConverterLinear(coefficient: Coefficient.feetPerSecondSquared))
     }
 
     /// Unit of Acceleration in Galileo
     class var galileo: UnitAcceleration {
-        get {
-            return UnitAcceleration(symbol: Symbol.gal,
-                                    converter: UnitConverterLinear(coefficient: Coefficient.gal))
-        }
+        return UnitAcceleration(symbol: Symbol.gal,
+                                converter: UnitConverterLinear(coefficient: Coefficient.gal))
     }
 }

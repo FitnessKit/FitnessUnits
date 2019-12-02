@@ -55,16 +55,12 @@ public final class UnitLinearDensity: Dimension {
 
     /// Linear Density in Kilogram Meter (kg/m)
     public class var kilogramMeter: UnitLinearDensity {
-        get {
-            return UnitLinearDensity(symbol: Symbol.kilogramMeter, coefficient: Coefficient.kilogramMeter)
-        }
+        return UnitLinearDensity(symbol: Symbol.kilogramMeter, coefficient: Coefficient.kilogramMeter)
     }
 
     /// Linear Desnity in Pound Foot (lb/ft)
     public class var poundFoot: UnitLinearDensity {
-        get {
-            return UnitLinearDensity(symbol: Symbol.poundFoot, coefficient: Coefficient.poundFoot)
-        }
+        return UnitLinearDensity(symbol: Symbol.poundFoot, coefficient: Coefficient.poundFoot)
     }
 
     /// Base unit for UnitLinearDensity

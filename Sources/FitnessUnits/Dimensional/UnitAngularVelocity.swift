@@ -55,16 +55,12 @@ public final class UnitAngularVelocity: Dimension {
 
     /// Angular Velocity in Degrees per Second (deg/s)
     public class var degreesPerSecond: UnitAngularVelocity {
-        get {
-            return UnitAngularVelocity(symbol: Symbol.degress, coefficient: Coefficient.degress)
-        }
+        return UnitAngularVelocity(symbol: Symbol.degress, coefficient: Coefficient.degress)
     }
 
     /// Angular Velocity in Radians per Second (rad/s)
     public class var radiansPerSecond: UnitAngularVelocity {
-        get {
-            return UnitAngularVelocity(symbol: Symbol.radians, coefficient: Coefficient.radians)
-        }
+        return UnitAngularVelocity(symbol: Symbol.radians, coefficient: Coefficient.radians)
     }
 
     /// Base unit for UnitAngularVelocity

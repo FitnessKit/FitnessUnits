@@ -23,7 +23,7 @@ Swift Package Manager:
 Swift
 ```swift
     dependencies: [
-        .package(url: "https://github.com/FitnessKit/FitnessUnits", from: "3.0.0"),
+        .package(url: "https://github.com/FitnessKit/FitnessUnits", from: "3.1.0"),
     ]
 ```
 
@@ -76,6 +76,7 @@ Swift4
 ## New Dimensionless Unit Types ##
 
 * UnitCadence - Cadence (RPM, BPM, Steps per min, etc..)
+* UnitCount
 * UnitGender
 * UnitOxygenConsumption - VO2
 * UnitPercent
@@ -91,7 +92,6 @@ Swift4
 ## Other Types ##
 
 * MeasurementZone - Type that bounds values between a upper and lower bounds.
-
 
 
 ## Author

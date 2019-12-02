@@ -40,23 +40,17 @@ open class UnitGender: Unit {
 
     /// Female Gender type
     public class var female: UnitGender {
-        get {
-            return UnitGender(symbol: Symbol.female)
-        }
+        return UnitGender(symbol: Symbol.female)
     }
 
     /// Male Gender type
     public class var male: UnitGender {
-        get {
-            return UnitGender(symbol: Symbol.male)
-        }
+        return UnitGender(symbol: Symbol.male)
     }
 
     /// Unspecified Gender type
     public class var unspecificed: UnitGender {
-        get {
-            return UnitGender(symbol: Symbol.unspecificed)
-        }
+        return UnitGender(symbol: Symbol.unspecificed)
     }
 }
 

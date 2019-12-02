@@ -50,51 +50,37 @@ public extension UnitSpeed {
 
     /// Speed in Meters Per Hour (m/h)
     class var metersPerHour: UnitSpeed {
-        get {
-            return UnitSpeed(symbol: Symbol.meterPerHour, converter: UnitConverterLinear(coefficient: Coefficient.meterPerHour))
-        }
+        return UnitSpeed(symbol: Symbol.meterPerHour, converter: UnitConverterLinear(coefficient: Coefficient.meterPerHour))
     }
 
     /// Speed in Meters Per Minute (m/m)
     class var metersPerMinute: UnitSpeed {
-        get {
-            return UnitSpeed(symbol: Symbol.meterPerMinute, converter: UnitConverterLinear(coefficient: Coefficient.meterPerMinute))
-        }
+        return UnitSpeed(symbol: Symbol.meterPerMinute, converter: UnitConverterLinear(coefficient: Coefficient.meterPerMinute))
     }
 
     /// Speed in Kilometers Per Second (km/s)
     class var kilometersPerSecond: UnitSpeed {
-        get {
-            return UnitSpeed(symbol: Symbol.kms, converter: UnitConverterLinear(coefficient: Coefficient.kms))
-        }
+        return UnitSpeed(symbol: Symbol.kms, converter: UnitConverterLinear(coefficient: Coefficient.kms))
     }
 
     /// Speed in Kilometers Per Minute (km/m)
     class var kilometersPerMinute: UnitSpeed {
-        get {
-            return UnitSpeed(symbol: Symbol.kpm, converter: UnitConverterLinear(coefficient: Coefficient.kpm))
-        }
+        return UnitSpeed(symbol: Symbol.kpm, converter: UnitConverterLinear(coefficient: Coefficient.kpm))
     }
 
     /// Speed in Miles Per Minute (mpm)
     class var milesPerMinute: UnitSpeed {
-        get {
-            return UnitSpeed(symbol: Symbol.mpm, converter: UnitConverterLinear(coefficient: Coefficient.mpm))
-        }
+        return UnitSpeed(symbol: Symbol.mpm, converter: UnitConverterLinear(coefficient: Coefficient.mpm))
     }
 
     /// Speed in Miles Per Second (mps)
     class var milesPerSecond: UnitSpeed {
-        get {
-            return UnitSpeed(symbol: Symbol.mps, converter: UnitConverterLinear(coefficient: Coefficient.mps))
-        }
+        return UnitSpeed(symbol: Symbol.mps, converter: UnitConverterLinear(coefficient: Coefficient.mps))
     }
 
     /// Speed in Speed of Light (c)
     class var speedOfLight: UnitSpeed {
-        get {
-            return UnitSpeed(symbol: Symbol.speedOfLight, converter: UnitConverterLinear(coefficient: Coefficient.speedOfLight))
-        }
+        return UnitSpeed(symbol: Symbol.speedOfLight, converter: UnitConverterLinear(coefficient: Coefficient.speedOfLight))
     }
 
 }

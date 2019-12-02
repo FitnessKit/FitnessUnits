@@ -56,23 +56,17 @@ public final class UnitTorque: Dimension {
 
     /// Torque in Newton Meter (N·m)
     public class var newtonMeter: UnitTorque {
-        get {
-            return UnitTorque(symbol: Symbol.newtonMeter, coefficient: Coefficient.newtonMeter)
-        }
+        return UnitTorque(symbol: Symbol.newtonMeter, coefficient: Coefficient.newtonMeter)
     }
 
     /// Torque in Foot Pound Force (lbf·ft)
     public class var footPoundForce: UnitTorque {
-        get {
-            return UnitTorque(symbol: Symbol.footPoundForce, coefficient: Coefficient.footPoundForce)
-        }
+        return UnitTorque(symbol: Symbol.footPoundForce, coefficient: Coefficient.footPoundForce)
     }
 
     /// Torque in Kilogram Force Meter (kgf·m)
     public class var kilogramForceMeter: UnitTorque {
-        get {
-            return UnitTorque(symbol: Symbol.kilogramForceMeter, coefficient: Coefficient.kilogramForceMeter)
-        }
+        return UnitTorque(symbol: Symbol.kilogramForceMeter, coefficient: Coefficient.kilogramForceMeter)
     }
 
     /// Base Unit for UnitTorque

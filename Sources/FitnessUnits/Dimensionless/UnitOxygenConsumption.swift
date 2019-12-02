@@ -36,16 +36,12 @@ open class UnitOxygenConsumption: Unit {
 
     /// Oxygen Consumption with symbol of mL/(kg·min)
     public class var consumption: UnitOxygenConsumption {
-        get {
-            return UnitOxygenConsumption(symbol: Symbol.consumption)
-        }
+        return UnitOxygenConsumption(symbol: Symbol.consumption)
     }
 
     /// Oxygen Consumption with symbol VO2
     public class var vo2: UnitOxygenConsumption {
-        get {
-            return UnitOxygenConsumption(symbol: Symbol.vo2)
-        }
+        return UnitOxygenConsumption(symbol: Symbol.vo2)
     }
 }
 

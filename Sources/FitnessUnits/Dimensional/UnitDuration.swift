@@ -45,29 +45,21 @@ public extension UnitDuration { /// Base unit - seconds
 
     /// Duration Microsecond
     class var microsecond: UnitDuration {
-        get {
-            return UnitDuration(symbol: Symbol.microsecond, converter: UnitConverterLinear(coefficient: Coefficient.microsecond))
-        }
+        return UnitDuration(symbol: Symbol.microsecond, converter: UnitConverterLinear(coefficient: Coefficient.microsecond))
     }
 
     /// Duration Millisecond
     class var millisecond: UnitDuration {
-        get {
-            return UnitDuration(symbol: Symbol.millisecond, converter: UnitConverterLinear(coefficient: Coefficient.millisecond))
-        }
+        return UnitDuration(symbol: Symbol.millisecond, converter: UnitConverterLinear(coefficient: Coefficient.millisecond))
     }
 
     /// Duration Year
     class var year: UnitDuration {
-        get {
-            return UnitDuration(symbol: Symbol.year, converter: UnitConverterLinear(coefficient: Coefficient.year))
-        }
+        return UnitDuration(symbol: Symbol.year, converter: UnitConverterLinear(coefficient: Coefficient.year))
     }
 
     /// Duration Decade
     class var decade: UnitDuration {
-        get {
-            return UnitDuration(symbol: Symbol.decade, converter: UnitConverterLinear(coefficient: Coefficient.decade))
-        }
+        return UnitDuration(symbol: Symbol.decade, converter: UnitConverterLinear(coefficient: Coefficient.decade))
     }
 }

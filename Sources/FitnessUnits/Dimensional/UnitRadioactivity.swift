@@ -67,58 +67,42 @@ public final class UnitRadioactivity: Dimension {
 
     /// Radioactivity in Disintegrations Per Minute (dpm)
     public class var disintegrationsPerMinute: UnitRadioactivity {
-        get {
-            return UnitRadioactivity(symbol: Symbol.disintegrationsPerMinute, coefficient: Coefficient.disintegrationsPerMinute)
-        }
+        return UnitRadioactivity(symbol: Symbol.disintegrationsPerMinute, coefficient: Coefficient.disintegrationsPerMinute)
     }
 
     /// Radioactivity in Becquerel (Bq)
     public class var becquerel: UnitRadioactivity {
-        get {
-            return UnitRadioactivity(symbol: Symbol.becquerel, coefficient: Coefficient.becquerel)
-        }
+        return UnitRadioactivity(symbol: Symbol.becquerel, coefficient: Coefficient.becquerel)
     }
 
     /// Radioactivity in Kilo Becquerel (kBq)
     public class var kilobecquerel: UnitRadioactivity {
-        get {
-            return UnitRadioactivity(symbol: Symbol.kilobecquerel, coefficient: Coefficient.kilobecquerel)
-        }
+        return UnitRadioactivity(symbol: Symbol.kilobecquerel, coefficient: Coefficient.kilobecquerel)
     }
 
     /// Radioactivity in Mega Becquerel (MBq)
     public class var megabecquerel: UnitRadioactivity {
-        get {
-            return UnitRadioactivity(symbol: Symbol.megabecquerel, coefficient: Coefficient.megabecquerel)
-        }
+        return UnitRadioactivity(symbol: Symbol.megabecquerel, coefficient: Coefficient.megabecquerel)
     }
 
     /// Radioactivity in Micro Curie (µCi)
     public class var microcurie: UnitRadioactivity {
-        get {
-            return UnitRadioactivity(symbol: Symbol.microcurie, coefficient: Coefficient.microcurie)
-        }
+        return UnitRadioactivity(symbol: Symbol.microcurie, coefficient: Coefficient.microcurie)
     }
 
     /// Radioactivity in Milli Curie (mCi)
     public class var millicurie: UnitRadioactivity {
-        get {
-            return UnitRadioactivity(symbol: Symbol.millicurie, coefficient: Coefficient.millicurie)
-        }
+        return UnitRadioactivity(symbol: Symbol.millicurie, coefficient: Coefficient.millicurie)
     }
 
     /// Radioactivity in Milli Curie (mCi)
     public class var curie: UnitRadioactivity {
-        get {
-            return UnitRadioactivity(symbol: Symbol.curie, coefficient: Coefficient.curie)
-        }
+        return UnitRadioactivity(symbol: Symbol.curie, coefficient: Coefficient.curie)
     }
 
     /// Radioactivity in Rutherford (rd)
     public class var rutherford: UnitRadioactivity {
-        get {
-            return UnitRadioactivity(symbol: Symbol.rutherford, coefficient: Coefficient.rutherford)
-        }
+        return UnitRadioactivity(symbol: Symbol.rutherford, coefficient: Coefficient.rutherford)
     }
 
     /// Base Unit for UnitRadioactivity

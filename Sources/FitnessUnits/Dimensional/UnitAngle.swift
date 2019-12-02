@@ -47,10 +47,8 @@ public extension UnitAngle {
 
     /// Bradian Unit of Angle
     class var bradian: UnitAngle {
-        get {
-            return UnitAngle(symbol: Symbol.bradian,
-                             converter: UnitConverterLinear(coefficient: Coefficient.bradian))
-        }
+        return UnitAngle(symbol: Symbol.bradian,
+                         converter: UnitConverterLinear(coefficient: Coefficient.bradian))
     }
 
     /// Milliradian Unit of Angle

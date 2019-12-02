@@ -59,30 +59,22 @@ public final class UnitForce: Dimension {
 
     /// Force in Newtons (N)
     public class var newton: UnitForce {
-        get {
-            return UnitForce(symbol: Symbol.newton, coefficient: Coefficient.newton)
-        }
+        return UnitForce(symbol: Symbol.newton, coefficient: Coefficient.newton)
     }
 
     /// Force in Kilogram Force (kgf)
     public class var kilogramForce: UnitForce {
-        get {
-            return UnitForce(symbol: Symbol.kilogramForce, coefficient: Coefficient.kilogramForce)
-        }
+        return UnitForce(symbol: Symbol.kilogramForce, coefficient: Coefficient.kilogramForce)
     }
 
     /// Force in Pound Force (lbf)
     public class var poundForce: UnitForce {
-        get {
-            return UnitForce(symbol: Symbol.poundForce, coefficient: Coefficient.poundForce)
-        }
+        return UnitForce(symbol: Symbol.poundForce, coefficient: Coefficient.poundForce)
     }
 
     /// Force in Dyne (dyn)
     public class var dyne: UnitForce {
-        get {
-            return UnitForce(symbol: Symbol.dyne, coefficient: Coefficient.dyne)
-        }
+        return UnitForce(symbol: Symbol.dyne, coefficient: Coefficient.dyne)
     }
 
     /// Base Unit for Force

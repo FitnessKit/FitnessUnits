@@ -35,8 +35,6 @@ final public class UnitPercent: Unit {
 
     /// Percentage Unit
     public class var percent: UnitPercent {
-        get {
-            return UnitPercent(symbol: Symbol.percent)
-        }
+        return UnitPercent(symbol: Symbol.percent)
     }
 }
