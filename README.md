@@ -101,5 +101,5 @@ This package is developed and maintained by Kevin A. Hoogheem
 
 ## License
 
-BluetoothMessageProtocol is available under the [MIT license](http://opensource.org/licenses/MIT)
+FitnessUnits is available under the [MIT license](http://opensource.org/licenses/MIT)
 

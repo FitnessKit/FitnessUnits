@@ -56,12 +56,12 @@ open class UnitGender: Unit {
 
 extension UnitGender: Encodable {
 
-    private enum CodingKeys : Int, CodingKey {
+    private enum CodingKeys: Int, CodingKey {
         case value
         case unit
     }
 
-    private enum UnitCodingKeys : Int, CodingKey {
+    private enum UnitCodingKeys: Int, CodingKey {
         case symbol
     }
 

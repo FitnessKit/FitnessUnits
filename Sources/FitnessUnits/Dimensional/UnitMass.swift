@@ -27,7 +27,43 @@ import Foundation
 @available(swift 3.1)
 @available(iOS 10.0, tvOS 10.0, watchOS 3.0, OSX 10.12, *)
 public extension UnitMass {
-
+    
+    enum BodySurfaceAreaFormula {
+        /// DuBois D, DuBois DF
+        case duBois
+        /// Gehan EA, George SL Formula
+        case gehanGeorge
+        /// Haycock GB, Schwartz GJ, Wisotsky DH Formula
+        case haycock
+        /// Mosteller
+        case mosteller
+        
+        /// Body Surface Area (BSA)
+        ///
+        /// - Parameters:
+        ///   - height: Height
+        ///   - weight: Weight
+        /// - Returns: Body Surface Area (BSA)
+        func bsa(height: Measurement<UnitLength>, weight: Measurement<UnitMass>) -> Double {
+            let heightCm = height.converted(to: .centimeters).value
+            let weightKg = weight.converted(to: .kilograms).value
+            
+            switch self {
+            case .duBois:
+                return 0.007184 * pow(heightCm, 0.725) * pow(weightKg, 0.425)
+                
+            case .gehanGeorge:
+                return 0.0235 * pow(heightCm, 0.42246) * pow(weightKg, 0.51456)
+                
+            case .haycock:
+                return 0.024265 * pow(heightCm, 0.3964) * pow(weightKg, 0.5378)
+                
+            case .mosteller:
+                return sqrt((heightCm * weightKg) / 3600)
+            }
+        }
+    }
+    
     /// Body Surface Area (BSA) using the Mosteller Formula
     ///
     /// - Parameters:
@@ -35,14 +71,9 @@ public extension UnitMass {
     ///   - weight: Weight
     /// - Returns: Body Surface Area (BSA)
     final class func bsaUsingMosteller(height: Measurement<UnitLength>, weight: Measurement<UnitMass>) -> Double {
-
-        let heightCm = height.converted(to: .centimeters).value
-        let weightKg = weight.converted(to: .kilograms).value
-
-        let bsa = sqrt((heightCm * weightKg) / 3600)
-        return bsa
+        return BodySurfaceAreaFormula.mosteller.bsa(height: height, weight: weight)
     }
-
+    
     /// Body Surface Area (BSA) using the DuBois D, DuBois DF Formula
     ///
     /// - Parameters:
@@ -50,14 +81,9 @@ public extension UnitMass {
     ///   - weight: Weight
     /// - Returns: Body Surface Area (BSA)
     final class func bsaUsingDuBois(height: Measurement<UnitLength>, weight: Measurement<UnitMass>) -> Double {
-
-        let heightCm = height.converted(to: .centimeters).value
-        let weightKg = weight.converted(to: .kilograms).value
-
-        let bsa = 0.007184 * pow(heightCm, 0.725) * pow(weightKg, 0.425)
-        return bsa
+        return BodySurfaceAreaFormula.duBois.bsa(height: height, weight: weight)
     }
-
+    
     /// Body Surface Area (BSA) using the Haycock GB, Schwartz GJ, Wisotsky DH Formula
     ///
     /// - Parameters:
@@ -65,14 +91,9 @@ public extension UnitMass {
     ///   - weight: Weight
     /// - Returns: Body Surface Area (BSA)
     final class func bsaUsingHaycock(height: Measurement<UnitLength>, weight: Measurement<UnitMass>) -> Double {
-
-        let heightCm = height.converted(to: .centimeters).value
-        let weightKg = weight.converted(to: .kilograms).value
-
-        let bsa = 0.024265 * pow(heightCm, 0.3964) * pow(weightKg, 0.5378)
-        return bsa
+        return BodySurfaceAreaFormula.haycock.bsa(height: height, weight: weight)
     }
-
+    
     /// Body Surface Area (BSA) using the Gehan EA, George SL Formula
     ///
     /// - Parameters:
@@ -80,19 +101,14 @@ public extension UnitMass {
     ///   - weight: Weight
     /// - Returns: Body Surface Area (BSA)
     final class func bsaUsingGehanGeorge(height: Measurement<UnitLength>, weight: Measurement<UnitMass>) -> Double {
-
-        let heightCm = height.converted(to: .centimeters).value
-        let weightKg = weight.converted(to: .kilograms).value
-
-        let bsa = 0.0235 * pow(heightCm, 0.42246) * pow(weightKg, 0.51456)
-        return bsa
+        return BodySurfaceAreaFormula.gehanGeorge.bsa(height: height, weight: weight)
     }
 }
 
 @available(swift 3.1)
 @available(iOS 10.0, tvOS 10.0, watchOS 3.0, OSX 10.12, *)
 public extension UnitMass {
-
+    
     /// Body Mass Index (BMI)
     ///
     /// - Parameters:
@@ -100,7 +116,7 @@ public extension UnitMass {
     ///   - weight: Weight
     /// - Returns: Body Mass Index (BMI)
     final class func bmi(height: Measurement<UnitLength>, weight: Measurement<UnitMass>) -> Double {
-
+        
         let heightM = height.converted(to: .meters).value
         let weightKg = weight.converted(to: .kilograms).value
         
