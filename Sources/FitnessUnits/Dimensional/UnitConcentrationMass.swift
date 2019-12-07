@@ -29,6 +29,7 @@ import Foundation
 public extension UnitConcentrationMass { /// Base unit - gramsPerLiter
 
     private struct Symbol {
+        static let gramPerDeciliter         = "g/dL"
         static let gramPerMilliliter        = "g/mL"
         static let kilogramPerMilliliter    = "kg/mL"
         static let milligramPerLiter        = "mg/L"
@@ -36,10 +37,16 @@ public extension UnitConcentrationMass { /// Base unit - gramsPerLiter
     }
 
     private struct Coefficient {
+        static let gramPerDeciliter         = 10.0
         static let gramPerMilliliter        = 1000.0
         static let kilogramPerMilliliter    = 1000000.00
         static let milligramPerLiter        = 0.001
         static let kilogramPerLiter         = 1000.0
+    }
+
+    /// Concentraion of Mass in Grams Per Deciliter (g/dL)
+    class var gramPerDeciliter: UnitConcentrationMass {
+        return UnitConcentrationMass(symbol: Symbol.gramPerDeciliter, converter: UnitConverterLinear(coefficient: Coefficient.gramPerDeciliter))
     }
 
     /// Concentraion of Mass in Grams Per Milliliter (g/mL)

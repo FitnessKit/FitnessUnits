@@ -63,6 +63,7 @@ Swift4
 * UnitEnergy - British Thermal Units (BTU)
 * UnitEnergy - US Therm (thm)
 * UnitMass - Mass Calculations
+* UnitConcentrationMass - gramsPerDeciliter
 * UnitConcentrationMass - gramsPerMilliliter
 * UnitConcentrationMass - kilogramsPerMilliliter
 * UnitConcentrationMass - milligramsPerLiter
