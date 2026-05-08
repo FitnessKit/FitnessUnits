@@ -27,7 +27,7 @@ import Foundation
 /// Percentage Unit
 @available(swift 3.1)
 @available(iOS 10.0, tvOS 10.0, watchOS 3.0, OSX 10.12, *)
-final public class UnitPercent: Unit {
+final public class UnitPercent: Unit, @unchecked Sendable {
 
     private struct Symbol {
         static let percent      = "%"
