@@ -16,13 +16,13 @@
     <header>
       <div class="content-wrapper">
         <p>
-          <a href="../index.html">FitnessUnits Docs</a>
+          <a href="../index.html">FitnessUnits 3.1.0 Docs</a>
           <span class="no-mobile"> (90% documented)</span>
         </p>
     
         <p class="header-right">
           <a href="https://github.com/FitnessKit/FitnessUnits">
-            <img src="../img/gh.png"/>
+            <img src="../img/gh.png" alt="GitHub"/>
             <span class="no-mobile">View on GitHub</span>
           </a>
         </p>
@@ -33,10 +33,12 @@
       <div class="content-wrapper">
         <p id="breadcrumbs">
           <span class="no-mobile">
-            <a href="../index.html">FitnessUnits Reference</a>
-            <img id="carat" src="../img/carat.png" />
+            <a href="../index.html">FitnessUnits</a>
+            <img id="carat" src="../img/carat.png" alt=""/>
+            <a href="../Structs.html">Structures</a>
+            <img id="carat" src="../img/carat.png" alt=""/>
+            ValidatedMeasurement Structure Reference
           </span>
-          ValidatedMeasurement Structure Reference
         </p>
       </div>
     </div>
@@ -48,8 +50,11 @@
               <h1>ValidatedMeasurement</h1>
                 <div class="declaration">
                   <div class="language">
-                    <pre class="highlight swift"><code><span class="kd">@available(OSX 10.12, iOS 10.0, watchOS 3.0, tvOS 10.0, *)</span>
+                    
+                    <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="n">macOS</span> <span class="mf">10.12</span><span class="p">,</span> <span class="n">iOS</span> <span class="mf">10.0</span><span class="p">,</span> <span class="n">watchOS</span> <span class="mf">3.0</span><span class="p">,</span> <span class="n">tvOS</span> <span class="mf">10.0</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span>
 <span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ValidatedMeasurement</span><span class="o">&lt;</span><span class="kt">UnitType</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt">Comparable</span><span class="p">,</span> <span class="kt">Equatable</span> <span class="k">where</span> <span class="kt">UnitType</span> <span class="p">:</span> <span class="kt">Unit</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">ValidatedMeasurement</span><span class="p">:</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">CustomDebugStringConvertible</span><span class="p">,</span> <span class="kt">CustomReflectable</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">ValidatedMeasurement</span> <span class="p">:</span> <span class="kt">Codable</span></code></pre>
 
                   </div>
                 </div>
@@ -149,7 +154,7 @@
                       <code>
                       <a name="/s:12FitnessUnits20ValidatedMeasurementV5value5valid4unitACyxGSd_Sbxtcfc"></a>
                       <a name="//apple_ref/swift/Method/init(value:valid:unit:)" class="dashAnchor"></a>
-                      <a class="token" href="#/s:12FitnessUnits20ValidatedMeasurementV5value5valid4unitACyxGSd_Sbxtcfc">init(value:valid:unit:)</a>
+                      <a class="token" href="#/s:12FitnessUnits20ValidatedMeasurementV5value5valid4unitACyxGSd_Sbxtcfc">init(value:<wbr>valid:<wbr>unit:<wbr>)</a>
                       </code>
                     </div>
                     <div class="height-container">
@@ -198,10 +203,6 @@
                       </section>
                     </div>
                   </li>
-                </ul>
-              </div>
-              <div class="task-group">
-                <ul>
                   <li class="item">
                     <div>
                       <code>
@@ -280,16 +281,363 @@
                       </section>
                     </div>
                   </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:12FitnessUnits20ValidatedMeasurementV1poiyACyxGAE_AEtFZ"></a>
+                      <a name="//apple_ref/swift/Method/+(_:_:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:12FitnessUnits20ValidatedMeasurementV1poiyACyxGAE_AEtFZ">+(_:<wbr>_:<wbr>)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Add two measurements of the same Unit.</p>
+<div class="aside aside-precondition">
+    <p class="aside-title">Precondition</p>
+    The <code><a href="../Structs/ValidatedMeasurement.html#/s:12FitnessUnits20ValidatedMeasurementV4unitxvp">unit</a></code> of <code>lhs</code> and <code>rhs</code> must be <code>isEqual</code> and <code><a href="../Structs/ValidatedMeasurement.html#/s:12FitnessUnits20ValidatedMeasurementV5validSbvp">valid</a></code> must be equal.
+
+</div>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">+</span> <span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">ValidatedMeasurement</span><span class="o">&lt;</span><span class="kt">UnitType</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">ValidatedMeasurement</span><span class="o">&lt;</span><span class="kt">UnitType</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">ValidatedMeasurement</span><span class="o">&lt;</span><span class="kt">UnitType</span><span class="o">&gt;</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Return Value</h4>
+                          <p>A measurement of value <code>lhs.value + rhs.value</code> and unit <code>lhs.unit</code>.</p>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:12FitnessUnits20ValidatedMeasurementV1soiyACyxGAE_AEtFZ"></a>
+                      <a name="//apple_ref/swift/Method/-(_:_:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:12FitnessUnits20ValidatedMeasurementV1soiyACyxGAE_AEtFZ">-(_:<wbr>_:<wbr>)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Subtract two measurements of the same Unit.</p>
+<div class="aside aside-precondition">
+    <p class="aside-title">Precondition</p>
+    The <code><a href="../Structs/ValidatedMeasurement.html#/s:12FitnessUnits20ValidatedMeasurementV4unitxvp">unit</a></code> of <code>lhs</code> and <code>rhs</code> must be <code>isEqual</code> and <code><a href="../Structs/ValidatedMeasurement.html#/s:12FitnessUnits20ValidatedMeasurementV5validSbvp">valid</a></code> must be equal.
+
+</div>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">-</span> <span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">ValidatedMeasurement</span><span class="o">&lt;</span><span class="kt">UnitType</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">ValidatedMeasurement</span><span class="o">&lt;</span><span class="kt">UnitType</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">ValidatedMeasurement</span><span class="o">&lt;</span><span class="kt">UnitType</span><span class="o">&gt;</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Return Value</h4>
+                          <p>A measurement of value <code>lhs.value - rhs.value</code> and unit <code>lhs.unit</code>.</p>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:12FitnessUnits20ValidatedMeasurementV1moiyACyxGAE_SdtFZ"></a>
+                      <a name="//apple_ref/swift/Method/*(_:_:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:12FitnessUnits20ValidatedMeasurementV1moiyACyxGAE_SdtFZ">*(_:<wbr>_:<wbr>)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Multiply a measurement by a scalar value.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">*</span> <span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">ValidatedMeasurement</span><span class="o">&lt;</span><span class="kt">UnitType</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">ValidatedMeasurement</span><span class="o">&lt;</span><span class="kt">UnitType</span><span class="o">&gt;</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Return Value</h4>
+                          <p>A measurement of value <code>lhs.value * rhs</code> with the same unit as <code>lhs</code>.</p>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:12FitnessUnits20ValidatedMeasurementV1moiyACyxGSd_AEtFZ"></a>
+                      <a name="//apple_ref/swift/Method/*(_:_:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:12FitnessUnits20ValidatedMeasurementV1moiyACyxGSd_AEtFZ">*(_:<wbr>_:<wbr>)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Multiply a scalar value by a measurement.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">*</span> <span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">ValidatedMeasurement</span><span class="o">&lt;</span><span class="kt">UnitType</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">ValidatedMeasurement</span><span class="o">&lt;</span><span class="kt">UnitType</span><span class="o">&gt;</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Return Value</h4>
+                          <p>A measurement of value <code>lhs * rhs.value</code> with the same unit as <code>rhs</code>.</p>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:12FitnessUnits20ValidatedMeasurementV1doiyACyxGAE_SdtFZ"></a>
+                      <a name="//apple_ref/swift/Method//(_:_:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:12FitnessUnits20ValidatedMeasurementV1doiyACyxGAE_SdtFZ">/(_:<wbr>_:<wbr>)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Divide a measurement by a scalar value.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">/</span> <span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">ValidatedMeasurement</span><span class="o">&lt;</span><span class="kt">UnitType</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">ValidatedMeasurement</span><span class="o">&lt;</span><span class="kt">UnitType</span><span class="o">&gt;</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Return Value</h4>
+                          <p>A measurement of value <code>lhs.value / rhs</code> with the same unit as <code>lhs</code>.</p>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:12FitnessUnits20ValidatedMeasurementV1doiyACyxGSd_AEtFZ"></a>
+                      <a name="//apple_ref/swift/Method//(_:_:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:12FitnessUnits20ValidatedMeasurementV1doiyACyxGSd_AEtFZ">/(_:<wbr>_:<wbr>)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Divide a scalar value by a measurement.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">/</span> <span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">ValidatedMeasurement</span><span class="o">&lt;</span><span class="kt">UnitType</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">ValidatedMeasurement</span><span class="o">&lt;</span><span class="kt">UnitType</span><span class="o">&gt;</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Return Value</h4>
+                          <p>A measurement of value <code>lhs / rhs.value</code> with the same unit as <code>rhs</code>.</p>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:12FitnessUnits20ValidatedMeasurementV2eeoiySbACyqd__G_ACyqd_0_GtSo6NSUnitCRbd__AHRbd_0_r0_lFZ"></a>
+                      <a name="//apple_ref/swift/Method/==(_:_:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:12FitnessUnits20ValidatedMeasurementV2eeoiySbACyqd__G_ACyqd_0_GtSo6NSUnitCRbd__AHRbd_0_r0_lFZ">==(_:<wbr>_:<wbr>)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Compare two measurements of the same <code>Dimension</code>.</p>
+
+<p>If <code>lhs.unit == rhs.unit</code>, returns <code>lhs.value == rhs.value</code>. Otherwise, converts <code>rhs</code> to the same unit as <code>lhs</code> and then compares the resulting values.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">==</span> <span class="o">&lt;</span><span class="kt">LeftHandSideType</span><span class="p">,</span> <span class="kt">RightHandSideType</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">ValidatedMeasurement</span><span class="o">&lt;</span><span class="kt">LeftHandSideType</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">ValidatedMeasurement</span><span class="o">&lt;</span><span class="kt">RightHandSideType</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span> <span class="k">where</span> <span class="kt">LeftHandSideType</span> <span class="p">:</span> <span class="kt">Unit</span><span class="p">,</span> <span class="kt">RightHandSideType</span> <span class="p">:</span> <span class="kt">Unit</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Return Value</h4>
+                          <p><code>true</code> if the measurements are equal.</p>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:12FitnessUnits20ValidatedMeasurementV1loiySbACyqd__G_ACyqd_0_GtSo6NSUnitCRbd__AHRbd_0_r0_lFZ"></a>
+                      <a name="//apple_ref/swift/Method/&lt;(_:_:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:12FitnessUnits20ValidatedMeasurementV1loiySbACyqd__G_ACyqd_0_GtSo6NSUnitCRbd__AHRbd_0_r0_lFZ"><(_:<wbr>_:<wbr>)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Compare two measurements of the same <code>Unit</code>.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">&lt;</span> <span class="o">&lt;</span><span class="kt">LeftHandSideType</span><span class="p">,</span> <span class="kt">RightHandSideType</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">ValidatedMeasurement</span><span class="o">&lt;</span><span class="kt">LeftHandSideType</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">ValidatedMeasurement</span><span class="o">&lt;</span><span class="kt">RightHandSideType</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span> <span class="k">where</span> <span class="kt">LeftHandSideType</span> <span class="p">:</span> <span class="kt">Unit</span><span class="p">,</span> <span class="kt">RightHandSideType</span> <span class="p">:</span> <span class="kt">Unit</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Return Value</h4>
+                          <p><code>true</code> if the measurements can be compared and the <code>lhs</code> is less than the <code>rhs</code> converted value.</p>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:Se4fromxs7Decoder_p_tKcfc"></a>
+                      <a name="//apple_ref/swift/Method/init(from:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:Se4fromxs7Decoder_p_tKcfc">init(from:<wbr>)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">from</span> <span class="nv">decoder</span><span class="p">:</span> <span class="kt">Decoder</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:12FitnessUnits20ValidatedMeasurementV6encode2toys7Encoder_p_tKF"></a>
+                      <a name="//apple_ref/swift/Method/encode(to:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:12FitnessUnits20ValidatedMeasurementV6encode2toys7Encoder_p_tKF">encode(to:<wbr>)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Encodes this value into the given encoder.</p>
+
+<p>If the value fails to encode anything, <code>encoder</code> will encode an empty
+keyed container in its place.</p>
+
+<p>This function throws an error if any values are invalid for the given
+encoder&rsquo;s format.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">encode</span><span class="p">(</span><span class="n">to</span> <span class="nv">encoder</span><span class="p">:</span> <span class="kt">Encoder</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>encoder</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The encoder to write data to.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
                 </ul>
               </div>
               <div class="task-group">
+                <div class="task-name-container">
+                  <a name="/Available%20where%20%60UnitType%60%20%3A%20%60Dimension%60"></a>
+                  <a name="//apple_ref/swift/Section/Available where `UnitType` : `Dimension`" class="dashAnchor"></a>
+                  <div class="section-name-container">
+                    <a class="section-name-link" href="#/Available%20where%20%60UnitType%60%20%3A%20%60Dimension%60"></a>
+                    <h3 class="section-name"><span>Available where <code>UnitType</code> : <code>Dimension</code></span>
+</h3>
+                  </div>
+                </div>
                 <ul>
                   <li class="item">
                     <div>
                       <code>
                       <a name="/s:12FitnessUnits20ValidatedMeasurementVAASo11NSDimensionCRbzrlE9converted2toACyxGx_tF"></a>
                       <a name="//apple_ref/swift/Method/converted(to:)" class="dashAnchor"></a>
-                      <a class="token" href="#/s:12FitnessUnits20ValidatedMeasurementVAASo11NSDimensionCRbzrlE9converted2toACyxGx_tF">converted(to:)</a>
+                      <a class="token" href="#/s:12FitnessUnits20ValidatedMeasurementVAASo11NSDimensionCRbzrlE9converted2toACyxGx_tF">converted(to:<wbr>)</a>
                       </code>
                     </div>
                     <div class="height-container">
@@ -339,7 +687,7 @@
                       <code>
                       <a name="/s:12FitnessUnits20ValidatedMeasurementVAASo11NSDimensionCRbzrlE7convert2toyx_tF"></a>
                       <a name="//apple_ref/swift/Method/convert(to:)" class="dashAnchor"></a>
-                      <a class="token" href="#/s:12FitnessUnits20ValidatedMeasurementVAASo11NSDimensionCRbzrlE7convert2toyx_tF">convert(to:)</a>
+                      <a class="token" href="#/s:12FitnessUnits20ValidatedMeasurementVAASo11NSDimensionCRbzrlE7convert2toyx_tF">convert(to:<wbr>)</a>
                       </code>
                     </div>
                     <div class="height-container">
@@ -385,7 +733,7 @@
                       <code>
                       <a name="/s:12FitnessUnits20ValidatedMeasurementVAASo11NSDimensionCRbzrlE1poiyACyxGAG_AGtFZ"></a>
                       <a name="//apple_ref/swift/Method/+(_:_:)" class="dashAnchor"></a>
-                      <a class="token" href="#/s:12FitnessUnits20ValidatedMeasurementVAASo11NSDimensionCRbzrlE1poiyACyxGAG_AGtFZ">+(_:_:)</a>
+                      <a class="token" href="#/s:12FitnessUnits20ValidatedMeasurementVAASo11NSDimensionCRbzrlE1poiyACyxGAG_AGtFZ">+(_:<wbr>_:<wbr>)</a>
                       </code>
                     </div>
                     <div class="height-container">
@@ -418,7 +766,7 @@
                       <code>
                       <a name="/s:12FitnessUnits20ValidatedMeasurementVAASo11NSDimensionCRbzrlE1soiyACyxGAG_AGtFZ"></a>
                       <a name="//apple_ref/swift/Method/-(_:_:)" class="dashAnchor"></a>
-                      <a class="token" href="#/s:12FitnessUnits20ValidatedMeasurementVAASo11NSDimensionCRbzrlE1soiyACyxGAG_AGtFZ">-(_:_:)</a>
+                      <a class="token" href="#/s:12FitnessUnits20ValidatedMeasurementVAASo11NSDimensionCRbzrlE1soiyACyxGAG_AGtFZ">-(_:<wbr>_:<wbr>)</a>
                       </code>
                     </div>
                     <div class="height-container">
@@ -442,352 +790,6 @@
                         <div>
                           <h4>Return Value</h4>
                           <p>The result of adding the two measurements.</p>
-                        </div>
-                      </section>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-              <div class="task-group">
-                <ul>
-                  <li class="item">
-                    <div>
-                      <code>
-                      <a name="/s:12FitnessUnits20ValidatedMeasurementV1poiyACyxGAE_AEtFZ"></a>
-                      <a name="//apple_ref/swift/Method/+(_:_:)" class="dashAnchor"></a>
-                      <a class="token" href="#/s:12FitnessUnits20ValidatedMeasurementV1poiyACyxGAE_AEtFZ">+(_:_:)</a>
-                      </code>
-                    </div>
-                    <div class="height-container">
-                      <div class="pointer-container"></div>
-                      <section class="section">
-                        <div class="pointer"></div>
-                        <div class="abstract">
-                          <p>Add two measurements of the same Unit.</p>
-<div class="aside aside-precondition">
-    <p class="aside-title">Precondition</p>
-    The <code><a href="../Structs/ValidatedMeasurement.html#/s:12FitnessUnits20ValidatedMeasurementV4unitxvp">unit</a></code> of <code>lhs</code> and <code>rhs</code> must be <code>isEqual</code> and <code><a href="../Structs/ValidatedMeasurement.html#/s:12FitnessUnits20ValidatedMeasurementV5validSbvp">valid</a></code> must be equal.
-
-</div>
-
-                        </div>
-                        <div class="declaration">
-                          <h4>Declaration</h4>
-                          <div class="language">
-                            <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">+</span> <span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">ValidatedMeasurement</span><span class="o">&lt;</span><span class="kt">UnitType</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">ValidatedMeasurement</span><span class="o">&lt;</span><span class="kt">UnitType</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">ValidatedMeasurement</span><span class="o">&lt;</span><span class="kt">UnitType</span><span class="o">&gt;</span></code></pre>
-
-                          </div>
-                        </div>
-                        <div>
-                          <h4>Return Value</h4>
-                          <p>A measurement of value <code>lhs.value + rhs.value</code> and unit <code>lhs.unit</code>.</p>
-                        </div>
-                      </section>
-                    </div>
-                  </li>
-                  <li class="item">
-                    <div>
-                      <code>
-                      <a name="/s:12FitnessUnits20ValidatedMeasurementV1soiyACyxGAE_AEtFZ"></a>
-                      <a name="//apple_ref/swift/Method/-(_:_:)" class="dashAnchor"></a>
-                      <a class="token" href="#/s:12FitnessUnits20ValidatedMeasurementV1soiyACyxGAE_AEtFZ">-(_:_:)</a>
-                      </code>
-                    </div>
-                    <div class="height-container">
-                      <div class="pointer-container"></div>
-                      <section class="section">
-                        <div class="pointer"></div>
-                        <div class="abstract">
-                          <p>Subtract two measurements of the same Unit.</p>
-<div class="aside aside-precondition">
-    <p class="aside-title">Precondition</p>
-    The <code><a href="../Structs/ValidatedMeasurement.html#/s:12FitnessUnits20ValidatedMeasurementV4unitxvp">unit</a></code> of <code>lhs</code> and <code>rhs</code> must be <code>isEqual</code> and <code><a href="../Structs/ValidatedMeasurement.html#/s:12FitnessUnits20ValidatedMeasurementV5validSbvp">valid</a></code> must be equal.
-
-</div>
-
-                        </div>
-                        <div class="declaration">
-                          <h4>Declaration</h4>
-                          <div class="language">
-                            <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">-</span> <span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">ValidatedMeasurement</span><span class="o">&lt;</span><span class="kt">UnitType</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">ValidatedMeasurement</span><span class="o">&lt;</span><span class="kt">UnitType</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">ValidatedMeasurement</span><span class="o">&lt;</span><span class="kt">UnitType</span><span class="o">&gt;</span></code></pre>
-
-                          </div>
-                        </div>
-                        <div>
-                          <h4>Return Value</h4>
-                          <p>A measurement of value <code>lhs.value - rhs.value</code> and unit <code>lhs.unit</code>.</p>
-                        </div>
-                      </section>
-                    </div>
-                  </li>
-                  <li class="item">
-                    <div>
-                      <code>
-                      <a name="/s:12FitnessUnits20ValidatedMeasurementV1moiyACyxGAE_SdtFZ"></a>
-                      <a name="//apple_ref/swift/Method/*(_:_:)" class="dashAnchor"></a>
-                      <a class="token" href="#/s:12FitnessUnits20ValidatedMeasurementV1moiyACyxGAE_SdtFZ">*(_:_:)</a>
-                      </code>
-                    </div>
-                    <div class="height-container">
-                      <div class="pointer-container"></div>
-                      <section class="section">
-                        <div class="pointer"></div>
-                        <div class="abstract">
-                          <p>Multiply a measurement by a scalar value.</p>
-
-                        </div>
-                        <div class="declaration">
-                          <h4>Declaration</h4>
-                          <div class="language">
-                            <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">*</span> <span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">ValidatedMeasurement</span><span class="o">&lt;</span><span class="kt">UnitType</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">ValidatedMeasurement</span><span class="o">&lt;</span><span class="kt">UnitType</span><span class="o">&gt;</span></code></pre>
-
-                          </div>
-                        </div>
-                        <div>
-                          <h4>Return Value</h4>
-                          <p>A measurement of value <code>lhs.value * rhs</code> with the same unit as <code>lhs</code>.</p>
-                        </div>
-                      </section>
-                    </div>
-                  </li>
-                  <li class="item">
-                    <div>
-                      <code>
-                      <a name="/s:12FitnessUnits20ValidatedMeasurementV1moiyACyxGSd_AEtFZ"></a>
-                      <a name="//apple_ref/swift/Method/*(_:_:)" class="dashAnchor"></a>
-                      <a class="token" href="#/s:12FitnessUnits20ValidatedMeasurementV1moiyACyxGSd_AEtFZ">*(_:_:)</a>
-                      </code>
-                    </div>
-                    <div class="height-container">
-                      <div class="pointer-container"></div>
-                      <section class="section">
-                        <div class="pointer"></div>
-                        <div class="abstract">
-                          <p>Multiply a scalar value by a measurement.</p>
-
-                        </div>
-                        <div class="declaration">
-                          <h4>Declaration</h4>
-                          <div class="language">
-                            <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">*</span> <span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">ValidatedMeasurement</span><span class="o">&lt;</span><span class="kt">UnitType</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">ValidatedMeasurement</span><span class="o">&lt;</span><span class="kt">UnitType</span><span class="o">&gt;</span></code></pre>
-
-                          </div>
-                        </div>
-                        <div>
-                          <h4>Return Value</h4>
-                          <p>A measurement of value <code>lhs * rhs.value</code> with the same unit as <code>rhs</code>.</p>
-                        </div>
-                      </section>
-                    </div>
-                  </li>
-                  <li class="item">
-                    <div>
-                      <code>
-                      <a name="/s:12FitnessUnits20ValidatedMeasurementV1doiyACyxGAE_SdtFZ"></a>
-                      <a name="//apple_ref/swift/Method//(_:_:)" class="dashAnchor"></a>
-                      <a class="token" href="#/s:12FitnessUnits20ValidatedMeasurementV1doiyACyxGAE_SdtFZ">/(_:_:)</a>
-                      </code>
-                    </div>
-                    <div class="height-container">
-                      <div class="pointer-container"></div>
-                      <section class="section">
-                        <div class="pointer"></div>
-                        <div class="abstract">
-                          <p>Divide a measurement by a scalar value.</p>
-
-                        </div>
-                        <div class="declaration">
-                          <h4>Declaration</h4>
-                          <div class="language">
-                            <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">/</span> <span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">ValidatedMeasurement</span><span class="o">&lt;</span><span class="kt">UnitType</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">ValidatedMeasurement</span><span class="o">&lt;</span><span class="kt">UnitType</span><span class="o">&gt;</span></code></pre>
-
-                          </div>
-                        </div>
-                        <div>
-                          <h4>Return Value</h4>
-                          <p>A measurement of value <code>lhs.value / rhs</code> with the same unit as <code>lhs</code>.</p>
-                        </div>
-                      </section>
-                    </div>
-                  </li>
-                  <li class="item">
-                    <div>
-                      <code>
-                      <a name="/s:12FitnessUnits20ValidatedMeasurementV1doiyACyxGSd_AEtFZ"></a>
-                      <a name="//apple_ref/swift/Method//(_:_:)" class="dashAnchor"></a>
-                      <a class="token" href="#/s:12FitnessUnits20ValidatedMeasurementV1doiyACyxGSd_AEtFZ">/(_:_:)</a>
-                      </code>
-                    </div>
-                    <div class="height-container">
-                      <div class="pointer-container"></div>
-                      <section class="section">
-                        <div class="pointer"></div>
-                        <div class="abstract">
-                          <p>Divide a scalar value by a measurement.</p>
-
-                        </div>
-                        <div class="declaration">
-                          <h4>Declaration</h4>
-                          <div class="language">
-                            <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">/</span> <span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">ValidatedMeasurement</span><span class="o">&lt;</span><span class="kt">UnitType</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">ValidatedMeasurement</span><span class="o">&lt;</span><span class="kt">UnitType</span><span class="o">&gt;</span></code></pre>
-
-                          </div>
-                        </div>
-                        <div>
-                          <h4>Return Value</h4>
-                          <p>A measurement of value <code>lhs / rhs.value</code> with the same unit as <code>rhs</code>.</p>
-                        </div>
-                      </section>
-                    </div>
-                  </li>
-                  <li class="item">
-                    <div>
-                      <code>
-                      <a name="/s:12FitnessUnits20ValidatedMeasurementV2eeoiySbACyqd__G_ACyqd_0_GtSo6NSUnitCRbd__AHRbd_0_r0_lFZ"></a>
-                      <a name="//apple_ref/swift/Method/==(_:_:)" class="dashAnchor"></a>
-                      <a class="token" href="#/s:12FitnessUnits20ValidatedMeasurementV2eeoiySbACyqd__G_ACyqd_0_GtSo6NSUnitCRbd__AHRbd_0_r0_lFZ">==(_:_:)</a>
-                      </code>
-                    </div>
-                    <div class="height-container">
-                      <div class="pointer-container"></div>
-                      <section class="section">
-                        <div class="pointer"></div>
-                        <div class="abstract">
-                          <p>Compare two measurements of the same <code>Dimension</code>.</p>
-
-<p>If <code>lhs.unit == rhs.unit</code>, returns <code>lhs.value == rhs.value</code>. Otherwise, converts <code>rhs</code> to the same unit as <code>lhs</code> and then compares the resulting values.</p>
-
-                        </div>
-                        <div class="declaration">
-                          <h4>Declaration</h4>
-                          <div class="language">
-                            <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">==</span> <span class="o">&lt;</span><span class="kt">LeftHandSideType</span><span class="p">,</span> <span class="kt">RightHandSideType</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">ValidatedMeasurement</span><span class="o">&lt;</span><span class="kt">LeftHandSideType</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">ValidatedMeasurement</span><span class="o">&lt;</span><span class="kt">RightHandSideType</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span> <span class="k">where</span> <span class="kt">LeftHandSideType</span> <span class="p">:</span> <span class="kt">Unit</span><span class="p">,</span> <span class="kt">RightHandSideType</span> <span class="p">:</span> <span class="kt">Unit</span></code></pre>
-
-                          </div>
-                        </div>
-                        <div>
-                          <h4>Return Value</h4>
-                          <p><code>true</code> if the measurements are equal.</p>
-                        </div>
-                      </section>
-                    </div>
-                  </li>
-                  <li class="item">
-                    <div>
-                      <code>
-                      <a name="/s:12FitnessUnits20ValidatedMeasurementV1loiySbACyqd__G_ACyqd_0_GtSo6NSUnitCRbd__AHRbd_0_r0_lFZ"></a>
-                      <a name="//apple_ref/swift/Method/&lt;(_:_:)" class="dashAnchor"></a>
-                      <a class="token" href="#/s:12FitnessUnits20ValidatedMeasurementV1loiySbACyqd__G_ACyqd_0_GtSo6NSUnitCRbd__AHRbd_0_r0_lFZ">&lt;(_:_:)</a>
-                      </code>
-                    </div>
-                    <div class="height-container">
-                      <div class="pointer-container"></div>
-                      <section class="section">
-                        <div class="pointer"></div>
-                        <div class="abstract">
-                          <p>Compare two measurements of the same <code>Unit</code>.</p>
-
-                        </div>
-                        <div class="declaration">
-                          <h4>Declaration</h4>
-                          <div class="language">
-                            <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">&lt;</span> <span class="o">&lt;</span><span class="kt">LeftHandSideType</span><span class="p">,</span> <span class="kt">RightHandSideType</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">ValidatedMeasurement</span><span class="o">&lt;</span><span class="kt">LeftHandSideType</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">ValidatedMeasurement</span><span class="o">&lt;</span><span class="kt">RightHandSideType</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span> <span class="k">where</span> <span class="kt">LeftHandSideType</span> <span class="p">:</span> <span class="kt">Unit</span><span class="p">,</span> <span class="kt">RightHandSideType</span> <span class="p">:</span> <span class="kt">Unit</span></code></pre>
-
-                          </div>
-                        </div>
-                        <div>
-                          <h4>Return Value</h4>
-                          <p><code>true</code> if the measurements can be compared and the <code>lhs</code> is less than the <code>rhs</code> converted value.</p>
-                        </div>
-                      </section>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-              <div class="task-group">
-                <ul>
-                  <li class="item">
-                    <div>
-                      <code>
-                      <a name="/s:Se4fromxs7Decoder_p_tKcfc"></a>
-                      <a name="//apple_ref/swift/Method/init(from:)" class="dashAnchor"></a>
-                      <a class="token" href="#/s:Se4fromxs7Decoder_p_tKcfc">init(from:)</a>
-                      </code>
-                    </div>
-                    <div class="height-container">
-                      <div class="pointer-container"></div>
-                      <section class="section">
-                        <div class="pointer"></div>
-                        <div class="abstract">
-                          
-                        </div>
-                        <div class="declaration">
-                          <h4>Declaration</h4>
-                          <div class="language">
-                            <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">from</span> <span class="nv">decoder</span><span class="p">:</span> <span class="kt">Decoder</span><span class="p">)</span> <span class="k">throws</span></code></pre>
-
-                          </div>
-                        </div>
-                      </section>
-                    </div>
-                  </li>
-                  <li class="item">
-                    <div>
-                      <code>
-                      <a name="/s:12FitnessUnits20ValidatedMeasurementV6encode2toys7Encoder_p_tKF"></a>
-                      <a name="//apple_ref/swift/Method/encode(to:)" class="dashAnchor"></a>
-                      <a class="token" href="#/s:12FitnessUnits20ValidatedMeasurementV6encode2toys7Encoder_p_tKF">encode(to:)</a>
-                      </code>
-                    </div>
-                    <div class="height-container">
-                      <div class="pointer-container"></div>
-                      <section class="section">
-                        <div class="pointer"></div>
-                        <div class="abstract">
-                          <p>Encodes this value into the given encoder.</p>
-
-<p>If the value fails to encode anything, <code>encoder</code> will encode an empty
-keyed container in its place.</p>
-
-<p>This function throws an error if any values are invalid for the given
-encoder&rsquo;s format.</p>
-
-                        </div>
-                        <div class="declaration">
-                          <h4>Declaration</h4>
-                          <div class="language">
-                            <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">encode</span><span class="p">(</span><span class="n">to</span> <span class="nv">encoder</span><span class="p">:</span> <span class="kt">Encoder</span><span class="p">)</span> <span class="k">throws</span></code></pre>
-
-                          </div>
-                        </div>
-                        <div>
-                          <h4>Parameters</h4>
-                          <table class="graybox">
-                            <tbody>
-                              <tr>
-                                <td>
-                                  <code>
-                                  <em>encoder</em>
-                                  </code>
-                                </td>
-                                <td>
-                                  <div>
-                                    <p>The encoder to write data to.</p>
-                                  </div>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
                         </div>
                       </section>
                     </div>
@@ -908,10 +910,9 @@ encoder&rsquo;s format.</p>
       <div class="footer-wrapper">
         <section id="footer">
           <p>© 2017 Kevin A. Hoogheem</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.12.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.15.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </div>
     </div>
   </body>
-</div>
 </html>

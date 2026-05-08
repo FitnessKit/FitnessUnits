@@ -16,13 +16,13 @@
     <header>
       <div class="content-wrapper">
         <p>
-          <a href="../index.html">FitnessUnits Docs</a>
+          <a href="../index.html">FitnessUnits 3.1.0 Docs</a>
           <span class="no-mobile"> (90% documented)</span>
         </p>
     
         <p class="header-right">
           <a href="https://github.com/FitnessKit/FitnessUnits">
-            <img src="../img/gh.png"/>
+            <img src="../img/gh.png" alt="GitHub"/>
             <span class="no-mobile">View on GitHub</span>
           </a>
         </p>
@@ -33,10 +33,12 @@
       <div class="content-wrapper">
         <p id="breadcrumbs">
           <span class="no-mobile">
-            <a href="../index.html">FitnessUnits Reference</a>
-            <img id="carat" src="../img/carat.png" />
+            <a href="../index.html">FitnessUnits</a>
+            <img id="carat" src="../img/carat.png" alt=""/>
+            <a href="../Structs.html">Structures</a>
+            <img id="carat" src="../img/carat.png" alt=""/>
+            StringMeasurement Structure Reference
           </span>
-          StringMeasurement Structure Reference
         </p>
       </div>
     </div>
@@ -48,9 +50,12 @@
               <h1>StringMeasurement</h1>
                 <div class="declaration">
                   <div class="language">
-                    <pre class="highlight swift"><code><span class="kd">@available(swift 3.1)</span>
-<span class="kd">@available(iOS 10.0, tvOS 10.0, watchOS 3.0, OSX 10.12, *)</span>
+                    
+                    <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="n">swift</span> <span class="mf">3.1</span><span class="p">)</span>
+<span class="kd">@available</span><span class="p">(</span><span class="n">iOS</span> <span class="mf">10.0</span><span class="p">,</span> <span class="n">tvOS</span> <span class="mf">10.0</span><span class="p">,</span> <span class="n">watchOS</span> <span class="mf">3.0</span><span class="p">,</span> <span class="n">macOS</span> <span class="mf">10.12</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span>
 <span class="kd">public</span> <span class="kd">struct</span> <span class="kt">StringMeasurement</span><span class="o">&lt;</span><span class="kt">UnitType</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt">Equatable</span> <span class="k">where</span> <span class="kt">UnitType</span> <span class="p">:</span> <span class="kt">Unit</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">StringMeasurement</span> <span class="p">:</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">CustomDebugStringConvertible</span><span class="p">,</span> <span class="kt">CustomReflectable</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">StringMeasurement</span><span class="p">:</span> <span class="kt">Encodable</span></code></pre>
 
                   </div>
                 </div>
@@ -80,7 +85,7 @@
                           <h4>Declaration</h4>
                           <div class="language">
                             <p class="aside-title">Swift</p>
-                            <pre class="highlight swift"><code><span class="kd">private(set)</span> <span class="kd">public</span> <span class="k">var</span> <span class="nv">unit</span><span class="p">:</span> <span class="kt">UnitType</span></code></pre>
+                            <pre class="highlight swift"><code><span class="kd">private(set)</span> <span class="kd">public</span> <span class="k">var</span> <span class="nv">unit</span><span class="p">:</span> <span class="kt">UnitType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                           </div>
                         </div>
@@ -119,7 +124,7 @@
                       <code>
                       <a name="/s:12FitnessUnits17StringMeasurementV5value4unitACyxGSS_xtcfc"></a>
                       <a name="//apple_ref/swift/Method/init(value:unit:)" class="dashAnchor"></a>
-                      <a class="token" href="#/s:12FitnessUnits17StringMeasurementV5value4unitACyxGSS_xtcfc">init(value:unit:)</a>
+                      <a class="token" href="#/s:12FitnessUnits17StringMeasurementV5value4unitACyxGSS_xtcfc">init(value:<wbr>unit:<wbr>)</a>
                       </code>
                     </div>
                     <div class="height-container">
@@ -171,10 +176,6 @@ your program. Do not save hash values to use during a future execution.</p>
                       </section>
                     </div>
                   </li>
-                </ul>
-              </div>
-              <div class="task-group">
-                <ul>
                   <li class="item">
                     <div>
                       <code>
@@ -253,16 +254,12 @@ your program. Do not save hash values to use during a future execution.</p>
                       </section>
                     </div>
                   </li>
-                </ul>
-              </div>
-              <div class="task-group">
-                <ul>
                   <li class="item">
                     <div>
                       <code>
                       <a name="/s:12FitnessUnits17StringMeasurementV2eeoiySbACyqd__G_ACyqd_0_GtSo6NSUnitCRbd__AHRbd_0_r0_lFZ"></a>
                       <a name="//apple_ref/swift/Method/==(_:_:)" class="dashAnchor"></a>
-                      <a class="token" href="#/s:12FitnessUnits17StringMeasurementV2eeoiySbACyqd__G_ACyqd_0_GtSo6NSUnitCRbd__AHRbd_0_r0_lFZ">==(_:_:)</a>
+                      <a class="token" href="#/s:12FitnessUnits17StringMeasurementV2eeoiySbACyqd__G_ACyqd_0_GtSo6NSUnitCRbd__AHRbd_0_r0_lFZ">==(_:<wbr>_:<wbr>)</a>
                       </code>
                     </div>
                     <div class="height-container">
@@ -290,16 +287,12 @@ your program. Do not save hash values to use during a future execution.</p>
                       </section>
                     </div>
                   </li>
-                </ul>
-              </div>
-              <div class="task-group">
-                <ul>
                   <li class="item">
                     <div>
                       <code>
                       <a name="/s:12FitnessUnits17StringMeasurementV4fromACyxGs7Decoder_p_tKcfc"></a>
                       <a name="//apple_ref/swift/Method/init(from:)" class="dashAnchor"></a>
-                      <a class="token" href="#/s:12FitnessUnits17StringMeasurementV4fromACyxGs7Decoder_p_tKcfc">init(from:)</a>
+                      <a class="token" href="#/s:12FitnessUnits17StringMeasurementV4fromACyxGs7Decoder_p_tKcfc">init(from:<wbr>)</a>
                       </code>
                     </div>
                     <div class="height-container">
@@ -326,7 +319,7 @@ your program. Do not save hash values to use during a future execution.</p>
                       <code>
                       <a name="/s:12FitnessUnits17StringMeasurementV6encode2toys7Encoder_p_tKF"></a>
                       <a name="//apple_ref/swift/Method/encode(to:)" class="dashAnchor"></a>
-                      <a class="token" href="#/s:12FitnessUnits17StringMeasurementV6encode2toys7Encoder_p_tKF">encode(to:)</a>
+                      <a class="token" href="#/s:12FitnessUnits17StringMeasurementV6encode2toys7Encoder_p_tKF">encode(to:<wbr>)</a>
                       </code>
                     </div>
                     <div class="height-container">
@@ -489,10 +482,9 @@ encoder&rsquo;s format.</p>
       <div class="footer-wrapper">
         <section id="footer">
           <p>© 2017 Kevin A. Hoogheem</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.12.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.15.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </div>
     </div>
   </body>
-</div>
 </html>
