@@ -27,7 +27,7 @@ import Foundation
 /// Units of Radioactivity
 @available(swift 3.1)
 @available(iOS 10.0, tvOS 10.0, watchOS 3.0, OSX 10.12, *)
-public final class UnitRadioactivity: Dimension {
+public final class UnitRadioactivity: Dimension, @unchecked Sendable {
 
     private struct Symbol {
         static let disintegrationsPerMinute     = "dpm"

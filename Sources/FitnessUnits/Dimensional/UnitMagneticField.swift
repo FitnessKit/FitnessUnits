@@ -27,7 +27,7 @@ import Foundation
 /// Units of Magnetic Field
 @available(swift 3.1)
 @available(iOS 10.0, tvOS 10.0, watchOS 3.0, OSX 10.12, *)
-public final class UnitMagneticField: Dimension {
+public final class UnitMagneticField: Dimension, @unchecked Sendable {
 
     private struct Symbol {
         static let nanoTesla    = "nT"

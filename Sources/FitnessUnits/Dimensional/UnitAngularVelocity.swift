@@ -27,7 +27,7 @@ import Foundation
 /// Units of Angular Velocity
 @available(swift 3.1)
 @available(iOS 10.0, tvOS 10.0, watchOS 3.0, OSX 10.12, *)
-public final class UnitAngularVelocity: Dimension {
+public final class UnitAngularVelocity: Dimension, @unchecked Sendable {
 
     private struct Symbol {
         static let degress      = "deg/s"
